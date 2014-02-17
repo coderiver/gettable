@@ -69,6 +69,8 @@ body
 
 // ------------------ main settings -------------------------- //
 .page-header
+	position: relative
+	z-index: 2000
 	+box-shadow(0 0 3px rgba(0,0,0,.5))
 	.btn_red
 		float: right
@@ -160,7 +162,7 @@ body
 		background: #ececec
 		border: 0
 		+box-shadow(0 1px 1px rgba(0,0,0,.36), inset 0 1px 1px #fff)
-		+g(#ececec, #fff)
+		+g(#fff, #ececec)
 		&:hover,
 		&:active
 			z-index: 1001 !important

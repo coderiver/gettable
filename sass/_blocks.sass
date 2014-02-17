@@ -73,3 +73,68 @@
 		sup
 			color: #7f7f7f 
 		
+.input-group_search
+	position: relative
+	display: block
+	.form-control
+		display: block
+		padding: 6px 34px 6px 16px 
+		float: none
+		width: 100%
+		+box
+		border-radius: 3px
+		background: #fff
+		+fbold
+		height: 43px
+		font-size: 16px
+		color: #000
+		border-radius: 4px !important
+		border-color: transparent
+		box-shadow: inset 0 2px 2px #c2c2c2
+		background: $light
+		+placeholder
+			color: #878787 
+		&:hover
+			+placeholder
+				color: #000
+			+ i
+				+s(glass-h)
+		&:focus
+			outline: none !important 
+			border-color: $red  
+			+box-shadow(0 0 7px rgba(255,53,3,.86), inset 0 2px 2px rgba(0,0,0,.14))
+			+placeholder
+				color: $red 
+			+ i
+				+s(glass-act)
+	i
+		position: absolute
+		top: 50%
+		z-index: 2
+		margin-top: -9px
+		right: 16px  
+		+s(glass)
+
+.btn-group_tabs
+	.btn
+		margin: 0 !important
+		padding: 5px 31px
+		height: 43px
+		font-size: 16px
+		background: #ececec
+		+box-shadow(0 1px 0 rgba(0,0,0,.1), inset 0 1px 1px #fff)
+		+g(#fff, #ececec)
+		+box
+		border: 0
+		border-left: 1px solid #cdcdcd
+		border-bottom: 1px solid #b4b4b4 
+		&:hover
+			color: $red
+			margin-left: 0
+			z-index: 1 
+		&:focus,
+		&.is-active
+			background: #595959
+			color: #fff 
+			+box-shadow(inset 0 2px 2px rgba(0,0,0,.65))
+

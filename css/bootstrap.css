@@ -210,7 +210,7 @@ a.bg-warning:hover { background-color: #f7ecb5; }
 
 a.bg-danger:hover { background-color: #e4b9b9; }
 
-.page-header { padding-bottom: 9px; margin: 0; padding: 22px 0; }
+.page-header { margin: 0; padding: 22px 0; }
 
 ul, ol { margin-top: 0; margin-bottom: 10px; }
 

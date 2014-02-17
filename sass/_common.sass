@@ -34,9 +34,24 @@ h1,h2,h3,h4,h5,h6,a,span,a:focus
 =fbold2
 	font-family: "PFAgoraBold", Verdana, Arial, sans-serif 
 $light: #fafafa
+$light2: #f7f7f7
 $text: #858585
 $dark: #4c4c4c
 $dark_gray: #373737
+$dark_gray: #373737
+$red: #dc2b00
+html
+	+scrollbar
+		width: 6px
+	+scrollbar-track
+		background: none
+	+scrollbar-thumb
+		border-radius: 3px
+		background: #535353
+	+scrollbar-track-piece 
+		width: 6px 
+		border-radius: 3px
+
 body
 	min-width: 1400px
 	background: $light 
@@ -94,6 +109,7 @@ body
 	.dropdown-menu 
 		margin-top: -1px
 		padding: 0 
+		width: 100%
 		overflow: hidden
 		width: 110px
 		border-radius: 3px
@@ -111,3 +127,102 @@ body
 				position: static
 				margin-right: 5px
 
+.btn-group_metro
+	float: left
+	width: 253px
+	&:hover
+		.btn
+			strong
+				color: #f00
+		.caret
+			border-color: #f00 transparent transparent transparent 
+		.icon-metro
+			+s(metro-h)
+	&.open
+		.caret
+			border-color: #fff transparent transparent transparent 
+		.icon-metro
+			+s(metro-act)
+		.btn
+			background: #4b4b4b
+			+box-shadow(inset 0 2px 2px rgba(0,0,0,.4))
+			strong
+				color: #fff 
+
+	.btn
+		position: relative
+		width: 100%
+		text-align: left
+		z-index: 1001 !important
+		padding: 0 14px
+		height: 43px
+		border-radius: 3px
+		background: #ececec
+		border: 0
+		+box-shadow(0 1px 1px rgba(0,0,0,.36), inset 0 1px 1px #fff)
+		+g(#ececec, #fff)
+		&:hover,
+		&:active
+			z-index: 1001 !important
+		strong
+			font-weight: normal
+			color: #000
+			font-size: 16px
+			+fbold 
+	.caret
+		position: absolute
+		top: 50%
+		margin-top: -3px
+		right: 14px
+		+arr(8,7,#878787,b)
+	.icon-metro
+		position: relative
+		margin-right: 8px
+		top: -3px
+	.dropdown-menu   
+		margin: -41px 0 0  
+		padding-top: 48px 
+		width: 100%
+		border-radius: 3px
+		background: #fff
+		box-shadow: 0 1px 3px #000
+		border: 0
+		+box
+		&:hover,
+		&:active
+			z-index: 1000 !important  
+		ul
+			list-style-type: none 
+			padding: 0
+			margin: 0 6px 0 0  
+			height: 412px
+			overflow-y: auto
+		li
+			padding: 0 9px 0 18px 
+			background: #fff
+			&:first-child
+				a
+					border-top: 0
+			&:hover
+				position: relative
+				z-index: 2  
+				+box-shadow(0 1px 0 #d32900)
+				+g(#e95b37, #d32900)  
+				a
+					border-top-color: #e95b37
+					color: #fff   
+		a
+			display: block
+			padding: 7px 0 
+			font-size: 16px
+			border-top: 1px solid #b2b2b2 
+			color: $dark 
+			&:hover
+				text-decoration: none
+				
+.filter-row
+	border-bottom: 1px solid #e6e6e6 
+	padding: 26px 0 
+	background: $light2
+	.btn-group_tabs
+		float: right

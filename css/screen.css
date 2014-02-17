@@ -1,27 +1,82 @@
 /*done by Coderiver.com.ua */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
-
-body, html { height: 100%; }
-
-img, fieldset, a img { border: none; }
-
 input[type="submit"], button { cursor: pointer; }
 input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner { padding: 0; border: 0; }
 
-textarea { overflow: auto; }
-
-input, button { margin: 0; padding: 0; border: 0; }
+button:active { outline: none !important; }
+button:active:focus { outline: none !important; }
+button:focus { outline: none !important; }
 
 input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus { outline: none; }
 
-ul, ol { list-style-type: none; }
+@font-face { font-family: GEInspiraLight; src: url("fonts/GEInspiraLT.eot"); src: url("fonts/GEInspiraLT.eot?#iefix") format("embedded-opentype"), url("fonts/GEInspiraLT.woff") format("woff"), url("fonts/GEInspiraLT.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
-table { border-spacing: 0; border-collapse: collapse; width: 100%; }
+@font-face { font-family: GEInspiraReg; src: url("fonts/GEInspira.eot"); src: url("fonts/GEInspira.eot?#iefix") format("embedded-opentype"), url("fonts/GEInspira.woff") format("woff"), url("fonts/GEInspira.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-body { font-size: 12px; font-family: Arial, sans-serif; line-height: 1.4; }
+@font-face { font-family: GEInspiraMed; src: url("fonts/GEInspira-Medium.eot"); src: url("fonts/GEInspira-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/GEInspira-Medium.woff") format("woff"), url("fonts/GEInspira-Medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-.l { *zoom: 1; }
-.l:after { content: " "; display: table; clear: both; }
-.l .l-col1 { float: left; width: 20%; }
-.l .l-col2 { float: right; width: 70%; }
+@font-face { font-family: GEInspiraBold; src: url("fonts/GEInspira-Bold.eot"); src: url("fonts/GEInspira-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/GEInspira-Bold.woff") format("woff"), url("fonts/GEInspira-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: PFAgoraRegular; src: url("fonts/PFAgoraSlabPro-Regular.eot"); src: url("fonts/PFAgoraSlabPro-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/PFAgoraSlabPro-Regular.woff") format("woff"), url("fonts/PFAgoraSlabPro-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: PFAgoraBold; src: url("fonts/PFAgoraSlabPro-Bold.eot"); src: url("fonts/PFAgoraSlabPro-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/PFAgoraSlabPro-Bold.woff") format("woff"), url("fonts/PFAgoraSlabPro-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+body { min-width: 1400px; background: #fafafa; color: #858585; font-family: "GEInspiraReg", Arial, sans-serif; line-height: 1.5; font-size: 13px; }
+
+.container { margin: 0 auto; width: 970px; }
+
+.row { margin: 0; }
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 { padding: 0; }
+
+.page-header { -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); }
+.page-header .btn_red { float: right; }
+.page-header .btn-group_simple { float: left; margin: 12px 0 0 32px; }
+
+.logo { float: left; background: url('../img/icons-s7743557ced.png') 0 0 no-repeat; width: 176px; height: 43px; }
+
+.btn-group_lang { float: right; margin: 8px 22px 0 0; font-size: 14px; color: #373737; }
+.btn-group_lang:hover .caret { border-color: red transparent transparent transparent; }
+.btn-group_lang.open { background: #4c4c4c; border-radius: 5px; }
+.btn-group_lang.open .btn { background: #4c4c4c; }
+.btn-group_lang.open .btn .caret { width: 0px; height: 0px; border-style: solid; border-width: 0 5px 6px 5px; border-color: transparent transparent white transparent; }
+.btn-group_lang .btn { position: relative; padding: 3px 7px 3px 9px; z-index: 1001; border-radius: 5px; background: white; border: 0; -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+.btn-group_lang .btn .icon { position: relative; top: -3px; margin-right: 8px; }
+.btn-group_lang .dropdown-menu { margin-top: -1px; padding: 0; overflow: hidden; width: 110px; border-radius: 3px; background: white; border: 0; -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+.btn-group_lang .dropdown-menu li a { padding: 8px 9px; }
+.btn-group_lang .dropdown-menu li a:hover { color: white; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ea5f3d), color-stop(100%, #d42b02)); background-image: -webkit-linear-gradient(#ea5f3d, #d42b02); background-image: -moz-linear-gradient(#ea5f3d, #d42b02); background-image: -o-linear-gradient(#ea5f3d, #d42b02); background-image: linear-gradient(#ea5f3d, #d42b02); }
+.btn-group_lang .dropdown-menu li .icon { position: static; margin-right: 5px; }
+
+.caret { display: inline-block; vertical-align: middle; width: 0px; height: 0px; border-style: solid; border-width: 6px 5px 0 5px; border-color: black transparent transparent transparent; }
+
+.btn_red { padding: 10px 12px; width: 192px; text-align: center; color: white; border-radius: 4px; font-family: "GEInspiraBold", Arial, sans-serif; font-size: 16px; text-shadow: 0 1px 1px #6e1500; box-shadow: 0 2px 1px #961c00, inset 0 1px 1px #ffc2b4; background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #c82700), color-stop(100%, #e72d00)), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(-48.23%, #e72d00), color-stop(-47.23%, #c82700)); background-image: -webkit-linear-gradient(bottom, #c82700 0%, #e72d00 100%), -webkit-linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%); background-image: -moz-linear-gradient(bottom, #c82700 0%, #e72d00 100%), -moz-linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%); background-image: -o-linear-gradient(bottom, #c82700 0%, #e72d00 100%), -o-linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%); background-image: linear-gradient(bottom, #c82700 0%, #e72d00 100%), linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%); }
+.btn_red:hover { color: white; background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #af2200), color-stop(100%, #cf2a03)), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(-48.23%, #e72d00), color-stop(-47.23%, #c82700)); background-image: -webkit-linear-gradient(bottom, #af2200 0%, #cf2a03 100%), -webkit-linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%); background-image: -moz-linear-gradient(bottom, #af2200 0%, #cf2a03 100%), -moz-linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%); background-image: -o-linear-gradient(bottom, #af2200 0%, #cf2a03 100%), -o-linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%); background-image: linear-gradient(bottom, #af2200 0%, #cf2a03 100%), linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%); }
+.btn_red:active { color: white; box-shadow: inset 0 2px 5px #731600; background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #b32200), color-stop(100%, #c82700)), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(-48.23%, #e72d00), color-stop(-47.23%, #c82700)); background-image: -webkit-linear-gradient(bottom, #b32200 0%, #c82700 100%), -webkit-linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%); background-image: -moz-linear-gradient(bottom, #b32200 0%, #c82700 100%), -moz-linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%); background-image: -o-linear-gradient(bottom, #b32200 0%, #c82700 100%), -o-linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%); background-image: linear-gradient(bottom, #b32200 0%, #c82700 100%), linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%); }
+.btn_red:focus { color: white; }
+
+.btn-group_simple .btn { padding: 0; border: 0; }
+.btn-group_simple .btn:active { background: none; }
+.btn-group_simple:hover .btn { background: none; }
+.btn-group_simple:hover strong { color: #db2b00; }
+.btn-group_simple.open strong { color: red; }
+.btn-group_simple.open:hover .btn { background: none; }
+.btn-group_simple.open:hover strong { color: red; }
+.btn-group_simple strong { display: inline-block; margin-right: 3px; border-bottom: 2px dotted rgba(61, 46, 46, 0.4); font-weight: normal; font-family: "GEInspiraBold", Arial, sans-serif; line-height: 1.1; color: #373737; font-size: 15px; }
+.btn-group_simple .icon { position: relative; top: -4px; margin-right: 3px; }
+.btn-group_simple .dropdown-menu { margin-top: 10px; padding: 0; overflow: hidden; border-radius: 3px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); border: 0; }
+.btn-group_simple .dropdown-menu li { border-top: 1px solid #dfdfdf; }
+.btn-group_simple .dropdown-menu li:first-child { border-top: 0; }
+.btn-group_simple .dropdown-menu a { padding: 8px 16px 8px 24px; font-size: 14px; color: #373737; }
+.btn-group_simple .dropdown-menu sup { color: #7f7f7f; }
+
+.l-cols { *zoom: 1; }
+.l-cols:after { content: " "; display: table; clear: both; }
+.l-cols .l-col1 { float: left; width: 29%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.l-cols .l-col2 { float: right; width: 70%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.icon { display: inline-block; vertical-align: middle; }
+
+.icon-lang-rus { background: url('../img/icons-s7743557ced.png') 0 -162px no-repeat; width: 16px; height: 11px; }
+
+.icon-lang-eng { background: url('../img/icons-s7743557ced.png') 0 -113px no-repeat; width: 16px; height: 11px; }
+
+.icon-earth { background: url('../img/icons-s7743557ced.png') 0 -134px no-repeat; width: 18px; height: 18px; }

@@ -1,49 +1,113 @@
-// # SHORT HOWTO
-// ## Sprites
-//     .whatever
-//          +sized-sprite($icons, coderiver) //or
-// 			+s(codedby) //gets default value for spritemap as $icons
-// ### animation example
-//     +include keyframes(rotate)
-//        from
-//           +rotate(0)
-//        to
-//           +rotate(360)
-// ## animation usage
-//     body:hover
-// 	    +animation(rotate 200s linear infinite)
-// ## animations easing, see easings.net for full list and examples, tnx @ai
-//     transition: all 1.2s ceaser($ease-in)
-// ## gradient example
-//     +background-image(linear-gradient(#232323, #5c5c5c));
-//     +g(#232323, #5c5c5c);
-//	   horizontal
-//     +gh(#232323, #5c5c5c);
-// ## making bw-images
-//     img
-//			@extend %gray
-// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
-//     +min-screen(320)
-//			display: none
-// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
-//
-// ## use cycles
-//     @for $i from 1 through 3
-//       .item-#{$i}
-//			width: 2em * $i;
-//     @each $s in a,b,c
-// 	    	#{$s}
-//				display: none
-// ## fonts 
-// Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)  
-// =book
-// 	font-family: "book",arial,sans-serif 
-	
+// ------------------ main settings -------------------------- //
+input[type="submit"],
+button
+	cursor: pointer
+	&::-moz-focus-inner
+		padding: 0
+		border: 0
+button
+	&:active
+		outline: none !important
+		&:focus
+			outline: none !important
+	&:focus
+		outline: none !important
+input, textarea, select,button,
+h1,h2,h3,h4,h5,h6,a,span,a:focus 
+	outline: none
++font(GEInspiraLight, GEInspiraLT)  
++font(GEInspiraReg, GEInspira)  
++font(GEInspiraMed, GEInspira-Medium)  
++font(GEInspiraBold, GEInspira-Bold)  
++font(PFAgoraRegular, PFAgoraSlabPro-Regular)
++font(PFAgoraBold, PFAgoraSlabPro-Bold)
+=flight
+	font-family: "GEInspiraLight", Arial, sans-serif 
+=freg
+	font-family: "GEInspiraReg", Arial, sans-serif 
+=fmed
+	font-family: "GEInspiraMed", Arial, sans-serif 
+=fbold
+	font-family: "GEInspiraBold", Arial, sans-serif 
+=freg2
+	font-family: "PFAgoraRegular", Verdana, Arial, sans-serif 
+=fbold2
+	font-family: "PFAgoraBold", Verdana, Arial, sans-serif 
+$light: #fafafa
+$text: #858585
+$dark: #4c4c4c
+$dark_gray: #373737
 body
-	font-size: 12px 
-	font-family: Arial, sans-serif 
-	line-height: 1.4
+	min-width: 1400px
+	background: $light 
+	color: $text
+	+freg
+	line-height: 1.5  
+	font-size: 13px 
+.container
+	margin: 0 auto 
+	width: 970px
+.row
+	margin: 0
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12
+	padding: 0
 
+// ------------------ main settings -------------------------- //
+.page-header
+	+box-shadow(0 0 3px rgba(0,0,0,.5))
+	.btn_red
+		float: right
+	.btn-group_simple
+		float: left
+		margin: 12px 0 0 32px 
+.logo
+	float: left
+	+s(logo)     
+.btn-group_lang
+	float: right
+	margin: 8px 22px 0 0
+	font-size: 14px
+	color: $dark_gray 
+	&:hover
+		.caret
+			border-color: #f00 transparent transparent transparent
+	&.open
+		background: $dark
+		border-radius: 5px
+		.btn
+			background: $dark 
+			.caret
+				+arr(10,6,#fff,t)
+	.btn
+		position: relative
+		padding: 3px 7px 3px 9px 
+		z-index: 1001
+		border-radius: 5px
+		background: #fff
+		border: 0
+		+box-shadow(0 1px 1px rgba(0,0,0,.2))
+		.icon
+			position: relative
+			top: -3px
+			margin-right: 8px
 
-// common blocks
+	.dropdown-menu 
+		margin-top: -1px
+		padding: 0 
+		overflow: hidden
+		width: 110px
+		border-radius: 3px
+		background: #fff
+		border: 0
+		+box-shadow(0 1px 1px rgba(0,0,0,.2))
+		li
+			border-top 1px solid #dfdfdf
+			a
+				padding: 8px 9px      
+				&:hover
+					color: #fff 
+					+g(#ea5f3d, #d42b02)      
+			.icon
+				position: static
+				margin-right: 5px
+

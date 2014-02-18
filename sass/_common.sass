@@ -274,4 +274,97 @@ body
 .item__main
 	padding: 0 19px 19px
 	font-size: 15px
-	color: #858585 
+	color: #858585
+	
+.page-footer
+	padding-top: 41px
+	height: 203px
+	+box
+	background: url(../img/footer-bg.png) 50% 0 repeat
+.page-footer__soc
+	float: left
+.page-footer__counter
+	float: left
+	margin-left: 37px
+.page-footer__created
+	float: right
+	margin-top: 54px
+	color: #807d78 
+.page-footer__title
+	margin-bottom: 15px
+	font-size: 16px
+	letter-spacing: 2px
+	color: #fff
+	text-transform: uppercase
+	+fbold 
+.counter
+	display: inline-block
+	vertical-align: middle
+	font-size: 0
+	div
+		position: relative
+		display: inline-block
+		margin-right: 7px
+		vertical-align: middle
+		&:first-child
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				left: -5px
+				margin-top: -3px
+				width: 3px
+				height: 6px
+				background: #666  
+				border-radius: 5px
+		&:after
+			content: ""
+			position: absolute
+			top: 50%
+			right: -5px
+			margin-top: -3px
+			width: 3px
+			height: 6px
+			background: #666  
+			border-radius: 5px
+	span
+		display: block
+		position: relative
+		z-index: 2
+		text-align: center
+		width: 45px
+		height: 52px
+		line-height: 52px
+		color: #fff
+		+fbold 
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			height: 25px 
+			background: #000 
+		&:before
+			top: 0
+		&:after
+			bottom: 0
+	i
+		position: relative
+		z-index: 2
+		font-style: normal
+		font-size: 50px
+			
+.counter-text
+	display: inline-block
+	margin-left: 8px
+	vertical-align: middle
+	+fbold  
+	font-size: 16px
+	color: #a8a8a8
+	line-height: 1 
+.logo-created
+	display: inline-block
+	margin-left: 10px
+	vertical-align: middle
+	+s(logo-created)   

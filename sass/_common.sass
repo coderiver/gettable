@@ -38,8 +38,8 @@ $light2: #f7f7f7
 $text: #858585
 $dark: #4c4c4c
 $dark_gray: #373737
-$dark_gray: #373737
 $red: #dc2b00
+$green: #84cf23
 html
 	+scrollbar
 		width: 6px
@@ -51,6 +51,8 @@ html
 	+scrollbar-track-piece 
 		width: 6px 
 		border-radius: 3px
+	+selection
+		background: rgba(19, 122, 233, .2)
 
 body
 	min-width: 1400px
@@ -223,8 +225,53 @@ body
 				text-decoration: none
 				
 .filter-row
-	border-bottom: 1px solid #e6e6e6 
 	padding: 26px 0 
 	background: $light2
 	.btn-group_tabs
 		float: right
+		
+.main-col__top
+	padding-top: 8px
+	+clr
+	.title
+		float: left
+	.filter-view
+		float: right
+		margin-top: 22px
+
+.items-wrap
+	padding-top: 12px
+	+clr
+.item
+	margin-bottom: 17px
+	border: 1px solid #e5e5e5
+	width: 315px
+	+box
+	+tr(box-shadow .2s linear)
+	&:hover
+		+box-shadow(0 0 4px rgba(0,0,0,.2))
+	.title
+		a
+			color: #000
+			&:hover
+				text-decoration: none
+.item__img
+	position: relative
+	text-align: center
+	height: 203px
+	overflow: hidden
+	text-align: center
+	.time
+		position: absolute
+		bottom: 15px
+		left: 20px
+		line-height: 1
+	.like
+		position: absolute
+		right: 20px
+		bottom: 15px
+		line-height: 1
+.item__main
+	padding: 0 19px 19px
+	font-size: 15px
+	color: #858585 

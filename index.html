@@ -10,6 +10,7 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/masonry.pkgd.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -81,26 +82,182 @@
 							</ul>
 						</div>
 					</div>
-					<div class="btn-group tn-group-lg btn-group_tabs">
-					  <button type="button" class="btn btn-default">Популярные</button>
-					  <button type="button" class="btn btn-default">Новинки</button>
-					  <button type="button" class="btn btn-default">Акции</button>
+					<div class="btn-group btn-group-lg btn-group_tabs">
+						<button type="button" class="btn btn-default">Популярные</button>
+						<button type="button" class="btn btn-default">Новинки</button>
+						<button type="button" class="btn btn-default">Акции</button>
 					</div>
 	  			</div>
 			</div>
 		</div>
 	</div>
 	<!-- END filter-row -->
-	<!-- BEGIN container -->
-	<div class="container">
-		<div class="l-cols">
-			<aside class="l-col1">
-
-			</aside>
-  			<div class="l-col2">
-  			</div>
+	<!-- BEGIN main-aection -->
+	<div class="main-section">
+		<div class="container">
+			<div class="l-cols">
+				<aside class="l-col1 sidebar">
+					<div class="sidebar__item">
+						<h2 class="sidebar__title">Средний чек</h2>
+						<div class="btn-group btn-group-justified">
+							<div class="btn-group btn-group_tabs">
+								<button type="button" class="btn btn-default">P</button>
+							</div>
+							<div class="btn-group btn-group_tabs">
+								<button type="button" class="btn btn-default">PP</button>
+							</div>
+						  	<div class="btn-group btn-group_tabs">
+								<button type="button" class="btn btn-default">PPP</button>
+						  	</div>
+						</div>
+					</div>
+					<div class="sidebar__item">
+						<div class="filter-icon">
+							<a href="#" class="filter-icon__first"></a>
+							<a href="#" class="filter-icon__second is-active"></a>
+							<a href="#" class="filter-icon__third"></a>
+							<a href="#" class="filter-icon__fourth"></a>
+						</div>
+					</div>
+					<div class="sidebar__item sidebar__food">
+						<h2 class="sidebar__title">Атмосфера и еда</h2>
+					</div>
+					<div class="sidebar__item sidebar__night-life">
+						<h2 class="sidebar__title">Ночная жизнь</h2>
+						<div class="checkbox">
+						    <label class="checkbox__in">
+								<input type="checkbox" checked> 
+								<span>С танцполом</span>
+						    </label>
+						</div>
+						<div class="checkbox">
+						    <label class="checkbox__in">
+								<input type="checkbox"> 
+								<span>Караоке бар</span>
+						    </label>
+						</div>
+						<div class="checkbox">
+						    <label class="checkbox__in">
+								<input type="checkbox" checked> 
+								<span>Стриптиз клуб</span>
+						    </label>
+						</div>
+						<div class="checkbox">
+						    <label class="checkbox__in">
+								<input type="checkbox"> 
+								<span>Паб </span>
+						    </label>
+						</div>
+					</div>
+				</aside>
+	  			<div class="l-col2 main-col">
+	  				<div class="main-col__top">
+	  					<h2 class="title">Нашлось 25 ресторанов:</h2>
+	  					<div class="filter-view">
+	  						<a href="#" class="is-active">
+	  							<i class="icon icon-list"></i>
+	  							<span>Список</span>
+	  						</a>
+	  						<a href="#">
+	  							<i class="icon icon-point"></i>
+	  							<span>На карте</span>
+	  						</a>
+	  					</div>
+	  				</div>
+	  				<div class="items-wrap js-masonry" data-masonry-options='{"columnWidth": 315, "gutter": 17, "itemSelector": ".js-item-masonry" }'>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Soprano by Gianni</a></h2>
+	  							<p>Древние методики хранения и приготовления пищи, а также рецепты, которым более 400 лет</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>Круглосуточно</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Follow Me Cafe</a></h2>
+	  							<p>Микс кухонь мира</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Soprano by Gianni</a></h2>
+	  							<p>Ресторан грузинской кухни в ТЦ «Кутузов-холл» на Минской улице</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Булка на Большой Грузинской</a></h2>
+	  							<p>Не совсем ресторан — это хлебный ­магазин при пекарне, в котором можно выпить кофе</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Soprano by Gianni</a></h2>
+	  							<p>Древние методики хранения и приготовления пищи, а также рецепты, которым более 400 лет</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>Круглосуточно</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Follow Me Cafe</a></h2>
+	  							<p>Микс кухонь мира</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Soprano by Gianni</a></h2>
+	  							<p>Ресторан грузинской кухни в ТЦ «Кутузов-холл» на Минской улице</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Булка на Большой Грузинской</a></h2>
+	  							<p>Не совсем ресторан — это хлебный ­магазин при пекарне, в котором можно выпить кофе</p>
+	  						</div>
+	  					</div>
+	  				</div>
+	  			</div>
+			</div>
 		</div>
 	</div>
-	<!-- END container -->
+	<!-- END main-aection -->
 </body>
 </html>

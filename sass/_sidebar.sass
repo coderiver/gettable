@@ -1,2 +1,41 @@
-.input-group_search
-    
+.sidebar
+    border-right: 1px solid #e4e4e4  
+.sidebar__title
+    margin: 0
+    font-size: 16px
+    font-weight: normal
+    color: #666
+    +fbold
+    text-transform: uppercase    
+.sidebar__item
+    border-bottom: 1px solid #e4e4e4    
+    padding: 21px 19px 21px 0
+    .btn-group-justified
+        margin-top: 10px
+.sidebar__food
+    .sidebar__title
+        color: #949494 
+.sidebar__night-life
+    .sidebar__title
+        margin-bottom: 18px
+        color: #000 
+.filter-icon
+    a
+        display: inline-block
+        margin-left: 40px
+        vertical-align: middle
+        +gray
+        +opacity(.4)
+        &:first-child
+            margin-left: 0
+        &.is-active
+            +gray-zero
+            +opacity(1)
+.filter-icon__first
+    +s(icon-filter-first)
+.filter-icon__second
+    +s(icon-filter-second)
+.filter-icon__third
+    +s(icon-filter-third)
+.filter-icon__fourth
+    +s(icon-filter-fourth)

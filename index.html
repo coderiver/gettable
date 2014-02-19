@@ -11,6 +11,7 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/masonry.pkgd.js"></script>
+	<script src="js/cycle.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -95,9 +96,99 @@
 				</div>
 			</div>
 		</div>
+		<div class="cycle-slideshow"
+			data-cycle-fx="scrollHorz"
+    		data-cycle-slides="> div"
+    		data-cycle-speed="500"
+    		data-cycle-pager=".js-slider-pager"
+    		data-cycle-pager-template="<button></button>"
+    		data-cycle-pager-active-class="is-active"
+    	>
+		    <div class="slider__item">
+		    	<img src="http://lorempixel.com/1920/416">
+		    	<div class="container">
+		    		<div class="slider__title">
+		    			<span>Лучший выбор</span>
+		    			500+ самых интересных ресторанов на одном сайте
+		    		</div>
+		    		<div class="slider__img">
+		    			<img src="img//map.png" alt="">
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="slider__item">
+		    	<img src="http://lorempixel.com/1920/416">
+		    	<div class="container">
+		    		<div class="slider__title">
+		    			<span>Лучший выбор</span>
+		    			500+ самых интересных ресторанов на одном сайте
+		    		</div>
+		    		<div class="slider__img">
+		    			<img src="img//map.png" alt="">
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="slider__item">
+		    	<img src="http://lorempixel.com/1920/416">
+		    	<div class="container">
+		    		<div class="slider__title">
+		    			<span>Лучший выбор</span>
+		    			500+ самых интересных ресторанов на одном сайте
+		    		</div>
+		    		<div class="slider__img">
+		    			<img src="img//map.png" alt="">
+		    		</div>
+		    	</div>
+		    </div>
+		</div>
+		<div class="slider__pager js-slider-pager"></div>
 	</div>
 	<!-- END slider -->
-
+	<div class="section-kitchen">
+		<div class="container">
+			<h2 class="main-title">
+				<a href="#" class="is-active">Выбрать кухню</a> 
+				<span>или</span> 
+				<a href="#">где отдохнуть</a>
+			</h2>
+			<div class="kitchen-wrap">
+				<a href="#" class="kitchen">
+					<div class="kitchen__img">
+						<img src="img/kitchen1.png" alt="">
+					</div>
+					<span>Итальянская кухня</span>
+				</a>
+				<a href="#" class="kitchen">
+					<div class="kitchen__img">
+						<img src="img/kitchen2.png" alt="">
+					</div>
+					<span>Русская кухня</span>
+				</a>
+				<a href="#" class="kitchen">
+					<div class="kitchen__img">
+						<img src="img/kitchen3.png" alt="">
+					</div>
+					<span>Японская кухня</span>
+				</a>
+				<a href="#" class="kitchen">
+					<div class="kitchen__img">
+						<img src="img/kitchen4.png" alt="">
+					</div>
+					<span>Грузинская кухня</span>
+				</a>
+				<a href="#" class="kitchen">
+					<div class="kitchen__img">
+						<img src="img/kitchen5.png" alt="">
+					</div>
+					<span>Китайская кухня</span>
+				</a>
+			</div>
+			<div class="to-center">
+				<!-- <a href="#" class="simple-btn"></a> -->
+				<button type="button" class="btn btn_simple btn-default">Показать все рестораны</button>
+			</div>
+		</div>
+	</div>
 	<!-- BEGIN footer -->
 	<div class="page-footer clearfix">
 		<div class="container">

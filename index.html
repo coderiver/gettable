@@ -12,6 +12,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/masonry.pkgd.js"></script>
 	<script src="js/cycle.js"></script>
+	<script src="js/jquery.cycle2.carousel.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -144,6 +145,7 @@
 		<div class="slider__pager js-slider-pager"></div>
 	</div>
 	<!-- END slider -->
+	<!-- BEGIN Kitchen -->
 	<div class="section-kitchen">
 		<div class="container">
 			<h2 class="main-title">
@@ -189,30 +191,238 @@
 			</div>
 		</div>
 	</div>
+	<!-- END Kitchen -->
+	<!-- BEGIN carousel -->
+	<div class="carousel">
+		<div class="container">
+			<h2 class="main-title">
+				<i class="icon icon-city"></i>
+				Известные городские сети:
+			</h2>
+			<div class="cycle-slideshow"
+				data-cycle-fx="carousel"
+	    		data-cycle-slides="> div"
+	    		data-cycle-speed="500"
+	    		data-cycle-prev=".js-carousel-prev"
+	    		data-cycle-next=".js-carousel-next"
+	    		data-cycle-carousel-visible="4"
+	    		data-cycle-pager=".js-carousel-pager"
+	    		data-cycle-pager-template="<button></button>"
+	    		data-cycle-pager-active-class="is-active"
+	    	>
+			    <div class="carousel__item">
+			    	<a href="#"><img src="img/slide1.png" width="213" height="213"></a>
+			    	<a href="#" class="carousel__title">GinzaProject</a>
+			    	<a href="#" class="carousel__link">25 ресторанов</a>
+			    </div>
+			    <div class="carousel__item">
+			    	<a href="#"><img src="img/slide2.png" width="213" height="213"></a>
+			    	<a href="#" class="carousel__title">GinzaProject</a>
+			    	<a href="#" class="carousel__link">25 ресторанов</a>
+			    </div>
+			    <div class="carousel__item">
+			    	<a href="#"><img src="img/slide3.png" width="213" height="213"></a>
+			    	<a href="#" class="carousel__title">GinzaProject</a>
+			    	<a href="#" class="carousel__link">25 ресторанов</a>
+			    </div>
+			    <div class="carousel__item">
+			    	<a href="#"><img src="img/slide4.png" width="213" height="213"></a>
+			    	<a href="#" class="carousel__title">GinzaProject</a>
+			    	<a href="#" class="carousel__link">25 ресторанов</a>
+			    </div>
+			</div>
+			<button class="btn-prev js-carousel-prev"></button>
+			<button class="btn-next js-carousel-next"></button>
+		</div>
+		<div class="carousel__pager js-carousel-pager"></div>
+	</div>
+	<!-- BEGIN carousel -->
+	<!-- BEGIN carousel -->
+	<div class="funny-slider">
+		<div class="container">
+			<h2 class="main-title">
+				<i class="icon icon-star"></i>
+				Лучшие заведения Москвы
+			</h2>
+			<div class="to-center">			
+				<div class="btn-group btn-group-lg btn-group_tabs">
+					<button type="button" class="btn btn-default is-active">
+						<i class="icon icon-filter-best"></i>Лучшее
+					</button>
+					<button type="button" class="btn btn-default">
+						<i class="icon icon-filter-new"></i>Новинки
+					</button>
+					<button type="button" class="btn btn-default">
+						<i class="icon icon-filter-club"></i>Бары и клубы
+					</button>
+				</div>
+				<div class="radio-group">
+					<label class="radio-label">
+				    	<input type="radio" name="optionsRadios" >
+				    	<span>С видом </span>
+					</label>
+					<label class="radio-label">
+				    	<input type="radio" name="optionsRadios" >
+				    	<span>В центре</span>
+					</label>
+					<label class="radio-label">
+				    	<input type="radio" name="optionsRadios" >
+				    	<span>До поздна</span>
+					</label>
+					<label class="radio-label">
+				    	<input type="radio" name="optionsRadios" >
+				    	<span>С кальяном </span>
+					</label>          
+				</div>         
+			</div>
+			<!-- <div class="cycle-slideshow"
+				data-cycle-fx="carousel"
+	    		data-cycle-slides="> div"
+	    		data-cycle-speed="500"
+	    		data-cycle-prev=".js-funny-prev"
+	    		data-cycle-next=".js-funny-next"
+	    		data-cycle-carousel-visible="3"
+	    		data-cycle-pager=".js-funny-pager"
+	    		data-cycle-pager-template="<button></button>"
+	    		data-cycle-pager-active-class="is-active"
+	    	>
+			    <div class="place">
+			    	<div class="place__img">
+			    		<img src="http://lorempixel.com/600/350/" alt="" width="600" height="350">
+			    		<div class="place__info">
+			    			<h3 class="place__title"><a href="#">Море суши на улице Миклухо-Маклая</a></h3>
+			    			Большая летняя веранда и ресторан <br> на крыше ТРЦ «Алтуфьевский»
+			    		</div>
+			    		<a href="#" class="like"><i class="icon icon-like"></i>50</a>
+			    	</div>
+			    	<div class="place__meta">
+			    		<div>
+			    			<span>Средний чек: </span> до 1500 руб.
+			    		</div>
+			    		<div>
+			    			Индонезийская кухня
+			    		</div>
+			    		<div>
+			    			<i class="icon icon-metro"></i>Библиотека имени Ленина
+			    		</div>
+			    	</div>
+			    </div>
+			    <div class="place">
+			    	<div class="place__img">
+			    		<img src="http://lorempixel.com/600/350/" alt="" width="600" height="350">
+			    		<div class="place__info">
+			    			<h3 class="place__title"><a href="#">Море суши на улице Миклухо-Маклая</a></h3>
+			    			Большая летняя веранда и ресторан <br> на крыше ТРЦ «Алтуфьевский»
+			    		</div>
+			    		<a href="#" class="like"><i class="icon icon-like"></i>50</a>
+			    	</div>
+			    	<div class="place__meta">
+			    		<div>
+			    			<span>Средний чек: </span> до 1500 руб.
+			    		</div>
+			    		<div>
+			    			Индонезийская кухня
+			    		</div>
+			    		<div>
+			    			<i class="icon icon-metro"></i>Библиотека имени Ленина
+			    		</div>
+			    	</div>
+			    </div>
+			    <div class="place">
+			    	<div class="place__img">
+			    		<img src="http://lorempixel.com/600/350/" alt="" width="600" height="350">
+			    		<div class="place__info">
+			    			<h3 class="place__title"><a href="#">Море суши на улице Миклухо-Маклая</a></h3>
+			    			Большая летняя веранда и ресторан <br> на крыше ТРЦ «Алтуфьевский»
+			    		</div>
+			    		<a href="#" class="like"><i class="icon icon-like"></i>50</a>
+			    	</div>
+			    	<div class="place__meta">
+			    		<div>
+			    			<span>Средний чек: </span> до 1500 руб.
+			    		</div>
+			    		<div>
+			    			Индонезийская кухня
+			    		</div>
+			    		<div>
+			    			<i class="icon icon-metro"></i>Библиотека имени Ленина
+			    		</div>
+			    	</div>
+			    </div>
+			</div>
+			<button class="btn-prev js-funny-prev"></button>
+			<button class="btn-next js-funny-next"></button> -->
+		</div>
+		<!-- <div class="carousel__pager js-funny-pager"></div>
+		<div class="to-center">4 из 59 ресторанов</div> -->
+	</div>
+	<!-- BEGIN carousel -->
 	<!-- BEGIN footer -->
 	<div class="page-footer clearfix">
-		<div class="container">
-			<div class="page-footer__soc">
-				<div class="page-footer__title">Мы в социальных сетях</div>
-				<div class="soc">
-					<a href="#" class="soc__fb"></a>
-					<a href="#" class="soc__od"></a>
-					<a href="#" class="soc__vk"></a>
-					<a href="#" class="soc__tw"></a>
+		<div class="container page-footer__top">
+			<div class="footer__seo">
+				<a href="#" class="logo"></a>
+				<p>© 2012 - 2013 GETTABLE</p>
+				<p>GetTable - быстрейшая служба бронирования столиков в рестораны Москвы. Мы поможем вам выбрать куда сходить сегодня вечером. 500 лучших ресторанов в одном месте! </p>
+				<p>Закажите столик онлайн и за 2 минуты для вас будет забронирован лучший столик, абсолютно бесплатно.</p>
+			</div>
+			<div>
+				<div class="footer__nav">
+					<div class="page-footer__title">КАТЕГОРИИ</div>
+					<ul>
+						<li><a href="#">Новый год</a></li>
+						<li><a href="#">Популярные</a></li>
+						<li><a href="#">Бары и клубы</a></li>
+						<li><a href="#">С видом</a></li>
+						<li><a href="#">Пивные</a></li>
+					</ul>
+				</div>
+				<div class="footer__nav">
+					<ul>
+						<li><a href="#">Итальянская кухня</a></li>
+						<li><a href="#">Русская кухня</a></li>
+						<li><a href="#">Японская кухня</a></li>
+						<li><a href="#">Грузинская кухня</a></li>
+						<li><a href="#">Китайская кухня</a></li>
+					</ul>
+				</div>
+				<div class="footer__nav">
+					<div class="page-footer__title">Полезные ссылки</div>
+					<ul>
+						<li><a href="#">Блог</a></li>
+						<li><a href="#">Наши партнеры</a></li>
+						<li><a href="#">Для ресторанов</a></li>
+						<li><a href="#">Оферта</a></li>
+						<li><a href="#">Пользовательское соглашение</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
 				</div>
 			</div>
-			<div class="page-footer__counter">
-				<div class="page-footer__title">Сегодня забронировали</div>
-				<div class="counter">
-					<div><span><i>2</i></span></div>
-					<div><span><i>3</i></span></div>
-					<div><span><i>5</i></span></div>
-					<div><span><i>7</i></span></div>
+		</div>
+		<div class="page-footer__bottom">
+			<div class="container">
+				<div class="page-footer__soc">
+					<div class="page-footer__title">Мы в социальных сетях</div>
+					<div class="soc">
+						<a href="#" class="soc__fb"></a>
+						<a href="#" class="soc__od"></a>
+						<a href="#" class="soc__vk"></a>
+						<a href="#" class="soc__tw"></a>
+					</div>
 				</div>
-				<div class="counter-text">человек <br>через GetTable</div>
-			</div>
-			<div class="page-footer__created">
-				Дизайн от <a href="#" class="logo-created"></a>.com
+				<div class="page-footer__counter">
+					<div class="page-footer__title">Сегодня забронировали</div>
+					<div class="counter">
+						<div><span><i>2</i></span></div>
+						<div><span><i>3</i></span></div>
+						<div><span><i>5</i></span></div>
+						<div><span><i>7</i></span></div>
+					</div>
+					<div class="counter-text">человек <br>через GetTable</div>
+				</div>
+				<div class="page-footer__created">
+					Дизайн от <a href="#" class="logo-created"></a>.com
+				</div>
 			</div>
 		</div>
 	</div>

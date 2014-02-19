@@ -1,0 +1,291 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" media="screen" href="css/bootstrap.css" >
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/masonry.pkgd.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+	<!-- BEGIN header -->
+	<div class="page-header clearfix">
+		<div class="container">
+			<a href="#" class="logo"></a>
+			<button type="button" class="btn btn_red">Вход / Регистрация</button>
+			<div class="btn-group btn-group_simple">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<i class="icon icon-earth"></i>
+					<strong>Санкт-Петербург</strong>
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Москва <sup>557</sup></a></li>
+					<li><a href="#">Санкт-Петербург <sup>256</sup></a></li>
+				</ul>
+			</div>
+			<div class="btn-group btn-group_lang">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<i class="icon icon-lang-rus"></i><span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#"><i class="icon icon-lang-rus"></i>Русский</a></li>
+					<li><a href="#"><i class="icon icon-lang-eng"></i>English</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- END header -->
+	<!-- BEGIN filter-row -->
+	<div class="filter-row">
+		<div class="container container_filter">
+			<div class="l-cols">
+				<div class="l-col1">
+					<div class="input-group input-group_search">
+				    	<input type="text" class="form-control" placeholder="Названию ресторана...">
+				    	<i></i>
+				    </div>
+				</div>
+	  			<div class="l-col2">
+	  				<div class="btn-group btn-group_metro tn-group-lg">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+							<i class="icon icon-metro"></i>
+							<strong>Станция метро</strong>
+							<span class="caret"></span>
+						</button>
+						<div class="dropdown-menu" role="menu">
+							<ul>
+								<li><a href="#">Авиамоторная</a></li>
+								<li><a href="#">Авиатора</a></li>
+								<li><a href="#">Авганца</a></li>
+								<li><a href="#">Армяна</a></li>
+								<li><a href="#">Бауманская</a></li>
+								<li><a href="#">Батрудинова</a></li>
+								<li><a href="#">Бубусика</a></li>
+								<li><a href="#">Динамо</a></li>
+								<li><a href="#">Даниела Спэтару</a></li>
+								<li><a href="#">Авиамоторная</a></li>
+								<li><a href="#">Авиатора</a></li>
+								<li><a href="#">Авганца</a></li>
+								<li><a href="#">Армяна</a></li>
+								<li><a href="#">Бауманская</a></li>
+								<li><a href="#">Батрудинова</a></li>
+								<li><a href="#">Бубусика</a></li>
+								<li><a href="#">Динамо</a></li>
+								<li><a href="#">Даниела Спэтару</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="btn-group btn-group-lg btn-group_tabs">
+						<button type="button" class="btn btn-default">Популярные</button>
+						<button type="button" class="btn btn-default">Новинки</button>
+						<button type="button" class="btn btn-default">Акции</button>
+					</div>
+	  			</div>
+			</div>
+		</div>
+	</div>
+	<!-- END filter-row -->
+	<!-- BEGIN main-aection -->
+	<div class="main-section">
+		<div class="container">
+			<div class="l-cols">
+				<aside class="l-col1 sidebar">
+					<div class="sidebar__item">
+						<h2 class="sidebar__title">Средний чек</h2>
+						<div class="btn-group btn-group-justified">
+							<div class="btn-group btn-group_tabs">
+								<button type="button" class="btn btn-default">P</button>
+							</div>
+							<div class="btn-group btn-group_tabs">
+								<button type="button" class="btn btn-default">PP</button>
+							</div>
+						  	<div class="btn-group btn-group_tabs">
+								<button type="button" class="btn btn-default">PPP</button>
+						  	</div>
+						</div>
+					</div>
+					<div class="sidebar__item">
+						<div class="filter-icon">
+							<a href="#" class="filter-icon__first"></a>
+							<a href="#" class="filter-icon__second is-active"></a>
+							<a href="#" class="filter-icon__third"></a>
+							<a href="#" class="filter-icon__fourth"></a>
+						</div>
+					</div>
+					<div class="sidebar__item sidebar__food">
+						<h2 class="sidebar__title">Атмосфера и еда</h2>
+					</div>
+					<div class="sidebar__item sidebar__night-life">
+						<h2 class="sidebar__title">Ночная жизнь</h2>
+						<div class="checkbox">
+						    <label class="checkbox__in">
+								<input type="checkbox" checked> 
+								<span>С танцполом</span>
+						    </label>
+						</div>
+						<div class="checkbox">
+						    <label class="checkbox__in">
+								<input type="checkbox"> 
+								<span>Караоке бар</span>
+						    </label>
+						</div>
+						<div class="checkbox">
+						    <label class="checkbox__in">
+								<input type="checkbox" checked> 
+								<span>Стриптиз клуб</span>
+						    </label>
+						</div>
+						<div class="checkbox">
+						    <label class="checkbox__in">
+								<input type="checkbox"> 
+								<span>Паб </span>
+						    </label>
+						</div>
+					</div>
+				</aside>
+	  			<div class="l-col2 main-col">
+	  				<div class="main-col__top">
+	  					<h2 class="title">Нашлось 25 ресторанов:</h2>
+	  					<div class="filter-view">
+	  						<a href="#" class="is-active">
+	  							<i class="icon icon-list"></i>
+	  							<span>Список</span>
+	  						</a>
+	  						<a href="#">
+	  							<i class="icon icon-point"></i>
+	  							<span>На карте</span>
+	  						</a>
+	  					</div>
+	  				</div>
+	  				<div class="items-wrap js-masonry" data-masonry-options='{"columnWidth": 315, "gutter": 17, "itemSelector": ".js-item-masonry" }'>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Soprano by Gianni</a></h2>
+	  							<p>Древние методики хранения и приготовления пищи, а также рецепты, которым более 400 лет</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>Круглосуточно</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Follow Me Cafe</a></h2>
+	  							<p>Микс кухонь мира</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Soprano by Gianni</a></h2>
+	  							<p>Ресторан грузинской кухни в ТЦ «Кутузов-холл» на Минской улице</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Булка на Большой Грузинской</a></h2>
+	  							<p>Не совсем ресторан — это хлебный ­магазин при пекарне, в котором можно выпить кофе</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Soprano by Gianni</a></h2>
+	  							<p>Древние методики хранения и приготовления пищи, а также рецепты, которым более 400 лет</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>Круглосуточно</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Follow Me Cafe</a></h2>
+	  							<p>Микс кухонь мира</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Soprano by Gianni</a></h2>
+	  							<p>Ресторан грузинской кухни в ТЦ «Кутузов-холл» на Минской улице</p>
+	  						</div>
+	  					</div>
+	  					<div class="item js-item-masonry">
+	  						<div class="item__img">
+	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
+	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
+	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  						</div>
+	  						<div class="item__main">
+	  							<h2 class="title"><a href="#">Булка на Большой Грузинской</a></h2>
+	  							<p>Не совсем ресторан — это хлебный ­магазин при пекарне, в котором можно выпить кофе</p>
+	  						</div>
+	  					</div>
+	  				</div>
+	  			</div>
+			</div>
+		</div>
+	</div>
+	<!-- END main-aection -->
+	<!-- BEGIN footer -->
+	<div class="page-footer clearfix">
+		<div class="container">
+			<div class="page-footer__soc">
+				<div class="page-footer__title">Мы в социальных сетях</div>
+				<div class="soc">
+					<a href="#" class="soc__fb"></a>
+					<a href="#" class="soc__od"></a>
+					<a href="#" class="soc__vk"></a>
+					<a href="#" class="soc__tw"></a>
+				</div>
+			</div>
+			<div class="page-footer__counter">
+				<div class="page-footer__title">Сегодня забронировали</div>
+				<div class="counter">
+					<div><span><i>2</i></span></div>
+					<div><span><i>3</i></span></div>
+					<div><span><i>5</i></span></div>
+					<div><span><i>7</i></span></div>
+				</div>
+				<div class="counter-text">человек <br>через GetTable</div>
+			</div>
+			<div class="page-footer__created">
+				Дизайн от <a href="#" class="logo-created"></a>.com
+			</div>
+		</div>
+	</div>
+	<!-- END footer -->
+</body>
+</html>

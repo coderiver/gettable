@@ -101,12 +101,13 @@
 			data-cycle-fx="scrollHorz"
     		data-cycle-slides="> div"
     		data-cycle-speed="500"
+    		data-cycle-timeout="0"
     		data-cycle-pager=".js-slider-pager"
     		data-cycle-pager-template="<button></button>"
     		data-cycle-pager-active-class="is-active"
     	>
 		    <div class="slider__item">
-		    	<img src="http://lorempixel.com/1920/416">
+		    	<div class="slider__bg"><img src="http://lorempixel.com/1920/416"></div>
 		    	<div class="container">
 		    		<div class="slider__title">
 		    			<span>Лучший выбор</span>
@@ -118,7 +119,7 @@
 		    	</div>
 		    </div>
 		    <div class="slider__item">
-		    	<img src="http://lorempixel.com/1920/416">
+		    	<div class="slider__bg"><img src="http://lorempixel.com/1920/416"></div>
 		    	<div class="container">
 		    		<div class="slider__title">
 		    			<span>Лучший выбор</span>
@@ -130,7 +131,7 @@
 		    	</div>
 		    </div>
 		    <div class="slider__item">
-		    	<img src="http://lorempixel.com/1920/416">
+		    	<div class="slider__bg"><img src="http://lorempixel.com/1920/416"></div>
 		    	<div class="container">
 		    		<div class="slider__title">
 		    			<span>Лучший выбор</span>
@@ -236,8 +237,8 @@
 		</div>
 		<div class="carousel__pager js-carousel-pager"></div>
 	</div>
-	<!-- BEGIN carousel -->
-	<!-- BEGIN carousel -->
+	<!-- END carousel -->
+	<!-- BEGIN funny-slider -->
 	<div class="funny-slider">
 		<div class="container">
 			<h2 class="main-title">
@@ -275,88 +276,191 @@
 					</label>          
 				</div>         
 			</div>
-			<!-- <div class="cycle-slideshow"
-				data-cycle-fx="carousel"
-	    		data-cycle-slides="> div"
-	    		data-cycle-speed="500"
-	    		data-cycle-prev=".js-funny-prev"
-	    		data-cycle-next=".js-funny-next"
-	    		data-cycle-carousel-visible="3"
-	    		data-cycle-pager=".js-funny-pager"
-	    		data-cycle-pager-template="<button></button>"
-	    		data-cycle-pager-active-class="is-active"
-	    	>
-			    <div class="place">
-			    	<div class="place__img">
-			    		<img src="http://lorempixel.com/600/350/" alt="" width="600" height="350">
-			    		<div class="place__info">
-			    			<h3 class="place__title"><a href="#">Море суши на улице Миклухо-Маклая</a></h3>
-			    			Большая летняя веранда и ресторан <br> на крыше ТРЦ «Алтуфьевский»
-			    		</div>
-			    		<a href="#" class="like"><i class="icon icon-like"></i>50</a>
-			    	</div>
-			    	<div class="place__meta">
-			    		<div>
-			    			<span>Средний чек: </span> до 1500 руб.
-			    		</div>
-			    		<div>
-			    			Индонезийская кухня
-			    		</div>
-			    		<div>
-			    			<i class="icon icon-metro"></i>Библиотека имени Ленина
-			    		</div>
-			    	</div>
-			    </div>
-			    <div class="place">
-			    	<div class="place__img">
-			    		<img src="http://lorempixel.com/600/350/" alt="" width="600" height="350">
-			    		<div class="place__info">
-			    			<h3 class="place__title"><a href="#">Море суши на улице Миклухо-Маклая</a></h3>
-			    			Большая летняя веранда и ресторан <br> на крыше ТРЦ «Алтуфьевский»
-			    		</div>
-			    		<a href="#" class="like"><i class="icon icon-like"></i>50</a>
-			    	</div>
-			    	<div class="place__meta">
-			    		<div>
-			    			<span>Средний чек: </span> до 1500 руб.
-			    		</div>
-			    		<div>
-			    			Индонезийская кухня
-			    		</div>
-			    		<div>
-			    			<i class="icon icon-metro"></i>Библиотека имени Ленина
-			    		</div>
-			    	</div>
-			    </div>
-			    <div class="place">
-			    	<div class="place__img">
-			    		<img src="http://lorempixel.com/600/350/" alt="" width="600" height="350">
-			    		<div class="place__info">
-			    			<h3 class="place__title"><a href="#">Море суши на улице Миклухо-Маклая</a></h3>
-			    			Большая летняя веранда и ресторан <br> на крыше ТРЦ «Алтуфьевский»
-			    		</div>
-			    		<a href="#" class="like"><i class="icon icon-like"></i>50</a>
-			    	</div>
-			    	<div class="place__meta">
-			    		<div>
-			    			<span>Средний чек: </span> до 1500 руб.
-			    		</div>
-			    		<div>
-			    			Индонезийская кухня
-			    		</div>
-			    		<div>
-			    			<i class="icon icon-metro"></i>Библиотека имени Ленина
-			    		</div>
-			    	</div>
-			    </div>
+			<div class="cycle-slideshow-wrap">
+				<div class="cycle-slideshow"
+					data-cycle-fx="carousel"
+		    		data-cycle-slides="> div"
+		    		data-cycle-speed="500"
+		    		data-cycle-timeout="0"
+		    		data-cycle-prev=".js-funny-prev"
+		    		data-cycle-next=".js-funny-next"
+		    		data-cycle-carousel-visible="1"
+		    		data-cycle-pager=".js-funny-pager"
+		    		data-cycle-pager-template="<button></button>"
+		    		data-cycle-pager-active-class="is-active"
+		    	>
+				    <div class="place">
+				    	<div class="place__img">
+				    		<img src="http://lorempixel.com/600/350/" alt="" width="600" height="350">
+				    		<div class="place__main">
+					    		<div class="place__info">
+					    			<h3 class="place__title"><a href="#">Море суши на улице Миклухо-Маклая</a></h3>
+					    			Большая летняя веранда и ресторан <br> на крыше ТРЦ «Алтуфьевский»
+					    		</div>
+					    		<a href="#" class="like"><i class="icon icon-like"></i>50</a>
+					    	</div>
+				    	</div>
+				    	<div class="place__meta">
+				    		<div>
+				    			<span>Средний чек: </span> до 1500 руб.
+				    		</div>
+				    		<div>
+				    			Индонезийская кухня
+				    		</div>
+				    		<div>
+				    			<i class="icon icon-metro"></i>Библиотека имени Ленина
+				    		</div>
+				    	</div>
+				    </div>
+				    <div class="place">
+				    	<div class="place__img">
+				    		<img src="http://lorempixel.com/600/350/" alt="" width="600" height="350">
+				    		<div class="place__main">
+					    		<div class="place__info">
+					    			<h3 class="place__title"><a href="#">Море суши на улице Миклухо-Маклая</a></h3>
+					    			Большая летняя веранда и ресторан <br> на крыше ТРЦ «Алтуфьевский»
+					    		</div>
+					    		<a href="#" class="like"><i class="icon icon-like"></i>50</a>
+					    	</div>
+				    	</div>
+				    	<div class="place__meta">
+				    		<div>
+				    			<span>Средний чек: </span> до 1500 руб.
+				    		</div>
+				    		<div>
+				    			Индонезийская кухня
+				    		</div>
+				    		<div>
+				    			<i class="icon icon-metro"></i>Библиотека имени Ленина
+				    		</div>
+				    	</div>
+				    </div>
+				    <div class="place">
+				    	<div class="place__img">
+				    		<img src="http://lorempixel.com/600/350/" alt="" width="600" height="350">
+				    		<div class="place__main">
+					    		<div class="place__info">
+					    			<h3 class="place__title"><a href="#">Море суши на улице Миклухо-Маклая</a></h3>
+					    			Большая летняя веранда и ресторан <br> на крыше ТРЦ «Алтуфьевский»
+					    		</div>
+					    		<a href="#" class="like"><i class="icon icon-like"></i>50</a>
+					    	</div>
+				    	</div>
+				    	<div class="place__meta">
+				    		<div>
+				    			<span>Средний чек: </span> до 1500 руб.
+				    		</div>
+				    		<div>
+				    			Индонезийская кухня
+				    		</div>
+				    		<div>
+				    			<i class="icon icon-metro"></i>Библиотека имени Ленина
+				    		</div>
+				    	</div>
+				    </div>
+				    <div class="place">
+				    	<div class="place__img">
+				    		<img src="http://lorempixel.com/600/350/" alt="" width="600" height="350">
+				    		<div class="place__main">
+					    		<div class="place__info">
+					    			<h3 class="place__title"><a href="#">Море суши на улице Миклухо-Маклая</a></h3>
+					    			Большая летняя веранда и ресторан <br> на крыше ТРЦ «Алтуфьевский»
+					    		</div>
+					    		<a href="#" class="like"><i class="icon icon-like"></i>50</a>
+					    	</div>
+				    	</div>
+				    	<div class="place__meta">
+				    		<div>
+				    			<span>Средний чек: </span> до 1500 руб.
+				    		</div>
+				    		<div>
+				    			Индонезийская кухня
+				    		</div>
+				    		<div>
+				    			<i class="icon icon-metro"></i>Библиотека имени Ленина
+				    		</div>
+				    	</div>
+				    </div>
+				    <div class="place">
+				    	<div class="place__img">
+				    		<img src="http://lorempixel.com/600/350/" alt="" width="600" height="350">
+				    		<div class="place__main">
+					    		<div class="place__info">
+					    			<h3 class="place__title"><a href="#">Море суши на улице Миклухо-Маклая</a></h3>
+					    			Большая летняя веранда и ресторан <br> на крыше ТРЦ «Алтуфьевский»
+					    		</div>
+					    		<a href="#" class="like"><i class="icon icon-like"></i>50</a>
+					    	</div>
+				    	</div>
+				    	<div class="place__meta">
+				    		<div>
+				    			<span>Средний чек: </span> до 1500 руб.
+				    		</div>
+				    		<div>
+				    			Индонезийская кухня
+				    		</div>
+				    		<div>
+				    			<i class="icon icon-metro"></i>Библиотека имени Ленина
+				    		</div>
+				    	</div>
+				    </div>
+				    <div class="place">
+				    	<div class="place__img">
+				    		<img src="http://lorempixel.com/600/350/" alt="" width="600" height="350">
+				    		<div class="place__main">
+					    		<div class="place__info">
+					    			<h3 class="place__title"><a href="#">Море суши на улице Миклухо-Маклая</a></h3>
+					    			Большая летняя веранда и ресторан <br> на крыше ТРЦ «Алтуфьевский»
+					    		</div>
+					    		<a href="#" class="like"><i class="icon icon-like"></i>50</a>
+					    	</div>
+				    	</div>
+				    	<div class="place__meta">
+				    		<div>
+				    			<span>Средний чек: </span> до 1500 руб.
+				    		</div>
+				    		<div>
+				    			Индонезийская кухня
+				    		</div>
+				    		<div>
+				    			<i class="icon icon-metro"></i>Библиотека имени Ленина
+				    		</div>
+				    	</div>
+				    </div>
+				</div>
 			</div>
-			<button class="btn-prev js-funny-prev"></button>
-			<button class="btn-next js-funny-next"></button> -->
+			<div class="container">
+				<button class="btn-funny-prev js-funny-prev"></button>
+				<button class="btn-funny-next js-funny-next"></button>
+			</div>
 		</div>
-		<!-- <div class="carousel__pager js-funny-pager"></div>
-		<div class="to-center">4 из 59 ресторанов</div> -->
+		<div class="carousel__pager js-funny-pager"></div>
+		<div class="to-center">4 из 59 ресторанов</div>
 	</div>
-	<!-- BEGIN carousel -->
+	<!-- END funny-slider -->
+	<div class="app">
+		<div class="container">
+			<h2 class="main-title">
+				<i class="icon icon-app"></i>
+				Скачайте бесплатное приложение
+			</h2>
+			<div class="app__info">
+				<div class="app__title">Носи все рестораны в кармане!</div>
+				<p>Находи лучшие рестораны поблизости. Бесплатное приложение для iPhone от GetTable</p>
+				<a href="#" class="app__btn">
+					<i class="icon icon-phone"></i>
+					<div>
+						Доступно в
+						<span>AppStore</span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="app__bg">
+			<img src="img/app-bg.jpg">
+			<img class="app__img" src="img/app-hand.png" alt="">
+		</div>
+	</div>
 	<!-- BEGIN footer -->
 	<div class="page-footer clearfix">
 		<div class="container page-footer__top">

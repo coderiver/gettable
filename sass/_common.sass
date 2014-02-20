@@ -1,7 +1,7 @@
 // ------------------ main settings -------------------------- //
 input[type="submit"],
 button
-	cursor: pointer
+	cursor: pointer  
 	&::-moz-focus-inner
 		padding: 0
 		border: 0
@@ -421,23 +421,29 @@ body
 .slider
 	position: relative
 	height: 416px
+	overflow: hidden
 	border-bottom: 1px solid #7e817e 
 .slider__item
 	position: relative
 	height: 416px
+	width: 100%
 	overflow: hidden
-	> img
+	.container
+		position: relative
+		z-index: 2
+		+clr
+.slider__bg
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	overflow: hidden
+	text-align: center
+	img
 		+gpu   
 		filter: blur(2px)
 		-webkit-filter: blur(2px)
-	.container
-		position: absolute
-		left: 50%
-		top: 0
-		bottom: 0
-		margin-left: -485px
-		z-index: 2
-		+clr
 .slider__title
 	position: absolute
 	top: 123px
@@ -553,7 +559,7 @@ body
 	height: 590px
 	+box
 	+box-shadow(0 -2px 20px rgba(0,0,0,.2), inset 0 -2px 5px rgba(0,0,0,.1))
-	background: #e9e9e9 url(../img/slider-bg.png) 0 0 repeat 
+	background: #e9e9e9 url(../img/carousel-bg.png) 0 0 repeat 
 	.main-title
 		margin-bottom: 46px
 	.container
@@ -610,12 +616,15 @@ body
 			border: 1px solid $red
 			
 .funny-slider
-	padding: 23px 0 15px
+	padding: 23px 0 23px
 	.container
 		position: relative
-		width: 1400px
+		width: 100%
 		overflow: hidden
 		padding: 0
+		.container
+			width: 1400px
+			overflow: visible
 	.main-title
 		margin-bottom: 20px
 	.btn-group
@@ -625,38 +634,59 @@ body
 	.place
 		margin: 0 30px 0 0
 	.cycle-slideshow
-		margin: 25px 0 18px
-		// position: absolute !important
-		// top: 0
-		// left: 50%
-		// margin-left: -700px
-		width: 1400px
+		margin: 0
+		position: absolute !important
+		top: 0
+		left: 50%
+		margin-left: -1560px
+		overflow: visible !important
+		width: 3000px !important
 		height: 400px
-		text-align: center
 		> .place
 			margin-left: 0
 	.to-center
 		font-size: 14px
+.cycle-slideshow-wrap
+	position: relative
+	margin: 25px 0 27px
+	height: 400px
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 3000px
+		z-index: 200
+		background: rgba(255,255,255,.5)  
+	&:before
+		left: -2373px
+	&:after
+		right: -2373px
 .place
 	height: 400px
 	overflow: hidden
+.place__main
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 21px 20px 18px
+	background: rgba(0,0,0,.5)  
+	+box-shadow(0 0 10px #000)
 .place__img
 	position: relative 
 	height: 350px
 	img
 		display: block
 	.like
-		position: absolute
-		bottom: 58px
-		right: 20px
+		float: right
 .place__info
-	position: absolute
-	bottom: 19px
-	left: 22px
-	font-size: 16px
-	right: 115px
-	z-index: 2
+	float: left
+	width: 410px
 	color: #999
+	font-size: 16px
+	+freg
 	line-height: 1.2
 	a
 		color: #fff 
@@ -667,7 +697,7 @@ body
 	+fbold
 	color: #fff
 	line-height: 1 
-	text-shadow: 0 1px 1px rgba(0,0,0,.5)
+	text-shadow: 0 1px 1px rgba(0,0,0,.7)
 .place__meta
 	height: 50px
 	line-height: 50px
@@ -692,3 +722,115 @@ body
 		+freg 
 	.icon
 		margin-right: 9px
+		
+.app
+	position: relative
+	height: 900px
+	overflow: hidden
+	.container
+		position: relative
+		z-index: 2
+	.main-title
+		padding-top: 30px
+		color: #fff 
+		text-shadow: 0 2px 1px rgba(0,0,0,.64)
+.app__bg
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	img
+		&:first-child
+			+gpu   
+			filter: blur(2px)
+			-webkit-filter: blur(2px)
+.app__img
+	position: absolute
+	bottom: 0
+	right: 0
+	
+.app__info
+	margin-top: 107px
+	width: 425px
+	color: #fff
+	line-height: 1.2
+	font-size: 20px
+	text-shadow: 0 2px 1px rgba(0,0,0,.64)
+.app__title
+	margin-bottom: 22px
+	font-size: 32px
+.app__btn
+	display: block
+	margin-top: 47px
+	position: relative
+	overflow: hidden
+	width: 280px
+	height: 102px
+	line-height: 102px
+	color: #fff 
+	+border-radius(10px)
+	background: #dd2b00
+	font-size: 18px
+	text-shadow: 0 1px 1px #6e1500
+	+box-shadow(inset 0 1px 7px #a52000)
+	+g(#e72d00, #c82700)
+	&:hover
+		color: #fff 
+		text-decoration: none
+		background: #ff3100
+		+box-shadow(inset 0 1px 7px #a52000)
+		+g(#ff3100, #aa2e10)
+	&:active
+		background: #c82700
+		+box-shadow(inset 0 2px 5px #731600)
+		+g(#c82700, #b32200)
+		&:before,
+		&:after
+			display: none
+	.icon
+		margin: 0 23px 0 26px 
+	.icon,
+	div
+		display: inline-block
+		vertical-align: middle
+		line-height: 1
+		span
+			display: block
+			font-size: 42px
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		left: 50%
+		margin-left: -45%
+		width: 90%
+		height: 40px
+		+box-shadow(0 0 30px 20px #dd684c) 
+		+border-radius(50%)
+	&:before
+		top: -45px
+	&:after
+		bottom: -50px
+		
+.btn-funny-prev,
+.btn-funny-next
+	position: absolute
+	z-index: 200
+	background: #fff
+	border: 0
+	i
+		display: inline-block
+		vertical-align: middle
+.btn-funny-prev
+	+s(prev2)
+	&:hover
+		+s(prev2-h)
+	&:active
+		+s(prev2-act)
+.btn-funny-next
+	+s(next2)
+	&:hover
+		+s(next2-h)
+	&:active
+		+s(next2-act)

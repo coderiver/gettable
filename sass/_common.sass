@@ -291,15 +291,17 @@ body
 	padding: 40px 0 30px
 .footer__seo
 	float: left
-	margin-right: 30px
+	margin: 0 30px 0 16px
 	width: 322px
 	.logo
 		float: none
 		display: block
-		margin-bottom: 5px
+		margin-bottom: 3px
+	p
+		margin-bottom: 17px
 .footer__nav
 	position: relative
-	padding-top: 50px
+	padding-top: 46px
 	width: 145px
 	float: left
 	&:nth-child(2)
@@ -316,7 +318,7 @@ body
 		padding: 0
 		list-style-type: none 
 	li
-		margin-bottom: 9px
+		margin-bottom: 11px
 	a
 		color: #858585
 		font-size: 15px 
@@ -561,23 +563,25 @@ body
 	+box-shadow(0 -2px 20px rgba(0,0,0,.2), inset 0 -2px 5px rgba(0,0,0,.1))
 	background: #e9e9e9 url(../img/carousel-bg.png) 0 0 repeat 
 	.main-title
-		margin-bottom: 46px
+		margin-bottom: 50px
 	.container
 		position: relative
 	.btn-prev,
 	.btn-next
-		top: 217px
+		top: 220px
 	.btn-prev
-		left: -157px
+		left: -149px
 	.btn-next
-		right: -157px
+		right: -149px
 .carousel__item
 	margin-right: 33px
 	text-align: center
 	img
 		display: block
+		margin-bottom: 15px
 .carousel__title
 	display: block
+	margin-bottom: 4px
 	color: $dark_gray
 	font-size: 23px
 	+fbold 
@@ -595,7 +599,7 @@ body
 .carousel__pager
 	position: absolute
 	left: 50%
-	bottom: 45px
+	bottom: 41px
 	margin-left: -485px
 	width: 970px
 	text-align: center
@@ -628,7 +632,7 @@ body
 	.main-title
 		margin-bottom: 20px
 	.btn-group
-		margin-bottom: 17px
+		margin-bottom: 34px
 	.radio-label
 		margin-right: 10px
 	.place
@@ -645,10 +649,11 @@ body
 		> .place
 			margin-left: 0
 	.to-center
+		margin-top: 26px
 		font-size: 14px
 .cycle-slideshow-wrap
 	position: relative
-	margin: 25px 0 27px
+	margin: 25px 0 0
 	height: 400px
 	&:before,
 	&:after
@@ -681,6 +686,7 @@ body
 		display: block
 	.like
 		float: right
+		margin-top: -7px
 .place__info
 	float: left
 	width: 410px
@@ -725,7 +731,7 @@ body
 		
 .app
 	position: relative
-	height: 900px
+	height: 700px
 	overflow: hidden
 	.container
 		position: relative
@@ -751,15 +757,16 @@ body
 	right: 0
 	
 .app__info
-	margin-top: 107px
+	margin-top: 104px
 	width: 425px
 	color: #fff
-	line-height: 1.2
+	line-height: 1.5
 	font-size: 20px
 	text-shadow: 0 2px 1px rgba(0,0,0,.64)
 .app__title
 	margin-bottom: 22px
 	font-size: 32px
+	line-height: 1.2
 .app__btn
 	display: block
 	margin-top: 47px
@@ -817,18 +824,22 @@ body
 .btn-funny-next
 	position: absolute
 	z-index: 200
+	top: -247px
+	padding: 0
 	background: #fff
 	border: 0
 	i
 		display: inline-block
 		vertical-align: middle
 .btn-funny-prev
+	left: 75px
 	+s(prev2)
 	&:hover
 		+s(prev2-h)
 	&:active
 		+s(prev2-act)
 .btn-funny-next
+	right: 75px
 	+s(next2)
 	&:hover
 		+s(next2-h)

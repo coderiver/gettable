@@ -224,9 +224,9 @@ body { min-width: 1400px; background: #fafafa; color: #858585; font-family: "GEI
 .funny-slider .to-center { margin-top: 26px; font-size: 14px; }
 
 .cycle-slideshow-wrap { position: relative; margin: 25px 0 0; height: 400px; }
-.cycle-slideshow-wrap:before, .cycle-slideshow-wrap:after { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 3000px; z-index: 200; background: rgba(255, 255, 255, 0.5); }
-.cycle-slideshow-wrap:before { left: -3330px; }
-.cycle-slideshow-wrap:after { right: -3330px; }
+.cycle-slideshow-wrap:before, .cycle-slideshow-wrap:after { content: ""; position: absolute; top: 0; bottom: 0; width: 3000px; z-index: 200; background: rgba(255, 255, 255, 0.5); }
+.cycle-slideshow-wrap:before { left: 50%; margin-left: -3330px; }
+.cycle-slideshow-wrap:after { right: 50%; margin-right: -3330px; }
 
 .place { height: 400px; overflow: hidden; }
 

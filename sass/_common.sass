@@ -661,14 +661,16 @@ body
 		position: absolute
 		top: 0
 		bottom: 0
-		left: 50%
+		//left: 50%
 		width: 3000px
 		z-index: 200
 		background: rgba(255,255,255,.5)  
 	&:before
-		left: -3330px
+		left: 50%
+		margin-left: -3330px
 	&:after
-		right: -3330px
+		right: 50%
+		margin-right: -3330px
 .place
 	height: 400px
 	overflow: hidden

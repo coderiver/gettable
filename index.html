@@ -19,7 +19,7 @@
 	<!-- BEGIN header -->
 	<div class="page-header clearfix">
 		<div class="container">
-			<a href="#" class="logo"></a>
+			<span class="logo"></span>
 			<button type="button" class="btn btn_red">Вход / Регистрация</button>
 			<div class="btn-group btn-group_simple">
 				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -97,17 +97,18 @@
 				</div>
 			</div>
 		</div>
-		<div class="cycle-slideshow"
-			data-cycle-fx="scrollHorz"
+		<div class="cycle-slideshow js-slider"
+			data-cycle-fx="fade"
     		data-cycle-slides="> div"
     		data-cycle-speed="500"
-    		data-cycle-timeout="0"
+    		data-cycle-slide-active-class="is-active"
+    		data-cycle-timeout="5000"
     		data-cycle-pager=".js-slider-pager"
     		data-cycle-pager-template="<button></button>"
     		data-cycle-pager-active-class="is-active"
     	>
 		    <div class="slider__item">
-		    	<div class="slider__bg"><img src="http://lorempixel.com/1920/416"></div>
+		    	<div class="slider__bg" style="background-image:url(http://lorempixel.com/1920/416)"></div>
 		    	<div class="container">
 		    		<div class="slider__title">
 		    			<span>Лучший выбор</span>
@@ -119,7 +120,7 @@
 		    	</div>
 		    </div>
 		    <div class="slider__item">
-		    	<div class="slider__bg"><img src="http://lorempixel.com/1920/416"></div>
+		    	<div class="slider__bg" style="background-image:url(http://lorempixel.com/1919/416)"></div>
 		    	<div class="container">
 		    		<div class="slider__title">
 		    			<span>Лучший выбор</span>
@@ -131,7 +132,7 @@
 		    	</div>
 		    </div>
 		    <div class="slider__item">
-		    	<div class="slider__bg"><img src="http://lorempixel.com/1920/416"></div>
+		    	<div class="slider__bg" style="background-image:url(http://lorempixel.com/1918/416)"></div>
 		    	<div class="container">
 		    		<div class="slider__title">
 		    			<span>Лучший выбор</span>
@@ -150,7 +151,7 @@
 	<div class="section-kitchen">
 		<div class="container">
 			<h2 class="main-title">
-				<a href="#" class="is-active">Выбрать кухню</a> 
+				<span class="is-active">Выбрать кухню</span> 
 				<span>или</span> 
 				<a href="#">где отдохнуть</a>
 			</h2>
@@ -201,36 +202,60 @@
 				Известные городские сети:
 			</h2>
 			<div class="cycle-slideshow"
-				data-cycle-fx="carousel"
+				data-cycle-fx="fade"
 	    		data-cycle-slides="> div"
 	    		data-cycle-speed="500"
 	    		data-cycle-prev=".js-carousel-prev"
 	    		data-cycle-next=".js-carousel-next"
-	    		data-cycle-carousel-visible="4"
 	    		data-cycle-pager=".js-carousel-pager"
 	    		data-cycle-pager-template="<button></button>"
 	    		data-cycle-pager-active-class="is-active"
 	    	>
-			    <div class="carousel__item">
-			    	<a href="#"><img src="img/slide1.png" width="213" height="213"></a>
-			    	<a href="#" class="carousel__title">GinzaProject</a>
-			    	<a href="#" class="carousel__link">25 ресторанов</a>
-			    </div>
-			    <div class="carousel__item">
-			    	<a href="#"><img src="img/slide2.png" width="213" height="213"></a>
-			    	<a href="#" class="carousel__title">GinzaProject</a>
-			    	<a href="#" class="carousel__link">25 ресторанов</a>
-			    </div>
-			    <div class="carousel__item">
-			    	<a href="#"><img src="img/slide3.png" width="213" height="213"></a>
-			    	<a href="#" class="carousel__title">GinzaProject</a>
-			    	<a href="#" class="carousel__link">25 ресторанов</a>
-			    </div>
-			    <div class="carousel__item">
-			    	<a href="#"><img src="img/slide4.png" width="213" height="213"></a>
-			    	<a href="#" class="carousel__title">GinzaProject</a>
-			    	<a href="#" class="carousel__link">25 ресторанов</a>
-			    </div>
+	    		<div class="carousel__slide">
+				    <div class="carousel__item">
+				    	<a href="#"><img src="img/slide1.png" width="213" height="213"></a>
+				    	<a href="#" class="carousel__title">GinzaProject</a>
+				    	<a href="#" class="carousel__link">25 ресторанов</a>
+				    </div>
+				    <div class="carousel__item">
+				    	<a href="#"><img src="img/slide2.png" width="213" height="213"></a>
+				    	<a href="#" class="carousel__title">GinzaProject</a>
+				    	<a href="#" class="carousel__link">25 ресторанов</a>
+				    </div>
+				    <div class="carousel__item">
+				    	<a href="#"><img src="img/slide3.png" width="213" height="213"></a>
+				    	<a href="#" class="carousel__title">GinzaProject</a>
+				    	<a href="#" class="carousel__link">25 ресторанов</a>
+				    </div>
+				    <div class="carousel__item">
+				    	<a href="#"><img src="img/slide4.png" width="213" height="213"></a>
+				    	<a href="#" class="carousel__title">GinzaProject</a>
+				    	<a href="#" class="carousel__link">25 ресторанов</a>
+				    </div>
+				</div>
+				<div class="carousel__slide">
+					<div class="carousel__item">
+				    	<a href="#"><img src="img/slide4.png" width="213" height="213"></a>
+				    	<a href="#" class="carousel__title">GinzaProject</a>
+				    	<a href="#" class="carousel__link">25 ресторанов</a>
+				    </div>
+				    <div class="carousel__item">
+				    	<a href="#"><img src="img/slide3.png" width="213" height="213"></a>
+				    	<a href="#" class="carousel__title">GinzaProject</a>
+				    	<a href="#" class="carousel__link">25 ресторанов</a>
+				    </div>
+				    <div class="carousel__item">
+				    	<a href="#"><img src="img/slide1.png" width="213" height="213"></a>
+				    	<a href="#" class="carousel__title">GinzaProject</a>
+				    	<a href="#" class="carousel__link">25 ресторанов</a>
+				    </div>
+				    
+				    <div class="carousel__item">
+				    	<a href="#"><img src="img/slide2.png" width="213" height="213"></a>
+				    	<a href="#" class="carousel__title">GinzaProject</a>
+				    	<a href="#" class="carousel__link">25 ресторанов</a>
+				    </div>
+				</div>
 			</div>
 			<button class="btn-prev js-carousel-prev"></button>
 			<button class="btn-next js-carousel-next"></button>
@@ -277,7 +302,7 @@
 				</div>         
 			</div>
 			<div class="cycle-slideshow-wrap">
-				<div class="cycle-slideshow"
+				<div class="cycle-slideshow js-place-slider"
 					data-cycle-fx="carousel"
 		    		data-cycle-slides="> div"
 		    		data-cycle-speed="500"
@@ -455,7 +480,6 @@
 			</div>
 		</div>
 		<div class="app__bg">
-			<img src="img/app-bg.jpg">
 			<img class="app__img" src="img/app-hand.png" alt="">
 		</div>
 	</div>
@@ -463,7 +487,7 @@
 	<div class="page-footer clearfix">
 		<div class="container page-footer__top">
 			<div class="footer__seo">
-				<a href="#" class="logo"></a>
+				<span class="logo"></span>
 				<p>© 2012 - 2013 GETTABLE</p>
 				<p>GetTable - быстрейшая служба бронирования столиков в рестораны Москвы. Мы поможем вам выбрать куда сходить сегодня вечером. 500 лучших ресторанов в одном месте! </p>
 				<p>Закажите столик онлайн и за 2 минуты для вас будет забронирован лучший столик, абсолютно бесплатно.</p>

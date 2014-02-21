@@ -290,6 +290,9 @@
 	color: $dark_gray
 	span
 		color: #ababab
+		&.is-active
+			color: $dark_gray
+			border-bottom-color: transparent 
 	a
 		color: $red
 		border-bottom: 3px dotted  
@@ -363,6 +366,8 @@
 				+s(filter-club-act)
 		.icon
 			margin-right: 5px
+		&.is-active
+			cursor: default
 			
 .radio-label
 	position: relative
@@ -371,6 +376,10 @@
 	line-height: 20px
 	vertical-align: middle
 	font-size: 15px
+	&:hover
+		span
+			&:before
+				background: #f5f5f5
 	span
 		position: relative
 		padding-left: 25px
@@ -378,6 +387,8 @@
 		color: #424242
 		font-weight: normal
 		+freg 
+		cursor: pointer
+
 		&:before
 			content: ""
 			position: absolute
@@ -397,6 +408,7 @@
 		height: 20px
 		opacity: 0
 		z-index: 2
+		cursor: pointer
 		&:checked
 			+ span
 				&:before

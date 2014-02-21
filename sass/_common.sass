@@ -81,12 +81,33 @@ body
 	.btn-group_simple
 		float: left
 		margin: 12px 0 0 32px 
+		&:hover	
+			strong
+				border-color: $red 
+			.caret
+				border-color: $red transparent transparent transparent
+		&.open
+			strong
+				border-color: #f00
+			.caret
+				border-color: #f00 transparent transparent transparent
+		.btn-default
+			background: none
 	.filter-view
 		float: left
 		margin: 9px 0 0 26px
 		span
 			line-height: 1.5
 			border-bottom: 1px solid #c3c3c3 
+		a
+			&:hover
+				span
+					color: $red
+					border-bottom-color: $red 
+			&:active
+				span
+					color: #f00 
+					border-bottom-color: #f00 
 .logo
 	float: left
 	+s(logo)     
@@ -420,6 +441,10 @@ body
 	margin-left: 10px
 	vertical-align: middle
 	+s(logo-created)   
+	+opacity(.5)
+	+tr(opacity .2s linear)
+	&:hover
+		+opacity(1)
 .slider
 	position: relative
 	height: 416px
@@ -430,6 +455,20 @@ body
 	height: 416px
 	width: 100%
 	overflow: hidden
+	&.is-active
+		.slider__title
+			top: 123px
+			opacity: .8
+		.slider__img
+			right: 6px
+	&.is-inactive
+		.slider__title
+			top: -500px
+			opacity: 0
+			+tr(all 1s ceaser($easeInOutBack))
+		.slider__img
+			right: -4000px
+			+tr(all 1s ceaser($easeOutCirc))
 	.container
 		position: relative
 		z-index: 2
@@ -437,25 +476,28 @@ body
 .slider__bg
 	position: absolute
 	top: 0
-	left: 0
+	left: 50%
 	bottom: 0
-	right: 0
+	margin-left: -1500px
+	width: 3000px
 	overflow: hidden
 	text-align: center
+	background-position: 50% 0 
 	img
 		+gpu   
 		filter: blur(2px)
 		-webkit-filter: blur(2px)
 .slider__title
 	position: absolute
-	top: 123px
+	top: -500px
 	left: 9px
 	line-height: 1.2
 	z-index: 2
 	width: 38%
 	color: #fff 
 	font-size: 30px
-	opacity: .8
+	opacity: 0
+	+tr(all .5s ceaser($easeInOutBack))
 	span
 		display: block
 		margin-bottom: 10px
@@ -467,12 +509,13 @@ body
 .slider__img
 	position: absolute
 	top: 113px
-	right: 6px
+	right: -4000px
+	+tr(all .6s ceaser($easeOutCirc))
 .slider__pager
 	position: absolute
 	left: 50%
-	bottom: 42px
-	margin-left: -485px
+	bottom: 38px
+	margin-left: -469px
 	width: 970px
 	z-index: 200
 	button
@@ -497,8 +540,9 @@ body
 	left: 0
 	right: 0
 	z-index: 1000
+	background: rgba(0,0,0,.2) 
 	padding: 15px 0 18px
-	+box-shadow(0 0 5px rgba(0,0,0,.6))
+	+box-shadow(0 3px 5px rgba(0, 0, 0, 0.3), inset 0 3px 6px rgba(0,0,0,.3))
 	+fbold 
 	.input-group_search
 		float: left
@@ -573,9 +617,14 @@ body
 		left: -149px
 	.btn-next
 		right: -149px
+.carousel__slide
+	overflow: hidden
 .carousel__item
-	margin-right: 33px
+	float: left
+	margin-left: 29px
 	text-align: center
+	&:first-child
+		margin-left: 0
 	img
 		display: block
 		margin-bottom: 15px
@@ -637,6 +686,10 @@ body
 		margin-right: 10px
 	.place
 		margin: 0 30px 0 0
+		+tr(opacity .5s linear)
+		opacity: .6 !important
+		&.is-current
+			opacity: 1 !important
 	.cycle-slideshow
 		margin: 0
 		position: absolute !important
@@ -655,22 +708,22 @@ body
 	position: relative
 	margin: 25px 0 0
 	height: 400px
-	&:before,
-	&:after
-		content: ""
-		position: absolute
-		top: 0
-		bottom: 0
-		//left: 50%
-		width: 3000px
-		z-index: 200
-		background: rgba(255,255,255,.5)  
-	&:before
-		left: 50%
-		margin-left: -3330px
-	&:after
-		right: 50%
-		margin-right: -3330px
+	// &:before,
+	// &:after
+	// 	content: ""
+	// 	position: absolute
+	// 	top: 0
+	// 	bottom: 0
+	// 	//left: 50%
+	// 	width: 3000px
+	// 	z-index: 200
+	// 	background: rgba(255,255,255,.5)  
+	// &:before
+	// 	left: 50%
+	// 	margin-left: -3330px
+	// &:after
+	// 	right: 50%
+	// 	margin-right: -3330px
 .place
 	height: 400px
 	overflow: hidden
@@ -749,6 +802,7 @@ body
 	right: 0
 	bottom: 0
 	left: 0
+	background: url('../img/app-bg.jpg') 50% 0 repeat
 	img
 		&:first-child
 			+gpu   

@@ -78,7 +78,7 @@ body { min-width: 1400px; background: #fafafa; color: #858585; font-family: "GEI
 .btn-group_metro .icon-metro { position: relative; margin-right: 8px; top: -3px; }
 .btn-group_metro .dropdown-menu { margin: -41px 0 0; padding-top: 48px; width: 100%; border-radius: 3px; background: white; box-shadow: 0 1px 3px black; border: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .btn-group_metro .dropdown-menu:hover, .btn-group_metro .dropdown-menu:active { z-index: 1000 !important; }
-.btn-group_metro .dropdown-menu ul { list-style-type: none; padding: 0; margin: 0 6px 0 0; height: 412px; overflow-y: auto; }
+.btn-group_metro .dropdown-menu ul { list-style-type: none; padding: 0; margin: 0 6px 0 0; height: 337px; overflow-y: auto; }
 .btn-group_metro .dropdown-menu li { padding: 0 9px 0 18px; background: white; }
 .btn-group_metro .dropdown-menu li:first-child a { border-top: 0; }
 .btn-group_metro .dropdown-menu li:hover { position: relative; z-index: 2; -webkit-box-shadow: 0 1px 0 #d32900; -moz-box-shadow: 0 1px 0 #d32900; box-shadow: 0 1px 0 #d32900; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e95b37), color-stop(100%, #d32900)); background-image: -webkit-linear-gradient(#e95b37, #d32900); background-image: -moz-linear-gradient(#e95b37, #d32900); background-image: -o-linear-gradient(#e95b37, #d32900); background-image: linear-gradient(#e95b37, #d32900); }
@@ -224,9 +224,9 @@ body { min-width: 1400px; background: #fafafa; color: #858585; font-family: "GEI
 .funny-slider .to-center { margin-top: 26px; font-size: 14px; }
 
 .cycle-slideshow-wrap { position: relative; margin: 25px 0 0; height: 400px; }
-.cycle-slideshow-wrap:before, .cycle-slideshow-wrap:after { content: ""; position: absolute; top: 0; bottom: 0; width: 3000px; z-index: 200; background: rgba(255, 255, 255, 0.5); }
-.cycle-slideshow-wrap:before { left: -2373px; }
-.cycle-slideshow-wrap:after { right: -2373px; }
+.cycle-slideshow-wrap:before, .cycle-slideshow-wrap:after { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 3000px; z-index: 200; background: rgba(255, 255, 255, 0.5); }
+.cycle-slideshow-wrap:before { left: -3330px; }
+.cycle-slideshow-wrap:after { right: -3330px; }
 
 .place { height: 400px; overflow: hidden; }
 

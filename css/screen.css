@@ -273,7 +273,7 @@ body { min-width: 1400px; background: #fafafa; color: #858585; font-family: "GEI
 .app__btn:before { top: -45px; }
 .app__btn:after { bottom: -50px; }
 
-.btn-funny-prev, .btn-funny-next { position: absolute; z-index: 200; top: -247px; padding: 0; background: white; border: 0; }
+.btn-funny-prev, .btn-funny-next { position: absolute; z-index: 200; top: -257px; padding: 0; background: white; border: 0; }
 .btn-funny-prev i, .btn-funny-next i { display: inline-block; vertical-align: middle; }
 
 .btn-funny-prev { left: 75px; background: url('../img/icons-s5d925af182.png') 0 -2106px no-repeat; width: 115px; height: 115px; }

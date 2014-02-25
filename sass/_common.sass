@@ -459,6 +459,7 @@ body
 		position: relative
 		z-index: 2
 		+clr
+.slider__item-first
 	&.is-active
 		.slider__title
 			top: 123px
@@ -467,7 +468,6 @@ body
 			opacity: .8
 		.slider__img
 			right: 6px
-.slider__item-first
 	&.is-inactive
 		.slider__title
 			top: -500px
@@ -475,55 +475,45 @@ body
 			+tr(all 1s ceaser($easeInOutBack))
 		.slider__img
 			right: -4000px
-			+tr(all 1s ceaser($easeOutCirc))
+			+tr(all 7s ceaser($easeOutCirc))
 .slider__item-second
+	&.is-active
+		.slider__title
+			top: 123px
+			bottom: 0
+			left: 0
+			opacity: .8
+		.slider__img
+			right: 6px
+			top: 14px
 	&.is-inactive
 		.slider__title
 			left: -4000px
 			opacity: 0
-			+tr(all 1s ceaser($easeOutQuint))
+			+tr(all 6s ceaser($easeOutQuint))
 		.slider__img
 			right: -2000px
 			+tr(all 1s ceaser($easeInOutCubic))
 .slider__item-third
+	&.is-active
+		.slider__title
+			top: 123px
+			bottom: 0
+			left: 0
+			opacity: .8
+		.slider__img
+			right: 6px
+			top: 103px
 	&.is-inactive
 		.slider__title
-			top: 1000px
+			top: -1000px
 			opacity: 0
-			+tr(all 1s ceaser($easeOutSine))
+			+tr(all 2s ceaser($easeOutSine))
 		.slider__img
 			right: 0
-			top: -1000px
-			+tr(all 1s ceaser($easeOutCirc))
-.slider__item-fourth
-	&.is-inactive
-		.slider__title
-			top: -500px
-			opacity: 0
-			+tr(all 1s ceaser($easeInOutBack))
-		.slider__img
-			right: -4000px
-			+tr(all 1s ceaser($easeOutCirc))
-.slider__item-fifth
-	
-	&.is-inactive
-		.slider__title
 			top: 1000px
-			opacity: 0
-			+tr(all 1s ceaser($easeOutSine))
-		.slider__img
-			right: 0
-			top: -1000px
-			+tr(all 1s ceaser($easeOutCirc))
-.slider__item-sixth
-	&.is-inactive
-		.slider__title
-			left: -4000px
-			opacity: 0
-			+tr(all 1s ceaser($easeOutQuint))
-		.slider__img
-			right: -2000px
-			+tr(all 1s ceaser($easeInOutCubic))
+			+tr(all 5s ceaser($easeOutCirc))
+
 .slider__bg
 	position: absolute
 	top: 0
@@ -534,6 +524,7 @@ body
 	overflow: hidden
 	text-align: center
 	background-position: 50% 0 
+	+background-size(100%,100%)
 	img
 		+gpu   
 		filter: blur(2px)

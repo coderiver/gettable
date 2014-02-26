@@ -465,7 +465,7 @@ body
 			top: 123px
 			bottom: 0
 			left: 0
-			opacity: .8
+			opacity: 1
 		.slider__img
 			right: 6px
 	&.is-inactive
@@ -482,10 +482,10 @@ body
 			top: 123px
 			bottom: 0
 			left: 0
-			opacity: .8
+			opacity: 1
 		.slider__img
 			right: 6px
-			top: 14px
+			top: 30px
 	&.is-inactive
 		.slider__title
 			left: -4000px
@@ -500,7 +500,7 @@ body
 			top: 123px
 			bottom: 0
 			left: 0
-			opacity: .8
+			opacity: 1
 		.slider__img
 			right: 6px
 			top: 103px
@@ -563,7 +563,7 @@ body
 	position: absolute
 	left: 50%
 	bottom: 38px
-	margin-left: -469px
+	margin-left: -485px
 	width: 970px
 	z-index: 200
 	button
@@ -594,7 +594,6 @@ body
 	+fbold 
 	.input-group_search
 		float: left
-	.input-group_search
 		margin-left: 13px  
 		width: 395px
 .search__title
@@ -621,7 +620,7 @@ body
 			
 .section-kitchen
 	padding: 30px 0 61px
-	background: #fbfbfb url(../img/bg.png) 0 0 repeat 
+	background: #fbfbfb url(../img/bg.jpg) 0 0 repeat 
 .kitchen-wrap
 	margin: 65px 0 60px  
 	text-align: center
@@ -663,8 +662,12 @@ body
 		top: 220px
 	.btn-prev
 		left: -149px
+		&:hover
+			left: -151px
 	.btn-next
 		right: -149px
+		&:hover
+			right: -151px
 .carousel__slide
 	overflow: hidden
 .carousel__item

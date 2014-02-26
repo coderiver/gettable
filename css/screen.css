@@ -35,7 +35,7 @@ html ::scrollbar-track-piece { width: 6px; border-radius: 3px; }
 html ::selection { background: rgba(19, 122, 233, 0.2); }
 html ::-moz-selection { background: rgba(19, 122, 233, 0.2); }
 
-body { min-width: 1400px; background: #fafafa; color: #858585; font-family: "GEInspiraReg", Arial, sans-serif; line-height: 1.5; font-size: 13px; }
+body { min-width: 1280px; background: #fafafa; color: #858585; font-family: "GEInspiraReg", Arial, sans-serif; line-height: 1.5; font-size: 13px; }
 
 .container { margin: 0 auto; width: 970px; }
 
@@ -179,8 +179,8 @@ body { min-width: 1400px; background: #fafafa; color: #858585; font-family: "GEI
 .slider__item-third.is-inactive .slider__title { top: -1000px; opacity: 0; -webkit-transition: all 2s cubic-bezier(0.390, 0.575, 0.565, 1.000); -moz-transition: all 2s cubic-bezier(0.390, 0.575, 0.565, 1.000); -o-transition: all 2s cubic-bezier(0.390, 0.575, 0.565, 1.000); transition: all 2s cubic-bezier(0.390, 0.575, 0.565, 1.000); }
 .slider__item-third.is-inactive .slider__img { right: 0; top: 1000px; -webkit-transition: all 5s cubic-bezier(0.075, 0.820, 0.165, 1.000); -moz-transition: all 5s cubic-bezier(0.075, 0.820, 0.165, 1.000); -o-transition: all 5s cubic-bezier(0.075, 0.820, 0.165, 1.000); transition: all 5s cubic-bezier(0.075, 0.820, 0.165, 1.000); }
 
-.slider__bg { position: absolute; top: 0; left: 50%; bottom: 0; margin-left: -1500px; width: 3000px; overflow: hidden; text-align: center; background-position: 50% 0; -webkit-background-size: 100%, 100%; -moz-background-size: 100%, 100%; -o-background-size: 100%, 100%; background-size: 100%, 100%; }
-.slider__bg img { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); filter: blur(2px); -webkit-filter: blur(2px); }
+.slider__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.slider__bg img { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); display: block; width: 100%; height: auto; }
 
 .slider__title { position: absolute; top: -500px; left: 9px; line-height: 1.2; z-index: 2; width: 38%; color: white; font-size: 30px; opacity: 0; -webkit-transition: all 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550); -moz-transition: all 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550); -o-transition: all 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550); transition: all 0.5s cubic-bezier(0.680, -0.550, 0.265, 1.550); }
 .slider__title span { display: block; margin-bottom: 10px; font-size: 50px; opacity: 1; line-height: 1; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.64); font-family: "PFAgoraBold", Verdana, Arial, sans-serif; }
@@ -240,7 +240,7 @@ body { min-width: 1400px; background: #fafafa; color: #858585; font-family: "GEI
 
 .funny-slider { padding: 23px 0 23px; }
 .funny-slider .container { position: relative; width: 100%; overflow: hidden; padding: 0; }
-.funny-slider .container .container { width: 1400px; overflow: visible; }
+.funny-slider .container .container { max-width: 1400px; overflow: visible; }
 .funny-slider .main-title { margin-bottom: 20px; }
 .funny-slider .btn-group { margin-bottom: 34px; }
 .funny-slider .radio-label { margin-right: 10px; }
@@ -277,8 +277,7 @@ body { min-width: 1400px; background: #fafafa; color: #858585; font-family: "GEI
 .app .container { position: relative; z-index: 2; }
 .app .main-title { padding-top: 30px; color: white; text-shadow: 0 2px 1px rgba(0, 0, 0, 0.64); }
 
-.app__bg { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: url("../img/app-bg.jpg") 50% 0 repeat; }
-.app__bg img:first-child { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); filter: blur(2px); -webkit-filter: blur(2px); }
+.app__bg { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-position: 50% 50%; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
 .app__img { position: absolute; bottom: 0; right: 0; }
 

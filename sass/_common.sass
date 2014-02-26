@@ -55,7 +55,7 @@ html
 		background: rgba(19, 122, 233, .2)
 
 body
-	min-width: 1400px
+	min-width: 1280px
 	background: $light 
 	color: $text
 	+freg
@@ -517,18 +517,23 @@ body
 .slider__bg
 	position: absolute
 	top: 0
-	left: 50%
+	//left: 50%
+	left: 0
+	right: 0 
 	bottom: 0
-	margin-left: -1500px
-	width: 3000px
-	overflow: hidden
-	text-align: center
-	background-position: 50% 0 
-	+background-size(100%,100%)
+	//margin-left: -1500px
+	//width: 3000px
+	overflow: hidden  
+	//text-align: center
+	//background-position: 50% 0 
+	+background-size(cover)
 	img
 		+gpu   
-		filter: blur(2px)
-		-webkit-filter: blur(2px)
+		display: block
+		width: 100%
+		height: auto
+		// filter: blur(2px)
+		// -webkit-filter: blur(2px)
 .slider__title
 	position: absolute
 	top: -500px
@@ -718,7 +723,7 @@ body
 		overflow: hidden
 		padding: 0
 		.container
-			width: 1400px
+			max-width: 1400px
 			overflow: visible
 	.main-title
 		margin-bottom: 20px
@@ -844,12 +849,17 @@ body
 	right: 0
 	bottom: 0
 	left: 0
-	background: url('../img/app-bg.jpg') 50% 0 repeat
-	img
-		&:first-child
-			+gpu   
-			filter: blur(2px)
-			-webkit-filter: blur(2px)
+	background-position: 50% 50% 
+	+background-size(cover)
+	// img
+	// 	&:first-child
+	// 		+gpu   
+	// 		filter: blur(2px)
+	// 		-webkit-filter: blur(2px)
+// .app__bg-img
+// 	display: block
+// 	width: 100%
+// 	height: auto  
 .app__img
 	position: absolute
 	bottom: 0

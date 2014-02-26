@@ -191,7 +191,7 @@ body { min-width: 1280px; background: #fafafa; color: #858585; font-family: "GEI
 .slider__pager button { display: inline-block; margin-right: 12px; vertical-align: middle; padding: 0; width: 10px; height: 10px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; background: none; border: 1px solid rgba(255, 255, 255, 0.6); }
 .slider__pager button.is-active { background: white; border: 1px solid white; }
 
-.slider__nav { position: absolute; top: 0; bottom: 0; width: 4000px; z-index: 200; cursor: pointer; background: none; }
+.slider__nav { position: absolute; top: 0; bottom: 0; width: 4000px; z-index: 200; background: none; }
 
 .slider__nav-prev { left: 50%; margin-left: -4000px; }
 

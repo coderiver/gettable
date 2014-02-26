@@ -210,6 +210,7 @@ body { min-width: 1280px; background: #fafafa; color: #858585; font-family: "GEI
 .search__text-sep { float: left; margin: 12px 0 0 20px; color: #c6c5c5; font-family: "GEInspiraBold", Arial, sans-serif; font-size: 16px; }
 
 .section-kitchen { padding: 30px 0 61px; background: #fbfbfb url(../img/bg.jpg) 0 0 repeat; }
+.section-kitchen .main-title .is-active { cursor: default; }
 
 .kitchen-wrap { margin: 65px 0 60px; text-align: center; font-size: 0; }
 
@@ -226,8 +227,10 @@ body { min-width: 1280px; background: #fafafa; color: #858585; font-family: "GEI
 .carousel .btn-prev, .carousel .btn-next { top: 220px; }
 .carousel .btn-prev { left: -149px; }
 .carousel .btn-prev:hover { left: -151px; }
+.carousel .btn-prev:active { left: -145px; }
 .carousel .btn-next { right: -149px; }
 .carousel .btn-next:hover { right: -151px; }
+.carousel .btn-next:active { right: -145px; }
 
 .carousel__slide { overflow: hidden; }
 

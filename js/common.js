@@ -16,6 +16,23 @@ $(document).ready(function() {
 		$(this).find(".is-active").addClass("is-inactive");
 	});
 
-
+  	function tab() {
+       $(".js-tab").each(function(){
+        	var tab_link = $(this).find("a");
+        	var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
+        	tab_cont.hide();
+        	tab_link.first().addClass("is-active");
+        	$(this).parents(".js-tab-group").find(".js-tab1").show();
+        	tab_link.on("click", function() {
+            	var index = $(this).attr("href");
+            	tab_link.removeClass("is-active");
+            	$(this).addClass("is-active");
+            	tab_cont.hide();
+            	$(this).parents(".js-tab-group").find("."+index).show();
+            	return false;
+          	});
+       });
+  	}
+  	tab();
 
 });

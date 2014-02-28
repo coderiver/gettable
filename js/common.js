@@ -35,4 +35,18 @@ $(document).ready(function() {
   	}
   	tab();
 
+
+    $(".js-input-tel").mask("(999) 999-99-99");
+    //$(".js-input-pass").mask("");
+
+    $(".js-login-link").on("click", function(){
+        $(".js-login-box").slideToggle("fast");
+        $(this).toggleClass("is-active");
+    });
+
+    $(".js-close-login").on("click", function(){
+        $(".js-login-box").slideUp("fast");
+        $(".js-login-link").removeClass("is-active"); 
+    });
+
 });

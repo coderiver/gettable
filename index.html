@@ -13,6 +13,7 @@
 	<script src="js/masonry.pkgd.js"></script>
 	<script src="js/cycle.js"></script>
 	<script src="js/jquery.cycle2.carousel.js"></script>
+	<script src="js/jquery.maskedinput.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -20,7 +21,7 @@
 	<div class="page-header clearfix">
 		<div class="container">
 			<span class="logo"></span>
-			<button type="button" class="btn btn_red">Вход / Регистрация</button>
+			<button type="button" class="btn btn_red js-login-link">Вход / Регистрация</button>
 			<div class="btn-group btn-group_simple">
 				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<i class="icon icon-earth"></i>
@@ -55,15 +56,17 @@
 	</div>
 	<!-- END header -->
 	<!-- BEGIN login-wrap -->
-	<div class="login">
+	<div class="login js-login-box">
 		<div class="container">
 			<div class="login__left">
 				<div class="login__title">Войти или зарегистрироваться 
-				<span>По вашему номеру телефона</span></div>
+				<strong>По вашему номеру телефона</strong></div>
 				<div class="login__form">
-					<span>+7</span>
-					<input type="text">
-					<button type="button" class="btn btn_red btn_red-new">войти</button>
+					<div class="login__row">
+						<span>+7</span>
+						<input type="tel" class="js-input-tel" placeholder="">
+						<button type="submit" class="btn btn_red btn_red-new">войти</button>
+					</div>
 				</div>
 				<p>Мы никогда не передадим ваш номер третьим лицам. Ваш номер нужен только для подтверждений о ваших бронированиях по СМС, а так же входа в личный кабинет.</p>
 			</div>
@@ -84,7 +87,7 @@
 					</li>
 				</ul>
 			</div>
-			<button class="btn-close">Скрыть</button>
+			<button class="btn-close js-close-login">Скрыть</button>
 		</div>
 	</div>
 	<!-- END login-wrap -->

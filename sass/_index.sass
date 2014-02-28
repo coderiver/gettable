@@ -191,9 +191,11 @@
 		.is-active
 			cursor: default
 .kitchen-wrap
-	margin: 65px 0 60px  
+	margin: 65px 0 0  
 	text-align: center
 	font-size: 0
+	.to-center
+		margin-top: 60px
 .kitchen
 	display: inline-block
 	margin-left: 69px
@@ -704,3 +706,30 @@
 	border: 0
 	background-color: none 
 	+s(clear)
+.place-item-wrap
+	padding-top: 8px
+	font-size: 0
+	margin-bottom: 63px
+.place-item
+	display: inline-block
+	margin-left: 15px
+	font-size: 16px
+	width: 175px
+	height: 160px
+	+border-radius(10px)
+	background: #fff
+	text-align: center
+	+box-shadow(0 7px 3px rgba(0,0,0,.08))
+	&:hover
+		text-decoration: none
+	&:first-child
+		margin-left: 0
+	span
+		color: #000
+		font-size: 16px
+		+fbold 
+.place-item__img
+	height: 120px
+	line-height: 120px
+	img
+		vertical-align: middle

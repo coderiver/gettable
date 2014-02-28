@@ -523,6 +523,11 @@ body { min-width: 1280px; background: #fafafa; color: #858585; font-family: "GEI
 .login__row.is-error input { border: 1px solid #dc2b00; -webkit-box-shadow: 0 0 4px rgba(220, 43, 0, 0.75), inset 0 3px 1px #e4e4e4; -moz-box-shadow: 0 0 4px rgba(220, 43, 0, 0.75), inset 0 3px 1px #e4e4e4; box-shadow: 0 0 4px rgba(220, 43, 0, 0.75), inset 0 3px 1px #e4e4e4; }
 .login__row span { position: absolute; left: -37px; top: 5px; font-size: 20px; font-family: "GEInspiraBold", Arial, sans-serif; color: black; }
 .login__row input { margin-right: 12px; padding: 0 11px; width: 240px; height: 44px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; color: black; font-size: 20px; font-family: "GEInspiraReg", Arial, sans-serif; border: 1px solid #c9c9c9; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; background: white; -webkit-box-shadow: inset 0 3px 1px #e4e4e4; -moz-box-shadow: inset 0 3px 1px #e4e4e4; box-shadow: inset 0 3px 1px #e4e4e4; }
+.login__row input:-ms-input-placeholder { color: #666666; font-family: "GEInspiraReg", Arial, sans-serif; font-size: 20px; }
+.login__row input:-moz-placeholder { color: #666666; font-family: "GEInspiraReg", Arial, sans-serif; font-size: 20px; }
+.login__row input::-moz-placeholder { color: #666666; font-family: "GEInspiraReg", Arial, sans-serif; font-size: 20px; }
+.login__row input::-webkit-input-placeholder { color: #666666; font-family: "GEInspiraReg", Arial, sans-serif; font-size: 20px; }
+.login__row input::placeholder { color: #666666; font-family: "GEInspiraReg", Arial, sans-serif; font-size: 20px; }
 .login__row input, .login__row .btn { display: inline-block; vertical-align: middle; }
 .login__row .icon-pass { position: absolute; left: -40px; top: 12px; background: url('../img/icons-s7d1dffd5b8.png') 0 -3347px no-repeat; width: 26px; height: 25px; }
 

@@ -22,7 +22,17 @@
 		+background-image(linear-gradient(bottom, #b32200 0%, #c82700 100%), linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%))
 	&:focus
 		color: #fff  
-		
+.btn_red-new
+	padding: 0 25px 
+	width: auto
+	height: 44px
+	font-size: 15px
+	text-shadow: none 
+	text-transform: uppercase
+	letter-spacing: 1px 
+	//+box-shadow(0 2px 1px #961c00, inset 0 1px 1px rgba(255,195,180,.74))
+	//+g(#e72d00, #c82700)
+
 .btn-group_simple
 	.btn
 		padding: 0
@@ -425,4 +435,41 @@
 					background: #fff
 					+box-shadow(0 1px 1px #6d1500)
 					 
-		
+.btn-close
+	position: absolute
+	padding: 0 
+	border: 0
+	border-bottom: 1px dotted 
+	font-size: 16px
+	color: #a1a1a1 
+	line-height: 1
+	background: none
+	&:hover
+		border-bottom-color: transparent 
+	&:before
+		content: ""
+		position: absolute
+		left: -27px
+		top: 0
+		+s(close) 
+.you-can
+	list-style: none
+	padding: 0
+	margin: -28px 0 0 
+	li
+		position: relative
+		font-size: 18px
+		padding: 26px 0 14px 71px
+		border-top: 1px solid #cfcfcf 
+		&:first-child
+			border-top: 0
+			//padding-top: 0
+			i
+				//top: 0
+	i
+		position: absolute
+		left: 0
+		top: 25px
+	span
+		display: inline-block
+		width: 170px

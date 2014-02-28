@@ -48,5 +48,11 @@ $(document).ready(function() {
         $(".js-login-box").slideUp("fast");
         $(".js-login-link").removeClass("is-active"); 
     });
+    $(".js-clear-input").on("click", function(){
+        $(this).fadeOut("fast");
+        $(this).parent().find("input").val("");
+    });
+
+
 
 });

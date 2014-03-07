@@ -153,28 +153,31 @@
 	.btn
 		width: 33.3%
 .checkbox
-	margin: 0 0 16px
 	padding-left: 0
 .checkbox__in
 	position: relative
 	height: 20px
 	line-height: 20px
 	display: inline-block
+	&:hover
+		span
+			color: #000
 	span
 		position: relative
-		padding-left: 29px
-		font-size: 16px
-		color: #424242 
+		padding-left: 26px
+		font-size: 15px
+		color: #757575
 		+unselectable
 		&:before
 			content: "" 
 			position: absolute
 			left: 0
 			top: 0
-			width: 18px
-			height: 18px
-			background: #fff
-			+box-shadow(0 1px 1px rgba(0,0,0,.38))
+			width: 16px
+			height: 16px
+			+box
+			border-top: 1px solid #b5b5b5
+			background: #e3e3e3
 
 	input
 		position: absolute
@@ -183,20 +186,20 @@
 		top: 50%
 		margin: -9px 0 0 0 !important
 		width: 18px
-		height: 18px
+		height: 18px  
 		opacity: 0 
 		&:checked
 			+ span
-				+fbold
-				color: #000 
+				color: $red
 				&:before
-					background: #595959
-					+box-shadow(inset 0 2px 2px rgba(0,0,0,.65))
+					background: #9b9b9b
+					border-top-color: #9b9b9b 
+					
 				&:after
 					content: ""
 					position: absolute
 					top: 5px
-					left: 2px
+					left: 3px
 					+s(check)  
 
 .title
@@ -488,3 +491,101 @@
 	background: none
 	&:hover
 		border-bottom-color: transparent 
+		
+.breadcrumb-wrap
+	background: rgba(247,247,247,.6)
+.breadcrumb
+	float: left
+	padding: 0
+	font-size: 0
+	height: 34px
+	line-height: 34px
+	margin-bottom: 0
+	list-style: none
+	border-radius: 4px
+	font-size: 16px
+	li
+		position: relative
+		display: inline-block
+		margin-left: 46px
+		&:before
+			content: ""
+			position: absolute
+			left: -28px
+			top: 50%
+			margin-top: -6px
+			+s(arr1) 
+		&:first-child
+			margin-left: 0   
+			&:before
+				display: none
+	a
+		color: #636363
+		text-decoration: none  
+		+tr(color .2s linear)
+		&:hover
+			color: #000 
+	.active
+		color: #000
+		
+.sort-section
+	position: relative
+	margin-bottom: 18px
+	&:before
+		content: ""
+		position: absolute
+		bottom: 0
+		z-index: -1
+		left: 50%
+		width: 1271px
+		height: 5px
+		margin-left: -635px
+		background: url(../img/shadow.png) 0 0 no-repeat 
+	.btn-group
+		float: right
+		margin-left: 20px
+.sort-section__in  
+	position: relative
+	z-index: 2
+	padding: 19px 0 
+	background: rgba(247,247,247,.6) 
+
+.btn-group_styled
+	.icon-rub
+		font-size: 16px
+	.btn
+		padding: 0 17px 
+		height: 34px
+		margin: 0 !important
+		background: #fff
+		border: 0
+		+box-shadow(0 1px 1px rgba(0,0,0,.36), inset 0 1px 1px #fff)
+		+g(#fff, #ececec)
+		z-index: 1
+		font-size: 13px
+		color: $dark_gray 
+		&:hover
+			z-index: 1
+			margin: 0 !important
+		&.is-active
+			background: #636363
+			color: #fff 
+			+box-shadow(inset 0 2px 2px rgba(32,32,32,.65))
+.btn-group_icon
+	.btn
+		width: 55px
+		padding: 0
+		text-align: center
+	i
+		vertical-align: middle
+		display: inline-block  
+	.is-active
+		.icon-list
+			+s(icon-list-act)          
+		.icon-map
+			+s(icon-map-act)            
+			
+.btn-group_rub
+	margin-right: 4px
+	.btn
+		width: 68px

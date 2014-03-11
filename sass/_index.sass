@@ -37,8 +37,8 @@
 			left: 0
 			opacity: 1
 		.slider__img
-			right: 6px
-			top: 30px
+			right: -34px
+			top: 144px
 	&.is-inactive
 		.slider__title
 			left: -4000px
@@ -55,8 +55,8 @@
 			left: 0
 			opacity: 1
 		.slider__img
-			right: 6px
-			top: 103px
+			right: 15px
+			top: 106px
 	&.is-inactive
 		.slider__title
 			top: -1000px
@@ -99,14 +99,17 @@
 	font-size: 30px
 	opacity: 0
 	+tr(all .5s ceaser($easeInOutBack))
+	+font-smoothing
 	span
 		display: block
 		margin-bottom: 10px
 		font-size: 50px
 		opacity: 1
 		line-height: 1
-		+text-shadow(0 1px 1px rgba(0,0,0,.64))
+		text-shadow: 0 1px 1px rgba(0,0,0,.64)
 		+fbold2
+	p
+		+opacity(.8)
 .slider__img
 	position: absolute
 	top: 113px
@@ -459,57 +462,29 @@
 	font-size: 32px
 	line-height: 1.2
 .app__btn
-	display: block
-	margin-top: 47px
 	position: relative
-	overflow: hidden
+	margin-top: 47px
 	width: 280px
 	height: 102px
-	line-height: 102px
-	color: #fff 
-	+border-radius(10px)
-	background: #dd2b00
-	font-size: 18px
-	text-shadow: 0 1px 1px #6e1500
-	+box-shadow(inset 0 1px 7px #a52000)
-	+g(#e72d00, #c82700)
-	&:hover
-		color: #fff 
-		text-decoration: none
-		background: #ff3100
-		+box-shadow(inset 0 1px 7px #a52000)
-		+g(#ff3100, #aa2e10)
-	&:active
-		background: #c82700
-		+box-shadow(inset 0 2px 5px #731600)
-		+g(#c82700, #b32200)
-		&:before,
-		&:after
-			display: none
-	.icon
-		margin: 0 23px 0 26px 
-	.icon,
-	div
-		display: inline-block
-		vertical-align: middle
-		line-height: 1
-		span
-			display: block
-			font-size: 42px
-	&:before,
-	&:after
-		content: ""
+	a
+		position: relative
+		display: block
+		z-index: 2
+		width: 280px
+		height: 102px
+		&:hover
+			+ i
+				+s(btn-h)
+		&:active
+			+ i
+				+s(btn-act)
+	i
 		position: absolute
-		left: 50%
-		margin-left: -45%
-		width: 90%
-		height: 40px
-		+box-shadow(0 0 30px 20px #dd684c) 
-		+border-radius(50%)
-	&:before
-		top: -45px
-	&:after
-		bottom: -50px
+		left: -15px
+		top: -13px
+		+s(btn)
+		
+
 		
 .btn-funny-prev,
 .btn-funny-next
@@ -517,7 +492,7 @@
 	z-index: 200
 	top: -257px
 	padding: 0
-	background: #fff
+	+opacity(.9)
 	border: 0
 	i
 		display: inline-block
@@ -531,7 +506,7 @@
 		+s(prev2-act)
 .btn-funny-next
 	right: 75px
-	+s(next2)
+	+s(next2)   
 	&:hover
 		+s(next2-h)
 	&:active
@@ -674,13 +649,14 @@
 		+border-radius(5px)
 		background: #fff
 		+box-shadow(inset 0 3px 1px #e4e4e4)
-		&:focus
-			//letter-spacing: .4px 
 		+placeholder
-			color: #666
+			color: #ddd
 			+freg 
 			font-size: 20px
 			//letter-spacing: .4px  
+		&:focus
+			+placeholder
+				color: #ddd   
 	input,
 	.btn
 		display: inline-block

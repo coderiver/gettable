@@ -23,17 +23,26 @@
 		+background-image(linear-gradient(bottom, #b32200 0%, #c82700 100%), linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%))
 	&:focus
 		color: #fff  
-.btn_red-new
+.btn_red-simple
 	padding: 0 25px 
 	width: auto
 	height: 44px
 	font-size: 15px
+	+fbold
+	color: #fff 
 	text-shadow: none 
 	text-transform: uppercase
 	letter-spacing: 1px 
-	//+box-shadow(0 2px 1px #961c00, inset 0 1px 1px rgba(255,195,180,.74))
-	//+g(#e72d00, #c82700)
-
+	border: 0
+	+border-radius(4px)
+	background: #c82700   
+	+box-shadow(0 2px 1px #961d00, inset 0 1px 1px rgba(255,195,180,.74))
+	+g(#e72d00, #c82700)
+	&:hover
+		color: #fff 
+		+background-image(linear-gradient(bottom, #af2200 0%, #cf2a03 100%), linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%))
+	&:focus
+		color: #fff 
 .btn-group_simple
 	.btn
 		padding: 0
@@ -83,7 +92,19 @@
 			color: $dark_gray
 		sup
 			color: #7f7f7f 
-		
+.dropdown-menu_city
+	.is-active
+		a
+			display: inline-block
+			position: relative
+			&:before
+				content: "" 
+				position: absolute
+				left: 8px
+				top: 50%
+				margin-top: -4px
+				+s(arr2)
+	
 .input-group_search
 	position: relative
 	display: block
@@ -100,20 +121,18 @@
 		font-size: 16px
 		color: #000
 		border-radius: 3px !important
-		border-color: transparent
+		border: 0
 		+box-shadow(inset 0 2px 2px rgba(0,0,0,.14))
-		background: $light
 		+placeholder
 			color: #878787 
-		&:hover
+		&:hover  
 			+placeholder
 				color: #000
 			+ i
 				+s(glass-h)
 		&:focus
 			outline: none !important 
-			border-color: $red  
-			+box-shadow(0 0 7px rgba(255,53,3,.86), inset 0 2px 2px rgba(0,0,0,.14))
+			+box-shadow(0 0 7px rgba(255,53,3,.86), inset 0 2px 2px rgba(0,0,0,.14),inset 0 0 0 1px $red  )
 			+placeholder
 				color: $red 
 			+ i
@@ -282,8 +301,8 @@
 	color: #7b7b7b
 	font-size: 16px
 	+freg
-	border-color: #adadad 
-	+border-radius(17px)
+	border-color: #adadad
+	+border-radius(19px)
 	&:hover
 		color: #f00
 		border-color: $red 
@@ -308,19 +327,31 @@
 			color: $dark_gray
 			border-bottom-color: transparent 
 	a
+		display: inline-block
+		position: relative
 		color: $red
-		border-bottom: 3px dotted  
+		&:after
+			content: ""
+			position: absolute
+			bottom: -8px
+			left: 0
+			right: 0
+			height: 6px
+			background: url(../img/border.png) 0 0 repeat-x  
 		&.is-active
 			color: $dark_gray
-			border-bottom-color: transparent 
+			&:after
+				display: none
 			&:hover
 				color: $dark_gray
 		&:hover
 			text-decoration: none
 			color: #f00 
-	.icon
-		display: block
-		margin: 0 auto 18px  
+			&:after  
+				background-image:  url(../img/border-h.png)
+		.icon
+			display: block
+			margin: 0 auto 18px  
 		
 .to-center
 	text-align: center

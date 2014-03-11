@@ -73,3 +73,34 @@
     font-style: normal
     +box-shadow(0 1px 1px rgba(0,0,0,.36), inset 0 1px 1px #fff)
     +g(#fff, #ececec)
+
+.accordion
+    .panel-heading
+        background: none
+    .panel-body,
+    .panel-heading,
+        border: 0 !important
+    .panel
+        +box-shadow(none)
+        border: 0
+        border-top: 1px solid #eaeaea
+        &:first-child
+            border-top: 0 
+    .panel-title
+        font-size: 14px
+        +fbold
+        a
+            display: block
+            position: relative
+            &:hover
+                text-decoration: none  
+            &:after
+                content: ""
+                position: absolute
+                top: 50%
+                right: 0
+                margin-top: -6px
+                +s(arr1) 
+    .panel-body
+        font-size: 13px
+        color: #757575 

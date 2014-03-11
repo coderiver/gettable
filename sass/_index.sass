@@ -241,8 +241,12 @@
 			left: 0
 		&:hover
 			left: -151px
+			+r(w1280)
+				left: 2px
 		&:active
 			left: -145px
+			+r(w1280)
+				left: 5px	
 
 	.btn-next
 		right: -149px
@@ -250,8 +254,12 @@
 			right: 0
 		&:hover
 			right: -151px
+			+r(w1280)
+				right: 2px
 		&:active
 			right: -145px
+			+r(w1280)
+				right: 5px
 
 .carousel__slide
 	overflow: hidden
@@ -527,47 +535,12 @@
 	padding-top: 8px
 	+clr
 	.title
-		float: left
+		float: left  
 	.filter-view
 		float: right
 		margin-top: 22px
 
-.items-wrap
-	padding-top: 12px
-	+clr
-.item
-	margin-bottom: 17px
-	border: 1px solid #e5e5e5
-	width: 315px
-	+box
-	+tr(box-shadow .2s linear)
-	&:hover
-		+box-shadow(0 0 4px rgba(0,0,0,.2))
-	.title
-		a
-			color: #000
-			&:hover
-				text-decoration: none
-.item__img
-	position: relative
-	text-align: center
-	height: 203px
-	overflow: hidden
-	text-align: center
-	.time
-		position: absolute
-		bottom: 15px
-		left: 20px
-		line-height: 1
-	.like
-		position: absolute
-		right: 20px
-		bottom: 15px
-		line-height: 1
-.item__main
-	padding: 0 19px 19px
-	font-size: 15px
-	color: #858585
+
 	
 .login
 	position: relative

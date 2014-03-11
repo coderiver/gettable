@@ -35,8 +35,10 @@ $(document).ready(function() {
   	}
   	tab();
 
-
-    $(".js-input-tel").mask("(999) 999-99-99");
+    if ($(".js-input-tel").length) {
+        $(".js-input-tel").mask("(999) 999-99-99");
+    }
+    
     //$(".js-input-pass").mask("");
 
     $(".js-login-link").on("click", function(){
@@ -53,6 +55,23 @@ $(document).ready(function() {
         $(this).parent().find("input").val("");
     });
 
+    $(".js-item-action").hover(
+        function() {
+            $(this).parents(".item").find(".item__action-info").fadeIn();
+        }, function() {
+            $(this).parents(".item").find(".item__action-info").fadeOut();
+        }
+    );
 
+    $('.js-scroll-pane').jScrollPane();
 
-});
+    $(".js-item-key").on("click",function(){
+        $(this).parents(".item").addClass("is-active");
+        return false;
+    }); 
+    $(".js-hide-info").on("click",function(){
+        $(this).parents(".item").removeClass("is-active");
+        return false;
+    });
+
+}); 

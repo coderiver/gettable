@@ -10,24 +10,28 @@
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/masonry.pkgd.js"></script>
+	<script src="js/cycle.js"></script>
+	<script src="js/jquery.cycle2.carousel.js"></script>
+	<script src="js/jquery.maskedinput.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/jquery.jscrollpane.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
 	<!-- BEGIN header -->
 	<div class="page-header clearfix">
 		<div class="container">
-			<a href="#" class="logo"></a>
-			<button type="button" class="btn btn_red">Вход / Регистрация</button>
+			<span class="logo"></span>
+			<button type="button" class="btn btn_red js-login-link">Вход / Регистрация</button>
 			<div class="btn-group btn-group_simple">
 				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<i class="icon icon-earth"></i>
 					<strong>Санкт-Петербург</strong>
 					<span class="caret"></span>
 				</button>
-				<ul class="dropdown-menu" role="menu">
+				<ul class="dropdown-menu dropdown-menu_city" role="menu">
 					<li><a href="#">Москва <sup>557</sup></a></li>
-					<li><a href="#">Санкт-Петербург <sup>256</sup></a></li>
+					<li class="is-active"><a href="#">Санкт-Петербург <sup>256</sup></a></li>
 				</ul>
 			</div>
 			<div class="btn-group btn-group_lang">
@@ -65,197 +69,486 @@
 	<!-- END breadcrumb -->
 	<!-- BEGIN main-aection -->
 	<div class="main-section">
-		<div class="container">
-			<div class="l-cols">
-				<aside class="sidebar">
-					<div class="sidebar__in">
-						<div class="input-group input-group_search">
-					    	<input type="text" class="form-control" placeholder="Поиск по названию...">
-					    	<i></i>
-					    </div>
-						<div class="sidebar__item">
-							<div class="btn-group btn-group_styled btn-group_rub">
-								<button type="button" class="btn is-active"><i class="icon-rub">Р</i></button>
-								<button type="button" class="btn"><i class="icon-rub">РР</i></button>
-								<button type="button" class="btn"><i class="icon-rub">РРР</i></button>
+		<div class="container wrap">
+			<aside class="sidebar">
+				<div class="sidebar__in">
+					<div class="input-group input-group_search">
+				    	<input type="text" class="form-control" placeholder="Поиск по названию...">
+				    	<i></i>
+				    </div>
+					<div class="sidebar__item">
+						<div class="btn-group btn-group_styled btn-group_rub">
+							<button type="button" class="btn is-active"><i class="icon-rub">Р</i></button>
+							<button type="button" class="btn"><i class="icon-rub">РР</i></button>
+							<button type="button" class="btn"><i class="icon-rub">РРР</i></button>
+						</div>
+						<i class="wtf">?</i>
+						<div class="checkbox-group">
+							<div class="checkbox">
+							    <label class="checkbox__in">
+									<input type="checkbox"> 
+									<span>В центре</span>
+							    </label>
 							</div>
-							<i class="wtf">?</i>
-							<div class="checkbox-group">
-								<div class="checkbox">
-								    <label class="checkbox__in">
-										<input type="checkbox"> 
-										<span>В центре</span>
-								    </label>
-								</div>
-								<div class="checkbox">
-								    <label class="checkbox__in">
-										<input type="checkbox"> 
-										<span>Кальян</span>
-								    </label>
-								</div>
-								<div class="checkbox">
-								    <label class="checkbox__in">
-										<input type="checkbox"> 
-										<span>До поздна</span>
-								    </label>
-								</div>
-								<div class="checkbox">
-								    <label class="checkbox__in">
-										<input type="checkbox"> 
-										<span>Акции</span>
-								    </label>
-								</div>
+							<div class="checkbox">
+							    <label class="checkbox__in">
+									<input type="checkbox"> 
+									<span>Кальян</span>
+							    </label>
+							</div>
+							<div class="checkbox">
+							    <label class="checkbox__in">
+									<input type="checkbox"> 
+									<span>До поздна</span>
+							    </label>
+							</div>
+							<div class="checkbox">
+							    <label class="checkbox__in">
+									<input type="checkbox"> 
+									<span>Акции</span>
+							    </label>
 							</div>
 						</div>
-						<div class="sidebar__item">
-							<div class="panel-group" id="accordion">
-								<div class="panel panel-default">
-									<div class="panel-heading">
-								    	<h4 class="panel-title">
-								        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Collapsible Group Item #1</a>
-								      	</h4>
-									</div>
-									<div id="collapseOne" class="panel-collapse collapse in">
-								    	<div class="panel-body">
-									        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-								    	</div>
-									</div>
-								</div>
-								<div class="panel panel-default">
-								    <div class="panel-heading">
-								    	<h4 class="panel-title">
-								   			<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Collapsible Group Item #2</a>
-								    	</h4>
-								    </div>
-								    <div id="collapseTwo" class="panel-collapse collapse">
-								    	<div class="panel-body">
-								        	Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-								    	</div>
-								    </div>
-								</div>
-								<div class="panel panel-default">
-								    <div class="panel-heading">
-								    	<h4 class="panel-title">
-								        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Collapsible Group Item #3</a>
-								    	</h4>
-								    </div>
-								    <div id="collapseThree" class="panel-collapse collapse">
-								    	<div class="panel-body">
-								        	Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-								      	</div>
-								    </div>
-								</div>
-							</div>
-						</div>
-						
 					</div>
-				</aside>  
-	  			<!-- <div class="main-col">
-	  				<div class="main-col__top">
-	  					<h2 class="title">Нашлось 25 ресторанов:</h2>
-	  					<div class="filter-view">
-	  						<a href="#" class="is-active">
-	  							<i class="icon icon-list"></i>
-	  							<span>Список</span>
-	  						</a>
-	  						<a href="#">
-	  							<i class="icon icon-point"></i>
-	  							<span>На карте</span>
-	  						</a>
+					<div class="sidebar__item">
+						<div class="panel-group accordion" id="accordion">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+							    	<h4 class="panel-title">
+							        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Особенности</a>
+							      	</h4>
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse in">
+							    	<div class="panel-body">
+								        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+							    	</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+							    <div class="panel-heading">
+							    	<h4 class="panel-title">
+							   			<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Выбрать станцию метро</a>
+							    	</h4>
+							    </div>
+							    <div id="collapseTwo" class="panel-collapse collapse">
+							    	<div class="panel-body">
+							        	Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute
+							    	</div>
+							    </div>
+							</div>
+							<div class="panel panel-default">
+							    <div class="panel-heading">
+							    	<h4 class="panel-title">
+							        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Интересное</a>
+							    	</h4>
+							    </div>
+							    <div id="collapseThree" class="panel-collapse collapse">
+							    	<div class="panel-body">
+							        	Anim pariatur cliche reprehenderit, enim eiusmod high 
+							      	</div>
+							    </div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</aside>  
+  			<div class="main-col wrap">
+  				<div class="item">
+  					<div class="item__wrap">
+	  					<div class="item__in">
+	  						<div class="item__card">
+	  							<div class="item__img">
+	  								<img src="http://lorempixel.com/313/203/food" alt="">
+	  								<span class="item__time"><i class="icon icon-time"></i>Круглосуточно</span>
+	  								<span class="item__counter js-item-key">12 ресторанов</span>
+	  								<div class="item__action-info">
+  										<div>
+  											<span>-25%</span>
+  											Скидка при бронировании понедельник, вторник, среда,  четверг, с 15:00 — 19:00
+  										</div>
+  									</div>
+	  							</div>
+	  							<div class="item__main">
+	  								<div class="item__title">
+	  									<div class="item__title-link">
+	  										<a href="#">George</a>
+	  									</div>
+										<a href="#" class="item__like">854</a>
+	  								</div>
+	  								<div class="item__text">Первый премиальный грузинский ресторан в Москве</div>
+	  								<div class="item__metro"><i class="icon icon-point"></i>м. Братиславская</div>
+	  							</div>
+	  							
+	  						</div>
+	  						<div class="item__info">
+	  							<button class="item__info-hide js-hide-info"><i></i></button>
+	  							<div class="item__list">
+	  								<strong>12 ресторанов:</strong>
+	  								<div class="scroll-pane js-scroll-pane">
+		  								<ul>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  								</ul>
+		  							</div>
+	  							</div>
+	  						</div>
 	  					</div>
 	  				</div>
-	  				<div class="items-wrap js-masonry" data-masonry-options='{"columnWidth": 315, "gutter": 17, "itemSelector": ".js-item-masonry" }'>
-	  					<div class="item js-item-masonry">
-	  						<div class="item__img">
-	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
-	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
-	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
+	  				<a class="item__action js-item-action" href="#">
+						- 25%
+					</a>
+  				</div>
+  				<div class="item">
+  					<div class="item__wrap">
+	  					<div class="item__in">
+	  						<div class="item__card">
+	  							<div class="item__img">
+	  								<img src="http://lorempixel.com/313/203/food" alt="">
+	  								<span class="item__time"><i class="icon icon-time"></i>Круглосуточно</span>
+	  								<span class="item__counter js-item-key">12 ресторанов</span>
+	  							</div>
+	  							<div class="item__main">
+	  								<div class="item__title">
+	  									<div class="item__title-link">
+	  										<a href="#">George</a>
+	  									</div>
+										<a href="#" class="item__like">854</a>
+	  								</div>
+	  								<div class="item__text">Первый премиальный грузинский ресторан в Москве</div>
+	  								<div class="item__metro"><i class="icon icon-point"></i>м. Братиславская</div>
+	  							</div>
+	  							
 	  						</div>
-	  						<div class="item__main">
-	  							<h2 class="title"><a href="#">Soprano by Gianni</a></h2>
-	  							<p>Древние методики хранения и приготовления пищи, а также рецепты, которым более 400 лет</p>
-	  						</div>
-	  					</div>
-	  					<div class="item js-item-masonry">
-	  						<div class="item__img">
-	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
-	  							<div class="time"><i class="icon icon-time"></i>Круглосуточно</div>
-	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
-	  						</div>
-	  						<div class="item__main">
-	  							<h2 class="title"><a href="#">Follow Me Cafe</a></h2>
-	  							<p>Микс кухонь мира</p>
-	  						</div>
-	  					</div>
-	  					<div class="item js-item-masonry">
-	  						<div class="item__img">
-	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
-	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
-	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
-	  						</div>
-	  						<div class="item__main">
-	  							<h2 class="title"><a href="#">Soprano by Gianni</a></h2>
-	  							<p>Ресторан грузинской кухни в ТЦ «Кутузов-холл» на Минской улице</p>
-	  						</div>
-	  					</div>
-	  					<div class="item js-item-masonry">
-	  						<div class="item__img">
-	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
-	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
-	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
-	  						</div>
-	  						<div class="item__main">
-	  							<h2 class="title"><a href="#">Булка на Большой Грузинской</a></h2>
-	  							<p>Не совсем ресторан — это хлебный ­магазин при пекарне, в котором можно выпить кофе</p>
-	  						</div>
-	  					</div>
-	  					<div class="item js-item-masonry">
-	  						<div class="item__img">
-	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
-	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
-	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
-	  						</div>
-	  						<div class="item__main">
-	  							<h2 class="title"><a href="#">Soprano by Gianni</a></h2>
-	  							<p>Древние методики хранения и приготовления пищи, а также рецепты, которым более 400 лет</p>
-	  						</div>
-	  					</div>
-	  					<div class="item js-item-masonry">
-	  						<div class="item__img">
-	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
-	  							<div class="time"><i class="icon icon-time"></i>Круглосуточно</div>
-	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
-	  						</div>
-	  						<div class="item__main">
-	  							<h2 class="title"><a href="#">Follow Me Cafe</a></h2>
-	  							<p>Микс кухонь мира</p>
-	  						</div>
-	  					</div>
-	  					<div class="item js-item-masonry">
-	  						<div class="item__img">
-	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
-	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
-	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
-	  						</div>
-	  						<div class="item__main">
-	  							<h2 class="title"><a href="#">Soprano by Gianni</a></h2>
-	  							<p>Ресторан грузинской кухни в ТЦ «Кутузов-холл» на Минской улице</p>
-	  						</div>
-	  					</div>
-	  					<div class="item js-item-masonry">
-	  						<div class="item__img">
-	  							<img src="http://lorempixel.com/313/203/food" alt="" width="313" height="203">
-	  							<div class="time"><i class="icon icon-time"></i>До 06:00 утра</div>
-	  							<a href="#" class="like"><i class="icon icon-like"></i>854</a>
-	  						</div>
-	  						<div class="item__main">
-	  							<h2 class="title"><a href="#">Булка на Большой Грузинской</a></h2>
-	  							<p>Не совсем ресторан — это хлебный ­магазин при пекарне, в котором можно выпить кофе</p>
+	  						<div class="item__info">
+	  							<button class="item__info-hide js-hide-info"><i></i></button>
+	  							<div class="item__list">
+	  								<strong>12 ресторанов:</strong>
+	  								<div class="scroll-pane js-scroll-pane">
+		  								<ul>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  								</ul>
+		  							</div>
+	  							</div>
 	  						</div>
 	  					</div>
 	  				</div>
-	  			</div> -->
-			</div>
+  				</div>
+  				<div class="item">
+  					<div class="item__wrap">
+	  					<div class="item__in">
+	  						<div class="item__card">
+	  							<div class="item__img">
+	  								<img src="http://lorempixel.com/313/203/food" alt="">
+	  								<span class="item__time"><i class="icon icon-time"></i>Круглосуточно</span>
+	  								<span class="item__counter js-item-key">12 ресторанов</span>
+	  								<div class="item__action-info">
+  										<div>
+  											<span>-25%</span>
+  											Скидка при бронировании понедельник, вторник, среда,  четверг, с 15:00 — 19:00
+  										</div>
+  									</div>
+	  							</div>
+	  							<div class="item__main">
+	  								<div class="item__title">
+	  									<div class="item__title-link">
+	  										<a href="#">George</a>
+	  									</div>
+										<a href="#" class="item__like">854</a>
+	  								</div>
+	  								<div class="item__text">Первый премиальный грузинский ресторан в Москве</div>
+	  								<div class="item__metro"><i class="icon icon-point"></i>м. Братиславская</div>
+	  							</div>
+	  							
+	  						</div>
+	  						<div class="item__info">
+	  							<button class="item__info-hide js-hide-info"><i></i></button>
+	  							<div class="item__list">
+	  								<strong>12 ресторанов:</strong>
+	  								<div class="scroll-pane js-scroll-pane">
+		  								<ul>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  								</ul>
+		  							</div>
+	  							</div>
+	  						</div>
+	  					</div>
+	  				</div>
+	  				<a class="item__action js-item-action" href="#">
+						- 25% скидка от 6 <i class="icon icon-user"></i>
+					</a>
+  				</div>
+  				<div class="item">
+  					<div class="item__wrap">
+	  					<div class="item__in">
+	  						<div class="item__card">
+	  							<div class="item__img">
+	  								<img src="http://lorempixel.com/313/203/food" alt="">
+	  								<span class="item__time"><i class="icon icon-time"></i>Круглосуточно</span>
+	  								<span class="item__counter js-item-key">12 ресторанов</span>
+	  							</div>
+	  							<div class="item__main">
+	  								<div class="item__title">
+	  									<div class="item__title-link">
+	  										<a href="#">George</a>
+	  									</div>
+										<a href="#" class="item__like">854</a>
+	  								</div>
+	  								<div class="item__text">Первый премиальный грузинский ресторан в Москве</div>
+	  								<div class="item__metro"><i class="icon icon-point"></i>м. Братиславская</div>
+	  							</div>
+	  							
+	  						</div>
+	  						<div class="item__info">
+	  							<button class="item__info-hide js-hide-info"><i></i></button>
+	  							<div class="item__list">
+	  								<strong>12 ресторанов:</strong>
+	  								<div class="scroll-pane js-scroll-pane">
+		  								<ul>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  									<li>
+		  										<a href="#">
+		  											<i class="icon icon-point"></i>м. Братиславская
+		  											<div>Большая полянка, д. 6</div>
+		  										</a>
+		  									</li>
+		  								</ul>
+		  							</div>
+	  							</div>
+	  						</div>
+	  					</div>
+	  				</div>
+  				</div>
+  			</div>
 		</div>
 	</div>
 	<!-- END main-aection -->

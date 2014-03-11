@@ -39,7 +39,7 @@ html ::scrollbar-track-piece { width: 6px; border-radius: 3px; }
 html ::selection { background: rgba(19, 122, 233, 0.2); }
 html ::-moz-selection { background: rgba(19, 122, 233, 0.2); }
 
-body { min-width: 1280px; background: #fafafa url(../img/body-bg.png) 0 0 repeat; color: #858585; font-family: "GEInspiraReg", Arial, sans-serif; line-height: 1.5; font-size: 13px; }
+body { min-width: 1023px; background: #fafafa url(../img/body-bg.png) 0 0 repeat; color: #858585; font-family: "GEInspiraReg", Arial, sans-serif; line-height: 1.5; font-size: 13px; }
 body.index-page { background: #fafafa; }
 body.index-page .page-footer { border-top: 0; }
 
@@ -442,9 +442,11 @@ body.index-page .page-footer { border-top: 0; }
 .carousel .container { position: relative; }
 .carousel .btn-prev, .carousel .btn-next { top: 220px; }
 .carousel .btn-prev { left: -149px; }
+@media only screen and (max-width: 1280px) { .carousel .btn-prev { left: 0; } }
 .carousel .btn-prev:hover { left: -151px; }
 .carousel .btn-prev:active { left: -145px; }
 .carousel .btn-next { right: -149px; }
+@media only screen and (max-width: 1280px) { .carousel .btn-next { right: 0; } }
 .carousel .btn-next:hover { right: -151px; }
 .carousel .btn-next:active { right: -145px; }
 

@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    $(document).click(function(){
+        window_el.fadeOut("fast");
+    });
+
+    var window_el = $(".js-window");
+
 	$(".js-slider").on('cycle-before', function() {
 		$(this).find(".is-inactive").removeClass("is-inactive");
 		$(this).find(".is-active").addClass("is-inactive");
@@ -64,7 +70,9 @@ $(document).ready(function() {
     );
 
     if ($('.js-scroll-pane').length) {
-        $('.js-scroll-pane').jScrollPane();
+        $('.js-scroll-pane').jScrollPane({
+            autoReinitialise: true
+        });
     }
       
 
@@ -77,4 +85,84 @@ $(document).ready(function() {
         return false;
     });
 
-}); 
+    var sidebar = $(".js-sidebar");
+    function fixedSidebar() {
+        var top = sidebar.offset().top-18;
+        if ($("body").scrollTop() >= top) {
+            $("body").addClass("is-fixed-sidebar");
+            var height = sidebar.find(".sidebar__in").outerHeight();
+            if (height >= $(window).height()) {
+                sidebar.find(".sidebar__wrap").css({
+                    maxHeight: $(window).height()-80
+                });
+                sidebar.find(".sidebar__in").css({
+                    maxHeight: $(window).height()-36
+                });
+            }
+        }
+        else {
+            $("body").removeClass("is-fixed-sidebar");
+        }
+    }
+    if (sidebar.length) {
+        fixedSidebar();
+    }
+    $(window).scroll(function(){
+        if (sidebar.length) {
+            fixedSidebar();
+        }
+        //$(".js-window").fadeOut();
+    }); 
+
+    $("body").prepend( '<div class="tip js-tip"><div class="tip__in"></div></div>' );
+    var tooltip = $(".js-tip");
+    $(".js-tip-key").hover(
+        
+        function(){
+            var left = $(this).offset().left;
+            var top = $(this).offset().top;
+            var tooltip_html = $(this).attr("data-title");
+            tooltip.find(".tip__in").html(tooltip_html);
+            var tooltip_height = tooltip.outerHeight();
+            tooltip.fadeIn("fast");
+            tooltip.css({
+                left: left+60,
+                top: top-(tooltip_height/2)+10,
+            });
+            
+        },
+        function() {
+            tooltip.hide();
+        }
+    );
+    tooltip.hover(
+        function(){
+            tooltip.show();
+        },
+        function() {
+            tooltip.hide(); 
+        }
+    );
+
+    $(".js-close-window").on("click", function(){
+        $(this).parents(".window").fadeOut("fast");
+    });
+    window_el.on("click", function(event){
+        event.stopPropagation()
+    })
+    $(".js-window-key").on("click", function(){
+        window_el.hide();
+        var el = $(this).attr("href");
+        var height = $("."+el).outerHeight();
+        var top = $(this).offset().top-(height/2)+($(this).outerHeight()/2);
+        var left = $(this).offset().left+$(this).outerWidth();
+        $("."+el).fadeIn("fast");
+        $("."+el).css({
+            top: top,
+            left: left
+        });
+        return false;
+        //event.stopPropagation()
+    });
+
+});  

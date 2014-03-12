@@ -21,7 +21,7 @@
 	<!-- BEGIN header -->
 	<div class="page-header clearfix">
 		<div class="container">
-			<span class="logo"></span>
+			<a class="logo" href="#"></a>
 			<button type="button" class="btn btn_red js-login-link">Вход / Регистрация</button>
 			<div class="btn-group btn-group_simple">
 				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -116,87 +116,66 @@
 	<!-- BEGIN main-aection -->
 	<div class="main-section">
 		<div class="container wrap">
-			<aside class="sidebar">
+			<aside class="sidebar js-sidebar">
 				<div class="sidebar__in">
-					<div class="input-group input-group_search">
-				    	<input type="text" class="form-control" placeholder="Поиск по названию...">
-				    	<i></i>
-				    </div>
-					<div class="sidebar__item">
-						<div class="btn-group btn-group_styled btn-group_rub">
-							<button type="button" class="btn is-active"><i class="icon-rub">Р</i></button>
-							<button type="button" class="btn"><i class="icon-rub">РР</i></button>
-							<button type="button" class="btn"><i class="icon-rub">РРР</i></button>
-						</div>
-						<i class="wtf">?</i>
-						<div class="checkbox-group">
-							<div class="checkbox">
-							    <label class="checkbox__in">
-									<input type="checkbox"> 
-									<span>В центре</span>
-							    </label>
+					<div class="sidebar__wrap">
+						<div class="input-group input-group_search">
+					    	<input type="text" class="form-control" placeholder="Поиск по названию..." >
+					    	<i></i>
+					    </div>
+						<div class="sidebar__item">
+							<div class="btn-group btn-group_styled btn-group_rub">
+								<button type="button" class="btn is-active"><i class="icon-rub">Р</i></button>
+								<button type="button" class="btn"><i class="icon-rub">РР</i></button>
+								<button type="button" class="btn"><i class="icon-rub">РРР</i></button>
 							</div>
-							<div class="checkbox">
-							    <label class="checkbox__in">
-									<input type="checkbox"> 
-									<span>Кальян</span>
-							    </label>
-							</div>
-							<div class="checkbox">
-							    <label class="checkbox__in">
-									<input type="checkbox"> 
-									<span>До поздна</span>
-							    </label>
-							</div>
-							<div class="checkbox">
-							    <label class="checkbox__in">
-									<input type="checkbox"> 
-									<span>Акции</span>
-							    </label>
-							</div>
-						</div>
-					</div>
-					<div class="sidebar__item">
-						<div class="panel-group accordion" id="accordion">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-							    	<h4 class="panel-title">
-							        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Особенности</a>
-							      	</h4>
+							<i class="wtf js-tip-key" data-title="
+								<h6>Средний чек:</h6>
+								<div><strong><i>Р</i></strong> — от 500 до 1000 руб.</div>
+								<div><strong><i>РР</i></strong> — от 1000 до 1500 руб.</div>
+								<div><strong><i>РРР</i></strong> — от 1500 до 3000 руб.</div>
+							">?</i>
+							<div class="checkbox-group">
+								<div class="checkbox">
+								    <label class="checkbox__in">
+										<input type="checkbox"> 
+										<span>В центре</span>
+								    </label>
 								</div>
-								<div id="collapseOne" class="panel-collapse collapse in">
-							    	<div class="panel-body">
-								        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-							    	</div>
+								<div class="checkbox">
+								    <label class="checkbox__in">
+										<input type="checkbox"> 
+										<span>Кальян</span>
+								    </label>
+								</div>
+								<div class="checkbox">
+								    <label class="checkbox__in">
+										<input type="checkbox"> 
+										<span>До поздна</span>
+								    </label>
+								</div>
+								<div class="checkbox">
+								    <label class="checkbox__in">
+										<input type="checkbox"> 
+										<span>Акции</span>
+								    </label>
 								</div>
 							</div>
-							<div class="panel panel-default">
-							    <div class="panel-heading">
-							    	<h4 class="panel-title">
-							   			<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Выбрать станцию метро</a>
-							    	</h4>
-							    </div>
-							    <div id="collapseTwo" class="panel-collapse collapse">
-							    	<div class="panel-body">
-							        	Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute
-							    	</div>
-							    </div>
-							</div>
-							<div class="panel panel-default">
-							    <div class="panel-heading">
-							    	<h4 class="panel-title">
-							        	<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Интересное</a>
-							    	</h4>
-							    </div>
-							    <div id="collapseThree" class="panel-collapse collapse">
-							    	<div class="panel-body">
-							        	Anim pariatur cliche reprehenderit, enim eiusmod high 
-							      	</div>
-							    </div>
-							</div>
+						</div>
+						<div class="sidebar__filter">
+							<a href="js-window1" class="sidebar__title js-window-key">Особенности</a>
+							<ul class="sidebar__list">
+								<li><span>Итальянская</span></li>
+								<li><span>Кавказская</span></li>
+							</ul>
+						</div>
+						<div class="sidebar__filter">
+							<a href="js-window2" class="sidebar__title js-window-key">Выбрать станцию метро</a>
+						</div>
+						<div class="sidebar__filter">
+							<a href="#" class="sidebar__title">Интересное</a>
 						</div>
 					</div>
-					
 				</div>
 			</aside>  
   			<div class="main-col wrap">
@@ -669,4 +648,315 @@
 	</div>
 	<!-- END footer -->
 </body>
+<div class="window js-window js-window1">
+	<div class="clearfix">
+		<div class="window__col">
+			<div class="window__title"><i class="icon icon-title-kitchen"></i>Тематические:</div>
+		</div>
+		<div class="window__col"></div>
+		<div class="window__col">
+			<div class="window__title"><i class="icon icon-title-club"></i>Клубы и бары:</div>
+		</div>
+	</div>
+	<div class="clearfix">
+		<div class="window__col">
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Итальянская</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Итальянская </span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Кавказская</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Восточная</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Японская </span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Морская кухня</span>
+			    </label>
+			</div>
+		</div>
+		<div class="window__col">
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Ватиканская</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Облепиховая</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Кавказская</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Восточная</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Японская </span>
+			    </label>
+			</div>
+		</div>
+		<div class="window__col">
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Бразильский</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>С отдыхом на море</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Рокерский</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>С кальяном</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Желчный</span>
+			    </label>
+			</div>
+		</div>
+	</div>
+	<button class="button-close js-close-window"></button>
+</div>
+<div class="window window_mod js-window js-window2">
+	<div class="input-group input-group_search input-group_metro">
+    	<input type="text" class="form-control" placeholder="Введите станцию метро...">
+    	<i></i>
+    </div>
+	<div class="clearfix scroll-pane js-scroll-pane">
+		<div class="window__col">
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Авиамоторная</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Академическая </span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Алексеевская</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Аннино</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Автозаводская </span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Авиамоторная</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Академическая </span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Алексеевская</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Аннино</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Автозаводская </span>
+			    </label>
+			</div>
+		</div>
+		<div class="window__col">
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Авиамоторная</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Академическая </span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Алексеевская</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Аннино</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Автозаводская </span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Авиамоторная</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Академическая </span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Алексеевская</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Аннино</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Автозаводская </span>
+			    </label>
+			</div>
+		</div>
+		<div class="window__col">
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Авиамоторная</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Академическая </span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Алексеевская</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Аннино</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Автозаводская </span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Авиамоторная</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Академическая </span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Алексеевская</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Аннино</span>
+			    </label>
+			</div>
+			<div class="checkbox">
+			    <label class="checkbox__in">
+					<input type="checkbox"> 
+					<span>Автозаводская </span>
+			    </label>
+			</div>
+		</div>
+	</div>
+	<button class="button-close js-close-window"></button>
+</div>  
 </html>

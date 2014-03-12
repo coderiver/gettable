@@ -73,6 +73,18 @@ body
 			border-top: 0
 		.container
 			width: 970px
+	&.is-fixed-sidebar
+		.sidebar__in
+			position: fixed
+			top: 18px
+			left: 50%
+			z-index: 1000
+			margin-left: -481px
+			width: 276px
+			+box
+		.sidebar__wrap
+			overflow-y: auto
+			height: 100%
 .container
 	margin: 0 auto 
 	width: 993px

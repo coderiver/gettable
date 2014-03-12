@@ -352,7 +352,7 @@ body.is-fixed-sidebar .sidebar__wrap { overflow-y: auto; height: 100%; }
 .btn-group_rub { margin-right: 4px; }
 .btn-group_rub .btn { width: 68px; }
 
-.tip { position: absolute; top: auto; left: auto; z-index: 2000; padding: 11px 25px 20px; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; background: white; font-size: 13px; color: #757575; -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.36); -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.36); box-shadow: 0 0 6px rgba(0, 0, 0, 0.36); }
+.tip { position: absolute; top: auto; left: auto; z-index: 3000; padding: 11px 25px 20px; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; background: white; font-size: 13px; color: #757575; -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.36); -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.36); box-shadow: 0 0 6px rgba(0, 0, 0, 0.36); }
 .tip:before { content: ""; position: absolute; left: -17px; top: 50%; margin-top: -13px; z-index: 2; background: url('../img/icons-s8f79a8917b.png') 0 -3333px no-repeat; width: 18px; height: 26px; }
 .tip:after { content: ""; position: absolute; left: -16px; top: 50%; margin-top: -8px; background: url('../img/icons-s8f79a8917b.png') 0 -3288px no-repeat; width: 18px; height: 17px; }
 .tip strong { font-family: "GEInspiraBold", Arial, sans-serif; color: black; font-weight: normal; }

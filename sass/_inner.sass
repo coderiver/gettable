@@ -48,19 +48,21 @@
 	position: relative
 	height: 203px
 	overflow: hidden
-	&:after
-		content: ""
-		position: absolute
-		top: 0
-		right: 0
-		left: 0
-		height: 216px
-		+background-image(linear-gradient(bottom, rgba(0,0,0,.9) 0%, rgba(0,0,0,0) 40.26%, rgba(0,0,0,0) 100%))
 	img
 		display: block
 		width: 100%
 		height: auto
-
+.item__img-link
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	height: 216px
+	z-index: 1
+	+tr(all .2s linear)
+	+background-image(linear-gradient(bottom, rgba(0,0,0,.9) 0%, rgba(0,0,0,0) 40.26%, rgba(0,0,0,0) 100%))
+	&:hover
+		+opacity(.7)
 .item__action
 	position: absolute
 	top: 7px

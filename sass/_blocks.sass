@@ -92,7 +92,21 @@
 			color: $dark_gray
 		sup
 			color: #7f7f7f 
-.dropdown-menu_city
+.dropdown-menu_city  
+	overflow: visible !important
+	&:before
+		content: ""
+		position: absolute
+		top: -6px
+		right: 10px
+		+arr(13,6,#fff,t) 
+	li
+		&:first-child
+			a
+				+border-radius(3px 3px 0 0)
+		&:last-child
+			a
+				+border-radius(0 0 3px 3px)
 	.is-active
 		a
 			display: inline-block
@@ -114,7 +128,7 @@
 		float: none
 		width: 100%
 		+box
-		border-radius: 3px
+		border-radius: 3px     
 		background: #f9f9f9
 		+fbold
 		height: 43px

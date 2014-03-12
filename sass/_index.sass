@@ -237,29 +237,29 @@
 		top: 220px
 	.btn-prev
 		left: -149px
-		+r(w1280)
-			left: 0
+		+r(w1270)
+			display: none
 		&:hover
 			left: -151px
-			+r(w1280)
-				left: 2px
+			// +r(w1280)
+			// 	left: -2px
 		&:active
 			left: -145px
-			+r(w1280)
-				left: 5px	
+			// +r(w1280)
+			// 	left: 4px	
 
 	.btn-next
 		right: -149px
-		+r(w1280)
-			right: 0
+		+r(w1270)
+			display: none
 		&:hover
 			right: -151px
-			+r(w1280)
-				right: 2px
+			// +r(w1280)
+			// 	right: -2px
 		&:active
 			right: -145px
-			+r(w1280)
-				right: 5px
+			// +r(w1280)
+			// 	right: 4px
 
 .carousel__slide
 	overflow: hidden
@@ -316,7 +316,7 @@
 	padding: 23px 0 23px
 	.container
 		position: relative
-		width: 100%
+		width: 100% !important  
 		overflow: hidden
 		padding: 0
 		.container

@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!--><html><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>Template</title>
+	<title>Search</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" media="screen" href="css/bootstrap.css" >
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
@@ -46,6 +46,52 @@
 		</div>
 	</div>
 	<!-- END header -->
+	<!-- BEGIN login-wrap -->
+	<div class="login js-login-box">
+		<div class="container">
+			<div class="login__left">
+				<div class="login__title">Войти или зарегистрироваться 
+				<strong>По вашему номеру телефона</strong></div>
+				<div class="login__form">
+					<div class="login__row">
+						<span>+7</span>
+						<input type="tel" class="js-input-tel" placeholder="(___) ___-__-__">
+						<button class="btn-resend">отправить код повторно</button>
+					</div>
+					<div class="login__title">
+						<strong>Секретный код:</strong>
+						<span>придет на ваш телефон в течение пары минут</span>
+					</div>
+					<div class="login__row is-error">
+						<i class="icon-pass"></i>
+						<input type="text" placeholder="xxxxxx" value="453354">
+						<button type="submit" class="btn btn_red-simple">Подтвердить</button>
+						<div class="login__error">Неверный код, перепроверьте его!</div>
+						<button class="btn-clear js-clear-input"></button>
+					</div>
+				</div>
+			</div>
+			<div class="login__right">
+				<div class="login__title">В личном кабинете вы сможете:</div>
+				<ul class="you-can">
+					<li>
+						<i class="icon-can1"></i>
+						<span>Запомнить интересные места</span>
+					</li>
+					<li>
+						<i class="icon-can2"></i>
+						<span>Сохранять историю посещений</span>
+					</li>
+					<li>
+						<i class="icon-can3"></i>
+						<span>Получать бонусы за посещения </span>
+					</li>
+				</ul>
+			</div>
+			<button class="btn-close js-close-login">Скрыть</button>
+		</div>
+	</div>
+	<!-- END login-wrap -->
 	<!-- BEGIN breadcrumb -->
 	<div class="sort-section">
 		<div class="sort-section__in">

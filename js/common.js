@@ -63,7 +63,10 @@ $(document).ready(function() {
         }
     );
 
-    $('.js-scroll-pane').jScrollPane();
+    if ($('.js-scroll-pane').length) {
+        $('.js-scroll-pane').jScrollPane();
+    }
+      
 
     $(".js-item-key").on("click",function(){
         $(this).parents(".item").addClass("is-active");

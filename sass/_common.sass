@@ -72,9 +72,11 @@ body
 		.container
 			width: 970px
 	&.is-fixed-sidebar
-		.sidebar__in
+		.sidebar__in,
+		.sidebar-target
 			position: fixed
 			top: 18px
+			bottom: auto
 			left: 50%
 			z-index: 1000
 			margin-left: -481px
@@ -87,7 +89,13 @@ body
 		.sidebar__in
 			position: absolute
 			top: auto
-	
+			bottom: 28px
+			left: 15px
+			z-index: 1000
+			width: 276px
+.main-section
+	> .container
+		position: relative
 .container
 	margin: 0 auto 
 	width: 993px

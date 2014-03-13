@@ -88,9 +88,10 @@ $(document).ready(function() {
     var sidebar = $(".js-sidebar");
     function fixedSidebar() {
         var top = sidebar.offset().top-18;
-        if ($("body").scrollTop() >= top) {
+        var scroll_top = $("body").scrollTop();
+         var height = sidebar.find(".sidebar__in").outerHeight();
+        if (scroll_top >= top) {
             $("body").addClass("is-fixed-sidebar");
-            var height = sidebar.find(".sidebar__in").outerHeight();
             if (height >= $(window).height()) {
                 sidebar.find(".sidebar__wrap").css({
                     maxHeight: $(window).height()-80
@@ -111,7 +112,6 @@ $(document).ready(function() {
         if (sidebar.length) {
             fixedSidebar();
         }
-        //$(".js-window").fadeOut();
     }); 
 
     $("body").prepend( '<div class="tip js-tip"><div class="tip__in"></div></div>' );

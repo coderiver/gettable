@@ -24,27 +24,19 @@ input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus { outl
 
 @font-face { font-family: rub-b; src: url("fonts/alsrubl-tahoma-bold.eot"); src: url("fonts/alsrubl-tahoma-bold.eot?#iefix") format("embedded-opentype"), url("fonts/alsrubl-tahoma-bold.woff") format("woff"), url("fonts/alsrubl-tahoma-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-html ::-moz-scrollbar { width: 6px; }
-html ::-webkit-scrollbar { width: 6px; }
-html ::scrollbar { width: 6px; }
-html ::-moz-scrollbar-track { background: none; }
-html ::-webkit-scrollbar-track { background: none; }
-html ::scrollbar-track { background: none; }
-html ::-moz-scrollbar-thumb { border-radius: 3px; background: #535353; }
-html ::-webkit-scrollbar-thumb { border-radius: 3px; background: #535353; }
-html ::scrollbar-thumb { border-radius: 3px; background: #535353; }
-html ::-moz-scrollbar-track-piece { width: 6px; border-radius: 3px; }
-html ::-webkit-scrollbar-track-piece { width: 6px; border-radius: 3px; }
-html ::scrollbar-track-piece { width: 6px; border-radius: 3px; }
 html ::selection { background: rgba(19, 122, 233, 0.2); }
 html ::-moz-selection { background: rgba(19, 122, 233, 0.2); }
 
 body { min-width: 1024px; background: #fafafa url(../img/body-bg.png) 0 0 repeat; color: #858585; font-family: "GEInspiraReg", Arial, sans-serif; line-height: 1.5; font-size: 13px; }
+body::-webkit-scrollbar { width: 6px; }
+body::-webkit-scrollbar-thumb { border-radius: 3px; background: #535353; }
+body::-webkit-scrollbar-track-piece { width: 6px; border-radius: 3px; }
 body.index-page { background: #fafafa; }
 body.index-page .page-footer { border-top: 0; }
 body.index-page .container { width: 970px; }
 body.is-fixed-sidebar .sidebar__in { position: fixed; top: 18px; left: 50%; z-index: 1000; margin-left: -481px; width: 276px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body.is-fixed-sidebar .sidebar__wrap { overflow-y: auto; height: 100%; }
+body.is-abs-sidebar .sidebar__in { position: absolute; top: auto; }
 
 .container { margin: 0 auto; width: 993px; }
 
@@ -173,6 +165,11 @@ body.is-fixed-sidebar .sidebar__wrap { overflow-y: auto; height: 100%; }
 .btn-group_simple .dropdown-menu li:first-child { border-top: 0; }
 .btn-group_simple .dropdown-menu a { padding: 8px 16px 8px 24px; font-size: 14px; color: #373737; }
 .btn-group_simple .dropdown-menu sup { color: #7f7f7f; }
+
+.dropdown-menu ul { overflow: auto; }
+.dropdown-menu ul::-webkit-scrollbar { width: 6px; }
+.dropdown-menu ul::-webkit-scrollbar-thumb { border-radius: 3px; background: #535353; }
+.dropdown-menu ul::-webkit-scrollbar-track-piece { width: 6px; border-radius: 3px; }
 
 .dropdown-menu_city { overflow: visible !important; }
 .dropdown-menu_city:before { content: ""; position: absolute; top: -6px; right: 10px; width: 0px; height: 0px; border-style: solid; border-width: 0 6.5px 6px 6.5px; border-color: transparent transparent white transparent; }

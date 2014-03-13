@@ -47,16 +47,6 @@ $dark_gray: #373737
 $red: #dc2b00
 $green: #84cf23
 html
-	+scrollbar
-		width: 6px
-	+scrollbar-track
-		background: none
-	+scrollbar-thumb
-		border-radius: 3px
-		background: #535353
-	+scrollbar-track-piece 
-		width: 6px 
-		border-radius: 3px
 	+selection
 		background: rgba(19, 122, 233, .2)
 
@@ -67,6 +57,14 @@ body
 	+freg
 	line-height: 1.5  
 	font-size: 13px 
+	+scrollbar
+		width: 6px
+	+scrollbar-thumb
+		border-radius: 3px
+		background: #535353
+	+scrollbar-track-piece 
+		width: 6px 
+		border-radius: 3px
 	&.index-page
 		background: $light 
 		.page-footer
@@ -85,6 +83,11 @@ body
 		.sidebar__wrap
 			overflow-y: auto
 			height: 100%
+	&.is-abs-sidebar
+		.sidebar__in
+			position: absolute
+			top: auto
+	
 .container
 	margin: 0 auto 
 	width: 993px

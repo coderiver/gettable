@@ -340,11 +340,11 @@ body.is-abs-sidebar .sidebar__in { position: absolute; top: auto; bottom: 28px; 
 
 .sort-section__in { position: relative; z-index: 2; padding: 19px 0; background: rgba(247, 247, 247, 0.6); }
 
-.sort-section_result { height: 333px; }
-.sort-section_result:after { content: ""; position: absolute; bottom: -5px; left: 50%; margin-left: -679px; background: url('../img/icons-s15f7e707a9.png') 0 -3545px no-repeat; width: 1378px; height: 5px; }
+.sort-section_result { height: 333px; padding-bottom: 5px; overflow: hidden; }
+.sort-section_result:after { content: ""; position: absolute; bottom: 0; left: 50%; margin-left: -679px; background: url('../img/icons-s15f7e707a9.png') 0 -3545px no-repeat; width: 1378px; height: 5px; }
 .sort-section_result .sort-section__in { position: absolute; top: 0; left: 0; right: 0; border-bottom: 1px solid #939b98; -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
 
-.search-result__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; min-width: 1600px; overflow: hidden; background: url(../img/search-bg.jpg) 0 50% no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.search-result__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 5px; min-width: 1600px; overflow: hidden; background: url(../img/search-bg.jpg) 0 50% no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
 .search-result__main { position: absolute; left: 50%; top: 117px; margin-left: -435px; z-index: 2; width: 870px; text-align: center; font-size: 30px; color: white; line-height: 1.2; }
 

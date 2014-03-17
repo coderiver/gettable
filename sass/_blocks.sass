@@ -628,10 +628,12 @@
 	background: rgba(247,247,247,.6) 
 .sort-section_result
 	height: 333px
+	padding-bottom: 5px
+	overflow: hidden
 	&:after
 		content: ""
 		position: absolute
-		bottom: -5px
+		bottom: 0
 		left: 50%
 		margin-left: -679px
 		+s(shadow-search)
@@ -648,7 +650,7 @@
 	top: 0
 	left: 0
 	right: 0 
-	bottom: 0
+	bottom: 5px
 	min-width: 1600px
 	overflow: hidden
 	background: url(../img/search-bg.jpg) 0 50% no-repeat 

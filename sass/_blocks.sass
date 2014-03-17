@@ -628,6 +628,13 @@
 	background: rgba(247,247,247,.6) 
 .sort-section_result
 	height: 333px
+	&:after
+		content: ""
+		position: absolute
+		bottom: -5px
+		left: 50%
+		margin-left: -679px
+		+s(shadow-search)
 	.sort-section__in  
 		position: absolute
 		top: 0
@@ -640,7 +647,7 @@
 	position: absolute
 	top: 0
 	left: 0
-	right: 0
+	right: 0 
 	bottom: 0
 	min-width: 1600px
 	overflow: hidden

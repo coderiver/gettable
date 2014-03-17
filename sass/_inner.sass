@@ -199,7 +199,9 @@
 	left: 320px
 	top: 0
 	bottom: 0
+	z-index: 3
 	width: 263px
+	+gpu
 .item__info-hide
 	position: absolute
 	left: -50px
@@ -268,4 +270,30 @@
 		margin-right: 6px
 
 
-  
+.search-error
+	position: relative 
+	margin: 0 0 48px
+	padding: 28px 0 37px
+	text-align: center
+	font-size: 16px
+	color: #666 
+	line-height: 1.2
+	&:after
+		content: "" 
+		position: absolute
+		bottom: -17px
+		left: 50%
+		margin-left: -238px
+		+s(error-shadow)
+	+
+		.title
+			margin-bottom: 21px
+.search-error__in
+	margin: 0 auto 
+	width: 370px
+	.icon
+		margin-bottom: 20px
+	strong
+		display: block
+		font-size: 23px
+		color: #000 

@@ -297,3 +297,25 @@
 		display: block
 		font-size: 23px
 		color: #000 
+		
+.map
+	position: relative
+	top: -90px
+	height: 902px
+	.sidebar
+		position: absolute
+		left: 0
+		top: 72px
+		bottom: 0
+		z-index: 3
+		overflow-y: auto
+	.sidebar__in
+		height: 100%
+		+border-radius(0)
+.google-map
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	z-index: 1

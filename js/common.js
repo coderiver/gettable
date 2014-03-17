@@ -107,7 +107,10 @@ $(document).ready(function() {
             }
 
             // remove fixing
-            var item_bottom = $(".js-item").offset().top + $(".js-item").outerHeight(); 
+            if ($(".js-item").length) {
+                var item_bottom = $(".js-item").offset().top + $(".js-item").outerHeight(); 
+            }
+            
             var sidebar_bottom = $(".sidebar-target").offset().top+height; 
 
             if (sidebar_bottom >= item_bottom) {

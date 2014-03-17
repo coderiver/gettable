@@ -607,17 +607,16 @@
 		
 .sort-section
 	position: relative
+	z-index: 4
 	margin-bottom: 18px
-	&:before
+	&:after
 		content: ""
 		position: absolute
-		bottom: 0
-		z-index: -1
-		left: 50%
-		width: 1271px
+		left: 0
+		right: 0
 		height: 5px
-		margin-left: -635px
-		background: url(../img/shadow.png) 0 0 no-repeat 
+		bottom: -5px
+		background: url(../img/shadow.png) 50% 0 no-repeat
 	.btn-group
 		float: right
 		margin-left: 20px
@@ -626,25 +625,20 @@
 	z-index: 2
 	padding: 19px 0 
 	background: rgba(247,247,247,.6) 
-.sort-section_result
-	height: 333px
-	padding-bottom: 5px
-	overflow: hidden
+
+.search-result
+	position: relative
+	margin: -90px 0 15px
+	height: 338px
+	z-index: 2
 	&:after
 		content: ""
 		position: absolute
-		bottom: 0
-		left: 50%
-		margin-left: -679px
-		+s(shadow-search)
-	.sort-section__in  
-		position: absolute
-		top: 0
 		left: 0
 		right: 0
-		border-bottom: 1px solid #939b98
-		+box-shadow(0 1px 3px rgba(0,0,0,.1)) 
-.search-result
+		height: 5px
+		bottom: 0
+		background: url(../img/shadow.png) 50% 0 no-repeat
 .search-result__bg
 	position: absolute
 	top: 0
@@ -704,7 +698,7 @@
 		vertical-align: middle
 		display: inline-block  
 	.is-active
-		.icon-list
+		.icon-list-black
 			+s(icon-list-act)          
 		.icon-map
 			+s(icon-map-act)            

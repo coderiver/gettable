@@ -756,30 +756,34 @@ body.is-abs-sidebar .sidebar__in { position: absolute; top: auto; bottom: 28px; 
 
 .google-map { position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 1; }
 
-.map-info { *zoom: 1; }
-.map-info:after { content: " "; display: table; clear: both; }
+.map-info { height: 97px; }
 
-.map-info__img { position: relative; float: left; height: 114px; width: 114px; overflow: hidden; }
+.map-info__inner { position: absolute; top: 0; left: 0; width: 100%; height: 114px; }
+
+.map-info__img { position: relative; float: left; height: 114px; width: 114px; }
 .map-info__img:after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(75%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.9))); background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.9)); background-image: -moz-linear-gradient(rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.9)); background-image: -o-linear-gradient(rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.9)); background-image: linear-gradient(rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.9)); }
-.map-info__img img { display: block; }
+.map-info__img img { display: block; max-width: 100%; height: auto; }
 
 .map-info__time { position: absolute; left: 0; bottom: 14px; color: white; font-size: 12px !important; text-shadow: 0 1px 1px black; padding-left: 27px; }
 .map-info__time:before { content: ""; position: absolute; left: 8px; top: 3px; background: url('../img/icons-sc1fa6e4a8a.png') 0 -5003px no-repeat; width: 14px; height: 14px; }
 
-.map-info__badge { position: absolute; left: 0; top: 5px; z-index: 3; padding: 0 7px 0 5px; height: 24px; line-height: 24px; background: #c82700; font-family: "GEInspiraBold", Arial, sans-serif; color: white; font-size: 14px; -webkit-box-shadow: 0 2px 1px #961c00; -moz-box-shadow: 0 2px 1px #961c00; box-shadow: 0 2px 1px #961c00; text-shadow: 0 1px 1px #601200; background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #c82700), color-stop(100%, #e72d00)); background-image: -webkit-linear-gradient(bottom, #c82700 0%, #e72d00 100%); background-image: -moz-linear-gradient(bottom, #c82700 0%, #e72d00 100%); background-image: -o-linear-gradient(bottom, #c82700 0%, #e72d00 100%); background-image: linear-gradient(bottom, #c82700 0%, #e72d00 100%); }
+.map-info__badge { position: absolute; left: -5px; top: 5px; z-index: 3; padding: 0 7px 0 5px; height: 24px; line-height: 24px; background: #c82700; font-family: "GEInspiraBold", Arial, sans-serif; color: white; font-size: 14px; -webkit-box-shadow: 0 2px 1px #961c00; -moz-box-shadow: 0 2px 1px #961c00; box-shadow: 0 2px 1px #961c00; text-shadow: 0 1px 1px #601200; background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #c82700), color-stop(100%, #e72d00)); background-image: -webkit-linear-gradient(bottom, #c82700 0%, #e72d00 100%); background-image: -moz-linear-gradient(bottom, #c82700 0%, #e72d00 100%); background-image: -o-linear-gradient(bottom, #c82700 0%, #e72d00 100%); background-image: linear-gradient(bottom, #c82700 0%, #e72d00 100%); }
 .map-info__badge i { display: inline-block; margin-right: 3px; vertical-align: middle; }
 .map-info__badge:after { content: ""; position: absolute; right: -14px; top: 0; background: url('../img/icons-sc1fa6e4a8a.png') 0 -3165px no-repeat; width: 14px; height: 27px; }
+.map-info__badge:before { content: ""; position: absolute; bottom: -7px; left: 0; background: url('../img/icons-sc1fa6e4a8a.png') 0 -3475px no-repeat; width: 5px; height: 6px; }
 
 .map-info__main { padding: 15px; overflow: hidden; font-size: 13px; line-height: 1.2; color: #858585; }
 .map-info__main .icon-point { margin-right: 6px; }
 
-.map-info__title { margin-bottom: 10px; font-size: 16px !important; font-family: "GEInspiraBold", Arial, sans-serif; color: black; }
+.map-info__title { display: inline-block; margin-bottom: 10px; color: black !important; font-size: 16px !important; font-family: "GEInspiraBold", Arial, sans-serif; }
 
 .map-info__meta { *zoom: 1; }
 .map-info__meta:after { content: " "; display: table; clear: both; }
 .map-info__meta span { float: right; margin-top: 2px; }
 .map-info__meta span:first-child { float: left; margin-top: 0; }
 .map-info__meta .icon-like-s { margin: -2px 2px 0 0; }
+
+.map-info-parent { position: static !important; overflow: visible !important; }
 
 .icon { display: inline-block; vertical-align: middle; }
 

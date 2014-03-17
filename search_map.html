@@ -113,14 +113,14 @@
 		</div>
 	</div> 
 	<!-- END sort-section -->
-	<div class="map">
+	<div class="map js-map-height">
 		<aside class="sidebar">
 			<div class="sidebar__in">
 				<div class="sidebar__wrap">
-					<div class="input-group input-group_search">
+					<!-- <div class="input-group input-group_search">
 				    	<input type="text" class="form-control" placeholder="Поиск по названию..." >
 				    	<i></i>
-				    </div>
+				    </div> -->
 					<div class="sidebar__item">
 						<div class="btn-group btn-group_styled btn-group_rub">
 							<button type="button" class="btn is-active"><i class="icon-rub">Р</i></button>
@@ -193,11 +193,11 @@
 			    }
 			    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 			    var image = 'img/marker.png';
-			    var myLatLng1 = new google.maps.LatLng(40.748296, -74.004394);
+			    var myLatLng1 = new google.maps.LatLng(40.743321,-73.993322);
 			   	var myLatLng2 = new google.maps.LatLng(40.742963, -73.992335);
 			   	var myLatLng3 = new google.maps.LatLng(40.739322, -73.993279);
 			   	var myLatLng4 = new google.maps.LatLng(40.744101, -73.999716);
-			   	var myLatLng5 = new google.maps.LatLng(40.743321,-73.993322);
+			   	var myLatLng5 = new google.maps.LatLng(40.748296, -74.004394);
 			    var marker1 = new google.maps.Marker({
 				      position: myLatLng1,
 				      map: map,
@@ -228,31 +228,44 @@
 				      title: 'Uluru (Ayers Rock)', 
 				      icon: image
 				});
-			    var contentString1 =	'<div style="width:200px;height: 80px">'
-						+'<p>115 E.23rd Street </p>'
-						+'<p>3rd. Floor </p>'
-						+'<p>New York, NY</p>'
-						+'<p>10010</p>'+
-					'</div>';
-				var contentString2 =	'<div style="width:200px;height: 80px">'
-						+'<p>115 E.23rd Street </p>'
-						+'<p>3rd. Floor </p>'
-						+'<p>New York, NY</p>'
-						+'<p>10010</p>'+
+			    var contentString1 =	'<div class="map-info" style="width:350px;">'
+			    	+'<div class="map-info__img">'
+			    		+'<img src="img/map-img.jpg">'
+			    		+'<div class="map-info__time">Круглосуточно</div>'
+			    		+'<div class="map-info__badge"><i  class="icon icon-user-small"></i>6 +</div>'
+			    	+'</div>'
+			    	+'<div class="map-info__main">'
+			    		+'<div class="map-info__title">George</div>'
+			    		+'<p>Первый премиальный грузинский ресторан в Москве</p>'
+			    		+'<div class="map-info__meta">'
+			    			+'<span><i class="icon icon-point"></i>м. Братиславская</span>'
+			    			+'<span><i class="icon icon-like-s"></i> 854</span>'
+			    		+'</div>'
+			    	+'</div>'
 					'</div>';
 			  	var infowindow1 = new google.maps.InfoWindow({
-				    content: contentString1
-				});
-				var infowindow2 = new google.maps.InfoWindow({
-				    content: contentString2
+				    content: contentString1,
+				    disableAutoPan: false,
+					alignBottom: true,
+					pixelOffset: new google.maps.Size(-7, 0),
+					zIndex: null,
+					boxClass: "info-windows",
+					closeBoxURL: "",
+					pane: "floatPane",
+					enableEventPropagation: false,
+					//infoBoxClearance: "10px",
+					//position: marker1.position
 				});
 				google.maps.event.addListener(marker1, 'click', function(){
 				    infowindow1.open(map,marker1);
-				    infowindow2.open(map,marker2);
 				});
-				//infowindow1.open(map,marker1);
-				infowindow2.open(map,marker2);
+				infowindow1.open(map,marker1);
 
+				google.maps.event.addListener(infowindow1, 'domready', function() {
+				    $(".map-info").parent().addClass("map-info-parent");
+				    $(".map-info").parent().parent().addClass("map-info-parent");
+	
+				});
 			}
 		  	// Asynchronous Loading
 			function loadScript() {

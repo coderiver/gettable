@@ -196,4 +196,16 @@ $(document).ready(function() {
         
     });
 
+    function mapHeight() {
+        var height = $(window).height()-$(".page-header").outerHeight();
+        $(".js-map-height").css({
+            height: height
+        });
+    }
+    mapHeight();
+    $(window).resize(function(){
+         mapHeight();
+    });
+   
+
 });  

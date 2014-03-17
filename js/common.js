@@ -132,8 +132,14 @@ $(document).ready(function() {
         if (sidebar.length) {
             fixedSidebar();
         }  
-        $('.window').fadeOut("fast");
+        //$('.window').fadeOut("fast");
     }); 
+    //  $("html").scroll(function(){
+    //     // if (sidebar.length) {
+    //     //     fixedSidebar();
+    //     // }  
+    //     $('.window').fadeOut("fast");
+    // }); 
 
     $("body").prepend( '<div class="tip js-tip"><div class="tip__in"></div></div>' );
     var tooltip = $(".js-tip");
@@ -171,7 +177,7 @@ $(document).ready(function() {
     window_el.on("click", function(event){
         event.stopPropagation()
     })
-    $(".js-window-key").on("click", function(){
+    $(".js-window-key").on("click", function(event){
         window_el.hide();
         var el = $(this).attr("href");
         var height = $("."+el).outerHeight();
@@ -182,8 +188,9 @@ $(document).ready(function() {
             top: top,
             left: left
         });
+        event.stopPropagation();
         return false;
-        //event.stopPropagation()
+        
     });
 
 });  

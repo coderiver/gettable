@@ -245,16 +245,7 @@
 					'</div></div>';
 			  	var infowindow1 = new google.maps.InfoWindow({
 				    content: contentString1,
-				    disableAutoPan: false,
-					alignBottom: true,
 					pixelOffset: new google.maps.Size(-7, 0),
-					zIndex: null,
-					boxClass: "info-windows",
-					closeBoxURL: "",
-					pane: "floatPane",
-					enableEventPropagation: false,
-					//infoBoxClearance: "10px",
-					//position: marker1.position
 				});
 				google.maps.event.addListener(marker1, 'click', function(){
 				    infowindow1.open(map,marker1);

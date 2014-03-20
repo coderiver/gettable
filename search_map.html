@@ -15,7 +15,48 @@
 	<script src="js/jquery.maskedinput.js"></script>
 	<script src="js/jquery.mousewheel.js"></script>
 	<script src="js/jquery.jscrollpane.js"></script>
+	<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
 	<script src="js/common.js"></script>
+	<script type="text/javascript">
+        ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+
+        function init(){ 
+            myMap = new ymaps.Map ("map", {
+                center: [40.743776, -73.992807],
+                zoom: 12
+            }); 
+            
+            myPlacemark1 = new ymaps.Placemark([40.748296, -74.004394], 
+	            {
+	                hintContent: '',
+	                balloonContent: '<div class="map-info" style="width:322px;"><div class="map-info__inner"><a class="map-info__img" href="#"><img src="img/map-img.jpg"><div class="map-info__time">Круглосуточно</div><div class="map-info__badge"><i  class="icon icon-user-small"></i>6 +</div></a><div class="map-info__main"><a class="map-info__title" href="#">George</a><p>Первый премиальный грузинский ресторан в Москве</p><div class="map-info__meta"><span><i class="icon icon-point"></i>м. Братиславская</span><span><i class="icon icon-like-s"></i> 854</span></div></div></div>',
+	            },
+	            {	
+	                iconImageHref: 'img/marker.png',
+	        		iconImageSize: [45, 49],
+	        		iconImageOffset: [-15, -35]
+	            }
+            );
+            myPlacemark2 = new ymaps.Placemark([40.742963, -73.992335], 
+	            {
+	                hintContent: '',
+	                balloonContent: '<div class="map-info" style="width:322px;"><div class="map-info__inner"><a class="map-info__img" href="#"><img src="img/map-img.jpg"><div class="map-info__time">Круглосуточно</div><div class="map-info__badge"><i  class="icon icon-user-small"></i>6 +</div></a><div class="map-info__main"><a class="map-info__title" href="#">George</a><p>Первый премиальный грузинский ресторан в Москве</p><div class="map-info__meta"><span><i class="icon icon-point"></i>м. Братиславская</span><span><i class="icon icon-like-s"></i> 854</span></div></div></div>',
+	            },
+	            {	
+	                iconImageHref: 'img/marker.png',
+	        		iconImageSize: [45, 49],
+	        		iconImageOffset: [-15, -35]
+	            }
+            );
+            
+            myMap.geoObjects.add(myPlacemark1);
+            myMap.geoObjects.add(myPlacemark2);
+        }
+    </script>
+
+	</div>
 </head>
 <body>
 	<!-- BEGIN header -->
@@ -177,97 +218,8 @@
 			</div>
 			<i class="sidebar-target"></i>
 		</aside> 
-		<div id="map-canvas" class="google-map"></div>
-		<script>
-		  	function initialize() {
-			    var mapOptions = {
-			      	zoom: 15,
-			      	center: new google.maps.LatLng(40.743776, -73.992807),
-			      	disableDefaultUI: true,
-			      	scrollwheel: false,
-			     	zoomControl: true,
-			    	zoomControlOptions: {
-			        	style: google.maps.ZoomControlStyle.DEFAULT
-			      	},
-			      	mapTypeId: google.maps.MapTypeId.ROADMAP
-			    }
-			    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-			    var image = 'img/marker.png';
-			    var myLatLng1 = new google.maps.LatLng(40.743321,-73.993322);
-			   	var myLatLng2 = new google.maps.LatLng(40.742963, -73.992335);
-			   	var myLatLng3 = new google.maps.LatLng(40.739322, -73.993279);
-			   	var myLatLng4 = new google.maps.LatLng(40.744101, -73.999716);
-			   	var myLatLng5 = new google.maps.LatLng(40.748296, -74.004394);
-			    var marker1 = new google.maps.Marker({
-				      position: myLatLng1,
-				      map: map,
-				      title: 'Uluru (Ayers Rock)', 
-				      icon: image
-				});
-				var marker2 = new google.maps.Marker({
-				      position: myLatLng2,
-				      map: map,
-				      title: 'Uluru (Ayers Rock)', 
-				      icon: image
-				});
-				var marker3 = new google.maps.Marker({
-				      position: myLatLng3,
-				      map: map,
-				      title: 'Uluru (Ayers Rock)', 
-				      icon: image
-				});
-				var marker4 = new google.maps.Marker({
-				      position: myLatLng4,
-				      map: map,
-				      title: 'Uluru (Ayers Rock)', 
-				      icon: image
-				});
-				var marker5 = new google.maps.Marker({
-				      position: myLatLng5,
-				      map: map,
-				      title: 'Uluru (Ayers Rock)', 
-				      icon: image
-				});
-			    var contentString1 =	'<div class="map-info" style="width:322px;"><div class="map-info__inner">'
-			    	+'<a class="map-info__img" href="#">'
-			    		+'<img src="img/map-img.jpg">'
-			    		+'<div class="map-info__time">Круглосуточно</div>'
-			    		+'<div class="map-info__badge"><i  class="icon icon-user-small"></i>6 +</div>'
-			    	+'</a>'
-			    	+'<div class="map-info__main">'
-			    		+'<a class="map-info__title" href="#">George</a>'
-			    		+'<p>Первый премиальный грузинский ресторан в Москве</p>'
-			    		+'<div class="map-info__meta">'
-			    			+'<span><i class="icon icon-point"></i>м. Братиславская</span>'
-			    			+'<span><i class="icon icon-like-s"></i> 854</span>'
-			    		+'</div>'
-			    	+'</div>'
-					'</div></div>';
-			  	var infowindow1 = new google.maps.InfoWindow({
-				    content: contentString1,
-					pixelOffset: new google.maps.Size(-7, 0),
-				});
-				google.maps.event.addListener(marker1, 'click', function(){
-				    infowindow1.open(map,marker1);
-				});
-				infowindow1.open(map,marker1);
-
-				google.maps.event.addListener(infowindow1, 'domready', function() {
-				    $(".map-info").parent().addClass("map-info-parent");
-				    $(".map-info").parent().parent().addClass("map-info-parent");
-	
-				});
-			}
-		  	// Asynchronous Loading
-			function loadScript() {
-			  var script = document.createElement('script');
-			  script.type = 'text/javascript';
-			  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-			      'callback=initialize';
-			  document.body.appendChild(script);
-			}
-			window.onload = loadScript;
-		</script>
+		<div id="map" class="yandex-map"></div>
+		
 	</div>
 	<!-- BEGIN footer -->
 	<div class="page-footer clearfix">

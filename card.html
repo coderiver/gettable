@@ -16,13 +16,53 @@
 	<script src="js/jquery.mousewheel.js"></script>
 	<script src="js/jquery.jscrollpane.js"></script>
 	<script src="js/common.js"></script>
+	<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
+	<script src="js/common.js"></script>
+	<script type="text/javascript">
+        ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+
+        function init(){ 
+            myMap = new ymaps.Map ("map-card", {
+                center: [40.743776, -73.992807],
+                zoom: 12
+            }); 
+            
+            myPlacemark1 = new ymaps.Placemark([40.748296, -74.004394], 
+	            {
+	                hintContent: '',
+	                balloonContent: '<div class="map-info" style="width:322px;"><div class="map-info__inner"><a class="map-info__img" href="#"><img src="img/map-img.jpg"><div class="map-info__time">Круглосуточно</div><div class="map-info__badge"><i  class="icon icon-user-small"></i>6 +</div></a><div class="map-info__main"><a class="map-info__title" href="#">George</a><p>Первый премиальный грузинский ресторан в Москве</p><div class="map-info__meta"><span><i class="icon icon-point"></i>м. Братиславская</span><span><i class="icon icon-like-s"></i> 854</span></div></div></div>',
+	            },
+	            {	
+	                iconImageHref: 'img/marker.png',
+	        		iconImageSize: [45, 49],
+	        		iconImageOffset: [-15, -35]
+	            }
+            );
+            myPlacemark2 = new ymaps.Placemark([40.742963, -73.992335], 
+	            {
+	                hintContent: '',
+	                balloonContent: '<div class="map-info" style="width:322px;"><div class="map-info__inner"><a class="map-info__img" href="#"><img src="img/map-img.jpg"><div class="map-info__time">Круглосуточно</div><div class="map-info__badge"><i  class="icon icon-user-small"></i>6 +</div></a><div class="map-info__main"><a class="map-info__title" href="#">George</a><p>Первый премиальный грузинский ресторан в Москве</p><div class="map-info__meta"><span><i class="icon icon-point"></i>м. Братиславская</span><span><i class="icon icon-like-s"></i> 854</span></div></div></div>',
+	            },
+	            {	
+	                iconImageHref: 'img/marker.png',
+	        		iconImageSize: [45, 49],
+	        		iconImageOffset: [-15, -35]
+	            }
+            );
+            
+            myMap.geoObjects.add(myPlacemark1);
+            myMap.geoObjects.add(myPlacemark2);
+        }
+    </script>
 </head>
 <body>
 	<!-- BEGIN header -->
 	<div class="page-header clearfix">
 		<div class="container">
 			<a class="logo" href="#"></a>
-			<button type="button" class="btn btn_red js-login-link">Вход / Регистрация</button>
+			<button type="button" class="btn btn_white js-login-link">Вход / Регистрация</button>
 			<div class="btn-group btn-group_simple">
 				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 					<i class="icon icon-earth"></i>
@@ -117,18 +157,174 @@
 	<div class="main-section card-page">
 		<div class="l-cols">
 			<div class="l-col1">
-				<div class="cycle-slideshow" 
+				<div class="cycle-slideshow slideshow" 
 				    data-cycle-fx="scrollHorz"
-				    data-cycle-speed="1500"
+				    data-cycle-speed="500"
 				    data-cycle-timeout="4000"
+				    data-cycle-prev=".js-slideshow-prev"
+				    data-cycle-next=".js-slideshow-next"
 				    >
 				    <img src="http://lorempixel.com/630/400/food">
 				    <img src="http://lorempixel.com/630/400/food">
 				    <img src="http://lorempixel.com/630/400/food">
 				    <img src="http://lorempixel.com/630/400/food">
+					<button class="slideshow__prev js-slideshow-prev"></button>
+					<button class="slideshow__next js-slideshow-next"></button>
+				</div>
+				<div class="card-content text-item">
+					<h1 class="h1">Dnieper river <span class="like-counter">854</span></h1>
+					<div class="card-content__text">
+						<p>Привычный московский микс европейских, итальянских и японских хитов, кухню возглавльяет сам легендарный Пьер Гоньен Франсуа из столицы Франции</p>
+					</div>
+					<a href="#" class="card-content__more">Подробности</a>
+				</div>
+				<div class="text-item">
+					<h2 class="h2">Рецензии</h2>
+					<div class="comment">
+						<div class="comment__top">
+							<a href="#" class="comment__pic">
+								<img src="http://lorempixel.com/48/48/people" alt="">
+							</a>
+							<div class="comment__user">
+								<a href="#">Борат</a>
+								<i class="icon icon-like-s"></i>
+								<span>25 декабря 2013 г.</span>
+							</div>
+						</div>
+						<div class="comment__main">Аргентинский кухня, бесплатный вайвай, бронирование столиков он лайн!<br> Официантка Памела еда носить туда-сюда. Бесплатный салфетка и соль. Нраица, хау мач?! Стол. Стул. Девять. Зебра.</div>
+					</div>
+					<div class="comment">
+						<div class="comment__top">
+							<a href="#" class="comment__pic">
+								<img src="http://lorempixel.com/48/48/people" alt="">
+							</a>
+							<div class="comment__user">
+								<a href="#">Борат</a>
+								<i class="icon icon-not-like"></i>
+								<span>25 декабря 2013 г.</span>
+							</div>
+						</div>
+						<div class="comment__main">Аргентинский кухня, бесплатный вайвай, бронирование столиков он лайн!<br> Официантка Памела еда носить туда-сюда. Бесплатный салфетка и соль. Нраица, хау мач?! Стол. Стул. Девять. Зебра.</div>
+					</div>
+					<div class="comment">
+						<div class="comment__top">
+							<a href="#" class="comment__pic">
+								<img src="http://lorempixel.com/48/48/people" alt="">
+							</a>
+							<div class="comment__user">
+								<a href="#">Борат</a>
+								<i class="icon icon-like-s"></i>
+								<span>25 декабря 2013 г.</span>
+							</div>
+						</div>
+						<div class="comment__main">Аргентинский кухня, бесплатный вайвай, бронирование столиков он лайн!<br> Официантка Памела еда носить туда-сюда. Бесплатный салфетка и соль. Нраица, хау мач?! Стол. Стул. Девять. Зебра.</div>
+					</div>
+					<div class="extend-actions">
+						<a href="#" class="link-more">Ещё 25</a>
+						<button class="btn-close">Скрыть</button>  
+					</div>
+				</div>
+				<div class="text-item">
+					<h2 class="h2">Меню</h2>
+					<div class="menu">
+						<div class="menu__nav">
+							<a href="#" class="is-active">Основное меню</a>      
+							<a href="#">Постное меню</a>      
+							<a href="#">Винная карта</a>    
+							<a href="#">Блюдо дня</a>
+						</div>
+						<div class="menu__title">САЛАТЫ</div>
+						<ul class="menu__list">
+							<li>
+								<span class="menu__name">Каталонский мясной сэт 60 г.</span>
+								<span class="menu__price">850 Р</span>
+								<div>Двадцать восемь, тридцать пять, сорок два двенадцать, тридцать сокор восемь два, двадцать двадцать двадцать.</div>
+							</li>
+							<li>
+								<span class="menu__name">Изуми муки маки 120 / 50 г.</span>
+								<span class="menu__price">520 Р</span>
+							</li>
+							<li>
+								<span class="menu__name">Триста спарсуши 900 г. </span>
+								<span class="menu__price">342 Р</span>
+							</li>
+							<li>
+								<span class="menu__name">Омлет по домашнему 500 г.</span>
+								<span class="menu__price">445 Р</span>
+							</li>
+							<li>
+								<span class="menu__name">Сухарики в пончирковке 10 г.</span>
+								<span class="menu__price">60 Р</span>
+							</li>
+							<li>
+								<span class="menu__name">Каталонский мясной сэт 500 г.</span>
+								<span class="menu__price">445 Р</span>
+							</li>
+						</ul>
+						<div class="menu__title">СУПЫ </div>
+						<ul class="menu__list">
+							<li>
+								<span class="menu__name">Каталонский мясной сэт 60 г.</span>
+								<span class="menu__price">850 Р</span>
+								<div>Двадцать восемь, тридцать пять, сорок два двенадцать, тридцать сокор восемь два, двадцать двадцать двадцать.</div>
+							</li>
+							<li>
+								<span class="menu__name">Изуми муки маки 120 / 50 г.</span>
+								<span class="menu__price">520 Р</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="text-item">
+					<h2 class="h2">Здесь есть</h2>
+					<p>Wi-Fi, итальянская кухня, терраса, бизнес ланч, веранда, ланчи, завтраки, программы для детей</p>
 				</div>
 			</div>
-			<div class="l-col2"></div>
+			<div class="l-col2">
+				<div class="l-col2__in">
+					<div class="card-info">
+						<div class="card-info__icon">
+							<i class="icon icon-card-point"></i>
+						</div>
+						<div class="card-info__main">
+							<p>осква, Кутузовский пр-т, 48, ТЦ  «Времена года», 3 этаж</p>
+							<span>м. Тимирязевская</span>
+						</div>
+					</div>
+					<div id="map-card" class="map-card"></div>
+					<div class="card-info">
+						<div class="card-info__icon">
+							<i class="icon icon-card-clock"></i>
+						</div>
+						<div class="card-info__main">
+							<p>Пн. – Ср., Вс. 12:00 – 21:00,</p>
+							<p>Чт., Пт. 12:00 – 6:00,</p>
+							<p>Сб. 22:00 – 6:00</p>
+						</div>
+					</div>
+					<div class="card-info">
+						<div class="card-info__icon">
+							<i class="icon icon-card-wallet"></i>
+						</div>
+						<div class="card-info__main">
+							<p>Средний чек: 3000 Р</p>
+						</div>
+					</div>
+					<div class="card-info">
+						<div class="card-info__icon">
+							<i class="icon icon-card-phone"></i>
+						</div>
+						<div class="card-info__main">
+							<p>8 (495) 255-11-66</p>
+						</div>
+					</div>
+					<div class="order-item">
+						<div class="order-item__title">Лучший столик в 2 клика</div>
+						<span>это бесплатно</span>
+						<a class="btn btn_green" href="#">Заказать столик</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- END main-aection -->
@@ -203,357 +399,5 @@
 	</div>
 	<!-- END footer -->
 </body>
-<div class="window js-window js-window1">
-	<div class="clearfix">
-		<div class="window__col">
-			<div class="window__title"><i class="icon icon-title-kitchen"></i>Тематические:</div>
-		</div>
-		<div class="window__col"></div>
-		<div class="window__col">
-			<div class="window__title"><i class="icon icon-title-club"></i>Клубы и бары:</div>
-		</div>
-	</div>
-	<div class="clearfix">
-		<div class="window__col">
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Итальянская</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Итальянская </span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Кавказская</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Восточная</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Японская </span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Морская кухня</span>
-			    </label>
-			</div>
-		</div>
-		<div class="window__col">
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Ватиканская</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Облепиховая</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Кавказская</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Восточная</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Японская </span>
-			    </label>
-			</div>
-		</div>
-		<div class="window__col">
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Бразильский</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>С отдыхом на море</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Рокерский</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>С кальяном</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Желчный</span>
-			    </label>
-			</div>
-		</div>
-	</div>
-	<button class="button-close js-close-window"></button>
-</div>
-<div class="window window_mod js-window js-window2">
-	<div class="input-group input-group_search input-group_metro">
-    	<input type="text" class="form-control" placeholder="Введите станцию метро...">
-    	<i></i>
-    </div>
-	<div class="clearfix scroll-pane js-scroll-pane">
-		<div class="window__col">
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Авиамоторная</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Академическая </span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Алексеевская</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Аннино</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Автозаводская </span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Авиамоторная</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Академическая </span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Алексеевская</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Аннино</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Автозаводская </span>
-			    </label>
-			</div>
-		</div>
-		<div class="window__col">
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Авиамоторная</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Академическая </span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Алексеевская</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Аннино</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Автозаводская </span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Авиамоторная</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Академическая </span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Алексеевская</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Аннино</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Автозаводская </span>
-			    </label>
-			</div>
-		</div>
-		<div class="window__col">
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Авиамоторная</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Академическая </span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Алексеевская</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Аннино</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Автозаводская </span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Авиамоторная</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Академическая </span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Алексеевская</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Аннино</span>
-			    </label>
-			</div>
-			<div class="checkbox">
-			    <label class="checkbox__in">
-					<input type="checkbox"> 
-					<span>Автозаводская </span>
-			    </label>
-			</div>
-		</div>
-	</div>
-	<button class="button-close js-close-window"></button>
-</div> 
-<div class="window js-window js-window3">
-	<div class="checkbox checkbox_box">
-	    <label class="checkbox__in">
-			<input type="checkbox"> 
-			<span></span>
-			<div class="checkbox__img">
-				<img src="img/check-img1.png" alt="">
-			</div>
-			<div>
-				<strong>GinzaProject </strong>
-				25 ресторанов
-			</div>
-	    </label>
-	</div>
-	<div class="checkbox checkbox_box">
-	    <label class="checkbox__in">
-			<input type="checkbox"> 
-			<span></span>
-			<div class="checkbox__img">
-				<img src="img/check-img2.png" alt="">
-			</div>
-			<div>
-				<strong>Novikov Group</strong>
-				15 ресторанов
-			</div>
-	    </label>
-	</div>
-	<div class="checkbox checkbox_box">
-	    <label class="checkbox__in">
-			<input type="checkbox"> 
-			<span></span>
-			<div class="checkbox__img">
-				<img src="img/check-img3.png" alt="">
-			</div>
-			<div>
-				<strong>Ресторанный Синдикат</strong>
-				195 ресторанов
-			</div>
-	    </label>
-	</div>
-	<button class="button-close js-close-window"></button>
-</div> 
+
 </html>

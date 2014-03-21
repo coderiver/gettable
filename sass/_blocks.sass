@@ -23,6 +23,16 @@
 		+background-image(linear-gradient(bottom, #b32200 0%, #c82700 100%), linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%))
 	&:focus
 		color: #fff  
+.btn_white
+	padding: 10px 12px
+	width: 192px
+	height: 44px  
+	border-radius: 4px
+	+fbold
+	font-size: 16px
+	+box-shadow(0 -1px 2px rgba(152,152,152,.77), inset 0 -1px 1px #f6f6f6)
+	+background-image(linear-gradient(bottom, #f7f7f7 0%, #fff 100%), linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%))
+
 .btn_red-simple
 	padding: 0 25px 
 	width: auto
@@ -43,10 +53,23 @@
 		+background-image(linear-gradient(bottom, #af2200 0%, #cf2a03 100%), linear-gradient(top, #e72d00 -48.23%, #c82700 -47.23%))
 	&:focus
 		color: #fff 
+		
+.btn_green
+	padding: 0 43px 
+	color: #fff
+	font-size: 20px
+	+fbold
+	text-shadow: 0 1px 1px #3a6920
+	height: 44px
+	line-height: 41px
+	background: url(../img/btn-green.png) 0 0 repeat
+	&:hover
+		color: #fff 
+		background: url(../img/btn-green-h.png) 0 0 repeat
 .btn-group_simple
 	.btn
 		padding: 0
-		border: 0
+		border: 0  
 		&:active
 			background: none
 	&:hover
@@ -531,7 +554,7 @@
 		content: ""
 		position: absolute
 		left: -27px
-		top: 0
+		top: 4px
 		+s(close) 
 .you-can
 	list-style: none

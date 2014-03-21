@@ -21,6 +21,7 @@ h1,h2,h3,h4,h5,h6,a,span,a:focus
 +font(GEInspiraBold, GEInspira-Bold)  
 +font(PFAgoraRegular, PFAgoraSlabPro-Regular)
 +font(PFAgoraBold, PFAgoraSlabPro-Bold)
++font(PFAgoraMedium, pf_agora_slab_pro_medium)
 +font(rub, alsrubl-tahoma-regular)
 +font(rub-b, alsrubl-tahoma-bold)
 =rub
@@ -39,6 +40,8 @@ h1,h2,h3,h4,h5,h6,a,span,a:focus
 	font-family: "PFAgoraRegular", Verdana, Arial, sans-serif 
 =fbold2
 	font-family: "PFAgoraBold", Verdana, Arial, sans-serif 
+=fmed2
+	font-family: "PFAgoraMedium", Verdana, Arial, sans-serif 
 $light: #fafafa
 $light2: #f7f7f7
 $text: #858585
@@ -114,7 +117,8 @@ body
 	padding: 22px 0 
 	background: $light 
 	+box-shadow(0 0 3px rgba(0,0,0,.5))
-	.btn_red
+	.btn_red,
+	.btn_white  
 		float: right
 	.btn-group_simple
 		float: left

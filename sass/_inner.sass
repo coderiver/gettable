@@ -272,7 +272,7 @@
 		
 .sort-section
 	position: relative
-	z-index: 4
+	z-index: 300
 	margin-bottom: 18px
 	&:after
 		content: ""
@@ -500,4 +500,247 @@
 	position: static !important
 	overflow: visible !important
 	
-.card-page
+.slideshow__prev,
+.slideshow__next
+	position: absolute
+	top: 50%
+	z-index: 200
+	margin-top: -21px
+	width: 42px
+	height: 42px
+	+border-radius(50%)
+	border: 0
+	background: rgba(0,0,0,.4)
+	+tr(all .2s linear) 
+	visibility: visible
+	&:hover
+		background: rgba(0,0,0,.6)
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -7px
+		visibility: visible
+.slideshow__prev
+	left: 21px
+	&:after
+		+s(arr4)
+		margin-left: -6px
+.slideshow__next
+	right: 21px
+	&:after
+		margin-left: -4px
+		+s(arr5)
+
+.card-content
+	padding-bottom: 28px
+	font-size: 16px
+	color: #333 
+.h1
+	margin-bottom: 18px
+	color: #444
+	font-size: 36px
+	+fmed2 
+	+clr   
+	.like-counter
+		float: right
+		margin-top: 6px
+.h2
+	margin-top: 10px
+	color: #444
+	font-size: 24px
+	+fbold2  
+.like-counter
+	position: relative
+	padding-left: 39px
+	display: inline-block
+	vertical-align: middle
+	color: #727272
+	font-size: 24px 
+	&:before
+		content: ""
+		position: absolute
+		left: 0 
+		top: 0
+		+s(like-b)
+.card-content__text
+	margin-bottom: 16px
+.card-content__more
+	color: #8d8d8d 
+.text-item
+	padding: 15px 20px 
+	border-bottom: 1px solid #f2f2f2 
+	font-size: 16px
+	color: #333 
+.comment
+	margin-bottom: 30px
+	color: #373737
+.comment__top
+	+clr
+	margin-bottom: 15px
+.comment__pic
+	display: inline-block
+	margin-right: 10px
+	vertical-align: middle
+	width: 48px
+	height: 48px
+	overflow: hidden
+	+border-radius(50%)
+	img
+		display: block
+		max-width: 100%
+		height: auto
+.comment__user
+	display: inline-block
+	vertical-align: middle
+	line-height: 1.2
+	a
+		font-size: 16px
+		font-weight: normal
+		+fbold
+		color: #000
+		&:hover
+			text-decoration: none
+	.icon
+		margin: -3px 0 0 7px
+	span
+		display: block
+		color: #c0c0c0
+		font-size: 14px 
+.comment__main
+	position: relative
+	padding: 15px
+	background: #f7f7f7
+	+border-radius(10px)  
+	&:before
+		content: ""
+		position: absolute
+		top: -8px
+		left: 17px
+		+arr(15,8,#f7f7f7,t) 
+
+.extend-actions
+	+clr	
+	margin-bottom: 13px
+	.link-more
+		float: left
+	.btn-close
+		position: relative
+		float: right
+		&:before
+			top: 0
+			+s(close-b) 
+.link-more
+	display: inline-block
+	border-bottom: 1px dotted
+	font-size: 16px
+	color: #8d8d8d 
+	line-height: 1.3
+	&:hover
+		text-decoration: none
+		color: #8d8d8d 
+		border-bottom-color: transparent 
+		
+.menu__nav
+	margin-bottom: 30px
+	a
+		display: inline-block
+		margin-left: 21px
+		vertical-align: middle
+		color: #444 
+		font-size: 16px
+		border-bottom: 2px dotted #dcdcdc
+		&:first-child
+			margin-left: 0
+		&:hover
+			text-decoration: none
+		&.is-active
+			border-bottom-color: transparent   
+.menu__title
+	margin-bottom: 11px
+	text-transform: uppercase 
+.menu__list
+	list-style-type: none
+	margin: 0 0 40px
+	padding: 0 
+	line-height: 1.3
+	&:last-child
+		margin-bottom: 0
+	li
+		position: relative
+		margin-bottom: 11px
+		+clr	
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 14px
+			right: 42px
+			height: 1px
+			background: url(../img/border2.png) 0 0 repeat-x   
+	div
+		clear: both
+		padding-right: 60px
+		color: #999 
+.menu__name
+	position: relative
+	z-index: 2
+	float: left
+	padding-right: 6px
+	background: #fff
+.menu__price
+	position: relative
+	z-index: 2
+	float: right
+	min-width: 36px
+	+box
+	text-align: left 
+	background: #fff  
+	
+.card-info
+	position: relative
+	margin-bottom: 16px
+	font-size: 15px
+	line-height: 1.2
+	color: #373737
+	p
+		margin-bottom: 0
+	span
+		display: block
+		color: #999 
+.card-info__icon
+	float: left
+	width: 42px	
+.card-info__main
+	overflow: hidden
+.map-card
+	margin-bottom: 18px
+	height: 94px
+	border: 1px solid #d1d1d1
+
+.order-item
+	line-height: 1 
+	margin-top: 34px
+	border: 1px solid #d4d4d4
+	padding: 0 18px 17px
+	font-size: 16px
+	text-align: center
+	+border-radius(5px)
+	.btn
+		padding: 0
+		width: 100%
+	span
+		position: relative
+		margin-bottom: 8px
+		top: -4px
+		display: inline-block
+		margin-top: -10px
+.order-item__title
+	position: relative
+	display: inline-block
+	padding: 0 9px 
+	top: -8px
+	background: #fff 
+	+fbold
+	color: #373737 

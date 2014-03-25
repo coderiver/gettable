@@ -50,7 +50,7 @@ $(document).ready(function() {
 
     $(".js-login-link").on("click", function(){
         $(".js-login-box").slideToggle("fast");
-        $(this).toggleClass("is-active");
+        $(this).toggleClass("is-active");  
     });
 
     $(".js-close-login").on("click", function(){

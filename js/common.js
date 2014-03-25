@@ -2,6 +2,7 @@ $(document).ready(function() {
 
     $(document).click(function(){
         window_el.fadeOut("fast");
+        popup.fadeOut("fast");
     });
 
     var window_el = $(".js-window");
@@ -206,6 +207,19 @@ $(document).ready(function() {
     $(window).resize(function(){
          mapHeight();
     });
-   
+
+    var popup = $(".popup");
+    $(".js-popup-link").on("click", function(event){
+        var popup = $(this).attr("href");
+        $("."+popup).fadeIn();
+        return false;
+        event.stopPropagation()
+    })
+    popup.on("click", function(event){
+        event.stopPropagation()
+    })
+    $(".js-popup-close").on("click", function(){
+       popup.fadeOut("fast");
+    })
 
 });  

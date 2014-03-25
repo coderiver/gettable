@@ -709,12 +709,26 @@
 	span
 		display: block
 		color: #999 
+.card-info_address
+	margin-bottom: 30px
+.card-info_parking
+	margin-bottom: 34px
+.card-info_attention
+	.card-info__main
+		span
+			margin-top: 17px
 .card-info__icon
 	float: left
 	width: 42px	
+	.icon-card-parking
+		margin-left: 5px
+	.icon-card-attention
+		margin-top: -14px
+
 .card-info__main
 	overflow: hidden
 .map-card
+	display: block
 	margin-bottom: 18px
 	height: 94px
 	border: 1px solid #d1d1d1
@@ -744,3 +758,40 @@
 	background: #fff 
 	+fbold
 	color: #373737 
+	
+.popup
+	display: none
+	position: absolute
+	top: 122px
+	z-index: 10000
+	left: 50%
+	margin-left: -495px
+	width: 990px
+	background: #fff
+	+clr
+	//+opacity(0)
+	//+tr(all 1s linear)  
+	+box-shadow(0 0 35px rgba(0,0,0,.39)) 
+	// &.is-visible
+	// 	top: 122px
+	// 	display: block
+	// 	+opacity(1)
+	.btn-close-big
+		top: 15px
+		right: 15px
+.popup__map
+	float: left
+	width: 706px
+	height: 493px  
+.popup__info
+	padding: 18px 20px 0 25px 
+	overflow: hidden
+.popup__title
+	margin-bottom: 23px
+	color: #444
+	font-size: 24px
+	+fbold2
+.btn-close-big
+	position: absolute
+	+s(close-b)
+	border: 0

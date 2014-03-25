@@ -72,8 +72,6 @@ body
 		background: $light 
 		.page-footer
 			border-top: 0
-		.container
-			width: 970px
 	&.is-fixed-sidebar
 		.sidebar__in,
 		.sidebar-target
@@ -82,7 +80,7 @@ body
 			bottom: auto
 			left: 50%
 			z-index: 1000
-			margin-left: -481px
+			margin-left: -492px
 			width: 276px
 			+box
 		.sidebar__wrap
@@ -93,7 +91,7 @@ body
 			position: absolute
 			top: auto
 			bottom: 28px
-			left: 15px
+			left: -7px
 			z-index: 1000
 			width: 276px
 .main-section
@@ -101,7 +99,7 @@ body
 		position: relative
 .container
 	margin: 0 auto 
-	width: 993px
+	width: 970px
 .row
 	margin: 0
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12
@@ -110,6 +108,9 @@ body
 	+rub
 	font-style: normal
 // ------------------ header -------------------------- //
+.page-header_smaller
+	.container
+		width: 970px
 .page-header
 	position: relative
 	z-index: 2000
@@ -150,6 +151,16 @@ body
 				span
 					color: #f00 
 					border-bottom-color: #f00 
+					
+.page-header__stat
+	float: left
+	margin: 10px 0 0 43px 
+	font-size: 15px     
+	color: #8e8e8e
+	strong
+		+fbold
+		color: #373737 
+		font-weight: bold
 .logo
 	float: left
 	+s(logo)     
@@ -301,10 +312,10 @@ body
 	.container
 		+clr
 .page-footer__top
-	padding: 40px 0 30px
+	padding: 40px 15px 30px
 .footer__seo
 	float: left
-	margin: 0 30px 0 16px
+	margin: 0 30px 0 0  
 	width: 322px
 	.logo
 		float: none
@@ -320,7 +331,7 @@ body
 	&:nth-child(2)
 		width: 205px  
 	&:nth-child(3)
-		width: 235px 
+		width: 220px 
 	.page-footer__title
 		position: absolute
 		top: 0

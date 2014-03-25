@@ -534,26 +534,27 @@
 		+s(arr5)
 
 .card-content
-	padding-bottom: 28px
+	margin-bottom: 19px
 	font-size: 16px
 	color: #333 
+	line-height: 1.2
 .h1
-	margin-bottom: 18px
+	margin: 0 0 18px
 	color: #444
 	font-size: 36px
 	+fmed2 
 	+clr   
 	.like-counter
 		float: right
-		margin-top: 6px
+		margin: 10px -4px 0 0
 .h2
-	margin-top: 10px
+	margin: 10px 0 26px
 	color: #444
 	font-size: 24px
 	+fbold2  
 .like-counter
 	position: relative
-	padding-left: 39px
+	padding-left: 34px
 	display: inline-block
 	vertical-align: middle
 	color: #727272
@@ -565,7 +566,7 @@
 		top: 0
 		+s(like-b)
 .card-content__text
-	margin-bottom: 16px
+	margin-bottom: 28px
 .card-content__more
 	color: #8d8d8d 
 .text-item
@@ -581,7 +582,7 @@
 	margin-bottom: 15px
 .comment__pic
 	display: inline-block
-	margin-right: 10px
+	margin: 0 10px 0 6px
 	vertical-align: middle
 	width: 48px
 	height: 48px
@@ -593,6 +594,7 @@
 		height: auto
 .comment__user
 	display: inline-block
+	margin-top: -6px
 	vertical-align: middle
 	line-height: 1.2
 	a
@@ -603,7 +605,7 @@
 		&:hover
 			text-decoration: none
 	.icon
-		margin: -3px 0 0 7px
+		margin: -6px 0 0 9px
 	span
 		display: block
 		color: #c0c0c0
@@ -611,13 +613,14 @@
 .comment__main
 	position: relative
 	padding: 15px
+	line-height: 1.3
 	background: #f7f7f7
 	+border-radius(10px)  
 	&:before
 		content: ""
 		position: absolute
 		top: -8px
-		left: 17px
+		left: 23px
 		+arr(15,8,#f7f7f7,t) 
 
 .extend-actions
@@ -662,7 +665,7 @@
 	text-transform: uppercase 
 .menu__list
 	list-style-type: none
-	margin: 0 0 40px
+	margin: 0 0 35px
 	padding: 0 
 	line-height: 1.3
 	&:last-child
@@ -700,19 +703,28 @@
 	
 .card-info
 	position: relative
-	margin-bottom: 16px
+	margin-bottom: 14px
 	font-size: 15px
-	line-height: 1.2
+	line-height: 1.4
 	color: #373737
 	p
 		margin-bottom: 0
 	span
 		display: block
 		color: #999 
+	.icon-card-wallet
+		margin-top: -7px
+.card-info_place
+	margin-bottom: 18px
 .card-info_address
-	margin-bottom: 30px
+	margin-bottom: 31px
 .card-info_parking
-	margin-bottom: 34px
+	margin-bottom: 35px
+.card-info_bill
+	margin-bottom: 25px
+.card-info_tel
+	.card-info__main
+		font-size: 18px
 .card-info_attention
 	.card-info__main
 		span
@@ -729,13 +741,13 @@
 	overflow: hidden
 .map-card
 	display: block
-	margin-bottom: 18px
-	height: 94px
+	margin-bottom: 20px
+	height: 96px
 	border: 1px solid #d1d1d1
 
 .order-item
 	line-height: 1 
-	margin-top: 34px
+	margin-top: 45px
 	border: 1px solid #d4d4d4
 	padding: 0 18px 17px
 	font-size: 16px
@@ -746,8 +758,7 @@
 		width: 100%
 	span
 		position: relative
-		margin-bottom: 8px
-		top: -4px
+		margin-bottom: 15px
 		display: inline-block
 		margin-top: -10px
 .order-item__title
@@ -786,6 +797,10 @@
 .popup__info
 	padding: 18px 20px 0 25px 
 	overflow: hidden
+	.card-info
+		line-height: 1.2
+	.card-info__icon
+		width: 37px
 .popup__title
 	margin-bottom: 23px
 	color: #444

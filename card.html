@@ -18,44 +18,6 @@
 	<script src="js/common.js"></script>
 	<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
 	<script src="js/common.js"></script>
-	<script type="text/javascript">
-        ymaps.ready(init);
-        var myMap, 
-            myPlacemark;
-
-        function init(){ 
-            myMap = new ymaps.Map ("map-card", {
-                center: [40.743776, -73.992807],
-                zoom: 12
-            }); 
-            
-            myPlacemark1 = new ymaps.Placemark([40.748296, -74.004394], 
-	            {
-	                hintContent: '',
-	                balloonContent: '<div class="map-info" style="width:322px;"><div class="map-info__inner"><a class="map-info__img" href="#"><img src="img/map-img.jpg"><div class="map-info__time">Круглосуточно</div><div class="map-info__badge"><i  class="icon icon-user-small"></i>6 +</div></a><div class="map-info__main"><a class="map-info__title" href="#">George</a><p>Первый премиальный грузинский ресторан в Москве</p><div class="map-info__meta"><span><i class="icon icon-point"></i>м. Братиславская</span><span><i class="icon icon-like-s"></i> 854</span></div></div></div>',
-	            },
-	            {	
-	                iconImageHref: 'img/marker.png',
-	        		iconImageSize: [45, 49],
-	        		iconImageOffset: [-15, -35]
-	            }
-            );
-            myPlacemark2 = new ymaps.Placemark([40.742963, -73.992335], 
-	            {
-	                hintContent: '',
-	                balloonContent: '<div class="map-info" style="width:322px;"><div class="map-info__inner"><a class="map-info__img" href="#"><img src="img/map-img.jpg"><div class="map-info__time">Круглосуточно</div><div class="map-info__badge"><i  class="icon icon-user-small"></i>6 +</div></a><div class="map-info__main"><a class="map-info__title" href="#">George</a><p>Первый премиальный грузинский ресторан в Москве</p><div class="map-info__meta"><span><i class="icon icon-point"></i>м. Братиславская</span><span><i class="icon icon-like-s"></i> 854</span></div></div></div>',
-	            },
-	            {	
-	                iconImageHref: 'img/marker.png',
-	        		iconImageSize: [45, 49],
-	        		iconImageOffset: [-15, -35]
-	            }
-            );
-            
-            myMap.geoObjects.add(myPlacemark1);
-            myMap.geoObjects.add(myPlacemark2);
-        }
-    </script>
 </head>
 <body>
 	<!-- BEGIN header -->
@@ -164,10 +126,10 @@
 				    data-cycle-prev=".js-slideshow-prev"
 				    data-cycle-next=".js-slideshow-next"
 				    >
-				    <img src="http://lorempixel.com/630/400/food">
-				    <img src="http://lorempixel.com/630/400/food">
-				    <img src="http://lorempixel.com/630/400/food">
-				    <img src="http://lorempixel.com/630/400/food">
+				    <img src="http://lorempixel.com/600/400/food">
+				    <img src="http://lorempixel.com/600/400/food">
+				    <img src="http://lorempixel.com/600/400/food">
+				    <img src="http://lorempixel.com/600/400/food">
 					<button class="slideshow__prev js-slideshow-prev"></button>
 					<button class="slideshow__next js-slideshow-next"></button>
 				</div>
@@ -291,7 +253,9 @@
 							<span>м. Тимирязевская</span>
 						</div>
 					</div>
-					<div id="map-card" class="map-card"></div>
+					<div class="map-card">
+						<img src="http://static-maps.yandex.ru/1.x/?ll=37.57802,55.730765&size=280,92&z=16&l=map&pt=37.57802,55.730765,pm2dbm" />
+					</div>
 					<div class="card-info">
 						<div class="card-info__icon">
 							<i class="icon icon-card-clock"></i>
@@ -398,6 +362,9 @@
 		</div>
 	</div>
 	<!-- END footer -->
+	<div class="popup popup__map">
+		
+	</div>
 </body>
 
 </html>

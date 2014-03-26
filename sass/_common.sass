@@ -265,46 +265,46 @@ body
 		position: relative
 		margin-right: 8px
 		top: -3px
-	.dropdown-menu   
-		margin: -41px 0 0  
-		padding-top: 48px 
-		width: 100%
-		border-radius: 3px
+.drop-list   
+	margin: -41px 0 0  
+	padding-top: 48px 
+	width: 100%
+	border-radius: 3px
+	background: #fff
+	box-shadow: 0 1px 3px #000
+	border: 0
+	+box
+	&:hover,
+	&:active
+		z-index: 1000 !important  
+	ul
+		list-style-type: none 
+		padding: 0
+		margin: 0 6px 0 0  
+		height: 337px
+		overflow-y: auto
+	li
+		padding: 0 9px 0 18px 
 		background: #fff
-		box-shadow: 0 1px 3px #000
-		border: 0
-		+box
-		&:hover,
-		&:active
-			z-index: 1000 !important  
-		ul
-			list-style-type: none 
-			padding: 0
-			margin: 0 6px 0 0  
-			height: 337px
-			overflow-y: auto
-		li
-			padding: 0 9px 0 18px 
-			background: #fff
-			&:first-child
-				a
-					border-top: 0
-			&:hover
-				position: relative
-				z-index: 2  
-				+box-shadow(0 1px 0 #d32900)
-				+g(#e95b37, #d32900)  
-				a
-					border-top-color: #e95b37
-					color: #fff   
-		a
-			display: block
-			padding: 7px 0 
-			font-size: 16px
-			border-top: 1px solid #b2b2b2 
-			color: $dark 
-			&:hover
-				text-decoration: none
+		&:first-child
+			a
+				border-top: 0
+		&:hover
+			position: relative
+			z-index: 2  
+			+box-shadow(0 1px 0 #d32900)
+			+g(#e95b37, #d32900)  
+			a
+				border-top-color: #e95b37
+				color: #fff   
+	a
+		display: block
+		padding: 7px 0 
+		font-size: 16px
+		border-top: 1px solid #b2b2b2 
+		color: $dark 
+		&:hover
+			text-decoration: none
 
 // ------------------ footer -------------------------- //
 .page-footer

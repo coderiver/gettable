@@ -518,10 +518,14 @@ body.is-abs-sidebar .sidebar__in { position: absolute; top: auto; bottom: 28px; 
 .kitchen-wrap { margin: 65px 0 0; text-align: center; font-size: 0; }
 .kitchen-wrap .to-center { margin-top: 60px; }
 
+.kitchen-wrap_place { margin-top: 49px; }
+
 .kitchen { display: inline-block; margin-left: 69px; vertical-align: top; font-size: 16px; }
 .kitchen:first-child { margin-left: 0; }
 .kitchen:hover span { color: red; border-bottom-color: rgba(255, 0, 0, 0.5); }
 .kitchen span { color: #dc2b00; display: inline-block; line-height: 1; letter-spacing: 0.1px; border-bottom: 2px solid rgba(219, 43, 0, 0.5); }
+
+.kitchen_place .kitchen__img { height: 100px; line-height: 100px; }
 
 .kitchen__img { display: block; height: 84px; }
 
@@ -663,16 +667,6 @@ body.is-abs-sidebar .sidebar__in { position: absolute; top: auto; bottom: 28px; 
 .login__error { position: absolute; left: 0; bottom: -30px; color: #dc2b00; font-size: 14px; }
 
 .btn-clear { position: absolute; top: 18px; left: 214px; padding: 0; border: 0; background-color: none; background: url('../img/icons-s5300c31c5f.png') 0 -5435px no-repeat; width: 13px; height: 12px; }
-
-.place-item-wrap { padding-top: 8px; font-size: 0; margin-bottom: 63px; }
-
-.place-item { display: inline-block; margin-left: 15px; font-size: 16px; width: 175px; height: 160px; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; background: white; text-align: center; -webkit-box-shadow: 0 7px 3px rgba(0, 0, 0, 0.08); -moz-box-shadow: 0 7px 3px rgba(0, 0, 0, 0.08); box-shadow: 0 7px 3px rgba(0, 0, 0, 0.08); }
-.place-item:hover { text-decoration: none; }
-.place-item:first-child { margin-left: 0; }
-.place-item span { color: black; font-size: 16px; font-family: "GEInspiraBold", Arial, sans-serif; }
-
-.place-item__img { height: 120px; line-height: 120px; }
-.place-item__img img { vertical-align: middle; }
 
 .main-col { float: right; width: 668px; margin-bottom: 10px; }
 

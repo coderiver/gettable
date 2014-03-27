@@ -172,7 +172,7 @@
 			+placeholder
 				color: #000
 		i
-			+s(glass-h) 
+			+sp(glass-h) 
 	.form-control
 		display: block
 		padding: 6px 34px 6px 16px    
@@ -194,6 +194,8 @@
 			outline: none !important 
 			border: 1px solid #efefef  
 			+box-shadow(inset 0 1px 2px rgba(0,0,0,.05))
+			+placeholder
+				font-size: 0
 			// border-color: $red
 			// +box-shadow(0 0 7px rgba(255,53,3,.86), inset 0 2px 2px rgba(0,0,0,.14))
 			// +placeholder
@@ -210,13 +212,13 @@
 .input-group_metro
 	&:hover  
 		i
-			+s(railway)  
+			+sp(railway)  
 			+opacity(1)
 	.form-control
 		padding-left: 52px
 		&:focus 
 			+ i
-				+s(railway-act)
+				+sp(railway-act)
 	i
 		left: 10px
 		+s(railway)    
@@ -351,27 +353,27 @@
 .soc__fb
 	+s(soc-fb)
 	&:hover
-		+s(soc-fb-h)
+		+sp(soc-fb-h)
 	&:active
-		+s(soc-fb-act)
+		+sp(soc-fb-act)
 .soc__od
 	+s(soc-od)
 	&:hover
-		+s(soc-od-h)
+		+sp(soc-od-h)
 	&:active
-		+s(soc-od-act)
+		+sp(soc-od-act)
 .soc__vk
 	+s(soc-vk)
 	&:hover
-		+s(soc-vk-h)
+		+sp(soc-vk-h)
 	&:active
-		+s(soc-vk-act)
+		+sp(soc-vk-act)
 .soc__tw
 	+s(soc-tw)
 	&:hover
-		+s(soc-tw-h)
+		+sp(soc-tw-h)
 	&:active
-		+s(soc-tw-act)  
+		+sp(soc-tw-act)  
 		
 .btn_simple
 	padding: 4px 19px 
@@ -450,15 +452,15 @@
 .btn-prev
 	+s(prev)
 	&:hover
-		+s(prev-h)
+		+sp(prev-h)
 	&:active
-		+s(prev-act)
+		+sp(prev-act)
 .btn-next
 	+s(next)
 	&:hover
-		+s(next-h)
+		+sp(next-h)
 	&:active
-		+s(next-act)
+		+sp(next-act)
 
 .btn-group_tabs
 	.btn
@@ -473,11 +475,11 @@
 			+box-shadow(0 1px 1px rgba(0,0,0,.2))
 			+g(#fff, #f6f6f6) 
 			.icon-filter-best
-				+s(filter-best-h) 
+				+sp(filter-best-h) 
 			.icon-filter-new
-				+s(filter-new-h) 
+				+sp(filter-new-h) 
 			.icon-filter-club
-				+s(filter-club-h)
+				+sp(filter-club-h)
 		&.is-active	
 			background: #4b4b4b
 			border-color: #4b4b4b

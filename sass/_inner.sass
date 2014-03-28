@@ -29,6 +29,11 @@
 		height: 250px
 	.item__text
 		height: 128px
+	.item__list 
+		.scroll-pane
+			height: 365px
+			&:after
+				bottom: 24px
 .item__wrap
 	position: absolute
 	top: 0
@@ -258,7 +263,7 @@
 				div
 					color: #353535
 	.scroll-pane
-		position: relative
+		//position: relative
 		height: 317px   
 		+scrollbar
 			width: 4px
@@ -275,12 +280,12 @@
 		&:before
 			content: "" 
 			position: absolute
-			left: 0
+			left: 30px
 		&:before
-			top: 0
+			top: 60px
 			+s(shadow-t)
 		&:after
-			bottom: 0
+			bottom: 12px
 			+s(shadow-b)
 	.icon
 		margin-right: 6px

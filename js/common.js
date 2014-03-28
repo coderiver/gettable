@@ -70,11 +70,11 @@ $(document).ready(function() {
         }
     );
 
-    if ($('.js-scroll-pane').length) {
-        $('.js-scroll-pane').jScrollPane({
-            autoReinitialise: true
-        });
-    }
+    // if ($('.js-scroll-pane').length) {
+    //     $('.js-scroll-pane').jScrollPane({
+    //         autoReinitialise: true
+    //     });
+    // }
       
 
     $(".js-item-key").on("click",function(){

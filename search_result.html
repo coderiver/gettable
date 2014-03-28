@@ -13,8 +13,6 @@
 	<script src="js/cycle.js"></script>
 	<script src="js/jquery.cycle2.carousel.js"></script>
 	<script src="js/jquery.maskedinput.js"></script>
-	<script src="js/jquery.mousewheel.js"></script>
-	<script src="js/jquery.jscrollpane.js"></script>
 	<script src="js/common.js"></script>
 </head>
 <body>
@@ -122,10 +120,7 @@
 			<aside class="sidebar js-sidebar">
 				<div class="sidebar__in">
 					<div class="sidebar__wrap">
-						<div class="input-group input-group_search">
-					    	<input type="text" class="form-control" placeholder="Поиск по названию..." >
-					    	<i></i>
-					    </div>
+						<a class="link-to-parent" href="#">В обычный поиск</a>
 						<div class="sidebar__item">
 							<div class="btn-group btn-group_styled btn-group_rub">
 								<button type="button" class="btn is-active"><i class="icon-rub">Р</i></button>
@@ -172,12 +167,12 @@
 								<li><span>Кавказская</span></li>
 							</ul>
 						</div>
-						<div class="sidebar__filter">
+						<!-- <div class="sidebar__filter">
 							<a href="js-window2" class="sidebar__title js-window-key">Выбрать станцию метро</a>
 						</div>
 						<div class="sidebar__filter">
 							<a href="js-window3" class="sidebar__title js-window-key">Интересное</a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				<i class="sidebar-target"></i>
@@ -774,10 +769,86 @@
 </div>
 <div class="window window_mod js-window js-window2">
 	<div class="input-group input-group_search input-group_metro">
-    	<input type="text" class="form-control" placeholder="Введите станцию метро...">
-    	<i></i>
+    	<input type="text" class="form-control dropdown-toggle" data-toggle="dropdown"  placeholder="Введите станцию метро...">
+		<i></i>
+		<div class="dropdown-menu drop-list drop-list_search" role="menu">
+			<ul>
+				<li>
+					<a href="#">
+						<strong>Кар</strong>ловы вары
+						<span>ул. Батрудинова д. 15 кв. 48</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>Кар</strong>ловы вары
+						<span>ул. Батрудинова д. 15 кв. 48</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>Кар</strong>ловы вары
+						<span>ул. Батрудинова д. 15 кв. 48</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>Кар</strong>ловы вары
+						<span>ул. Батрудинова д. 15 кв. 48</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>Кар</strong>ловы вары
+						<span>ул. Батрудинова д. 15 кв. 48</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>Кар</strong>ловы вары
+						<span>ул. Батрудинова д. 15 кв. 48</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>Кар</strong>ловы вары
+						<span>ул. Батрудинова д. 15 кв. 48</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>Кар</strong>ловы вары
+						<span>ул. Батрудинова д. 15 кв. 48</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>Кар</strong>ловы вары
+						<span>ул. Батрудинова д. 15 кв. 48</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>Кар</strong>ловы вары
+						<span>ул. Батрудинова д. 15 кв. 48</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>Кар</strong>ловы вары
+						<span>ул. Батрудинова д. 15 кв. 48</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<strong>Кар</strong>ловы вары
+						<span>ул. Батрудинова д. 15 кв. 48</span>
+					</a>
+				</li>
+			</ul>
+		</div>
     </div>
-	<div class="clearfix scroll-pane js-scroll-pane">
+	<div class="window__in">
 		<div class="window__col">
 			<div class="checkbox">
 			    <label class="checkbox__in">

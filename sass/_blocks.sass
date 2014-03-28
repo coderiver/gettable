@@ -777,6 +777,18 @@
 		width: 545px
 		.form-control
 			background: #fff 
+	.window__in
+		max-height: 218px
+		overflow-y: auto
+		+scrollbar
+			width: 4px
+			background: #e3e3e3 
+		+scrollbar-thumb
+			border-radius: 2px
+			background: #818181
+		+scrollbar-track-piece 
+			width: 4px 
+			border-radius: 2px
 .window__col
 	width: 173px
 	float: left
@@ -819,3 +831,20 @@
 	vertical-align: middle
 	width: 94px
 	text-align: center
+	
+.link-to-parent
+	display: inline-block
+	position: relative
+	margin-bottom: 16px
+	padding-left: 20px 
+	font-size: 16px
+	color: #000   
+	&:hover
+		text-decoration: none
+		color: #000 
+	&:before
+		content: ""
+		position: absolute
+		top: 5px
+		left: 0
+		+s(arr6)

@@ -207,7 +207,7 @@
 		top: 50%
 		z-index: 1002
 		margin-top: -9px
-		right: 16px  
+		right: 16px    
 		+s(glass)
 .input-group_metro
 	&:hover  
@@ -287,7 +287,7 @@
 		opacity: 0 
 		&:checked
 			+ span
-				color: $red
+				color: #000
 				&:before
 					background: #9b9b9b
 					border-top-color: #9b9b9b 
@@ -737,7 +737,7 @@
 	z-index: 2000
 	+box
 	max-height: 300px
-	padding: 21px 25px 20px
+	padding: 31px 25px 20px
 	+border-radius(10px)
 	background: #fff
 	font-size: 13px
@@ -767,14 +767,16 @@
 	.scroll-pane
 		position: relative
 		padding-left: 7px
-		margin-top: 10px
-		height: 156px
+		margin-top: 11px
+		height: 173px
 		width: 563px
 .window_mod
 	width: 603px
 	padding: 21px 15px 20px 20px
 	.input-group_metro
 		width: 545px
+		.form-control
+			background: #fff 
 .window__col
 	width: 173px
 	float: left
@@ -785,7 +787,13 @@
 	+fbold
 	color: #000 
 	.icon
-		margin: -6px 11px 0 0 
+		margin: -12px 10px 0 -7px
+.window_kitchen
+	width: 602px
+.window_interest
+	padding: 7px 36px 2px 23px
+	.checkbox_box
+		margin-bottom: 10px
 .button-close
 	position: absolute
 	+s(close)
@@ -804,10 +812,10 @@
 				display: block
 				font-weight: normal
 				+fbold
-				color: #000 
+				color: #000   
 				font-size: 18px
 .checkbox__img
 	display: inline-block
 	vertical-align: middle
-	width: 110px
+	width: 94px
 	text-align: center

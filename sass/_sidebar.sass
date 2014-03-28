@@ -7,16 +7,23 @@
         border-radius: 5px !important
     .input-group_search
         margin-bottom: 21px
+        .form-control
+            position: relative
+            z-index: 1001  
+            background: #fff 
+        .drop-list
+            +box-shadow(none)
+            border: 1px solid #efefef
     .checkbox
         display: inline-block
-        margin-top: 19px
         vertical-align: middle
-        margin-left: 15px
+        margin: 0 0 15px 15px
         width: 46%
         &:nth-child(2n+1)
             margin-left: 0
     .checkbox-group
-        margin-top: 4px
+        margin-top: 23px
+        border-bottom: 1px solid #eaeaea 
 .js-sidebar-target
     height: 1px
 
@@ -28,7 +35,7 @@
     padding-right: 11px
 .sidebar__item
     border-top: 1px solid #e4e4e4    
-    padding: 21px 0
+    padding: 24px 0 6px
     .btn-group-justified
         margin-top: 10px
 .filter-icon
@@ -112,13 +119,13 @@
         .button-close
             position: absolute
             top: 50%
-            right: 12px
+            right: 6px
             margin-top: -6px
     &:after
         content: ""
         position: absolute
         top: 50%
-        right: 12px
+        right: 8px
         margin-top: -6px
         +opacity(.4)
         +s(arr1)

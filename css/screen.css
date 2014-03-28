@@ -30,9 +30,9 @@ html ::selection { background: rgba(19, 122, 233, 0.2); }
 html ::-moz-selection { background: rgba(19, 122, 233, 0.2); }
 
 body { min-width: 1024px; background: #fafafa url(../img/body-bg.png) 0 0 repeat; color: #858585; font-family: "GEInspiraReg", Arial, sans-serif; line-height: 1.5; font-size: 13px; }
-body::-webkit-scrollbar { width: 6px; }
-body::-webkit-scrollbar-thumb { border-radius: 3px; background: #535353; }
-body::-webkit-scrollbar-track-piece { width: 6px; border-radius: 3px; }
+body::-webkit-scrollbar { width: 4px; height: 4px; background: #e3e3e3; }
+body::-webkit-scrollbar-thumb { border-radius: 2px; background: #818181; }
+body::-webkit-scrollbar-track-piece { width: 4px; border-radius: 2px; }
 body.index-page { background: #fafafa; }
 body.index-page .page-footer { border-top: 0; }
 body.is-fixed-sidebar .sidebar__in, body.is-fixed-sidebar .sidebar-target { position: fixed; top: 18px; bottom: auto; left: 50%; z-index: 1000; margin-left: -492px; width: 276px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
@@ -757,6 +757,9 @@ body.is-abs-sidebar .sidebar__in { position: absolute; top: auto; bottom: 28px; 
 .item__list li a:hover { text-decoration: none; }
 .item__list li a:hover div { color: #353535; }
 .item__list .scroll-pane { position: relative; height: 317px; }
+.item__list .scroll-pane::-webkit-scrollbar { width: 4px; overflow: hidden; background: #e3e3e3; border-radius: 2px; }
+.item__list .scroll-pane::-webkit-scrollbar-thumb { border-radius: 2px; background: #818181; }
+.item__list .scroll-pane::-webkit-scrollbar-track-piece { width: 4px; border-radius: 2px; }
 .item__list .scroll-pane:after, .item__list .scroll-pane:before { content: ""; position: absolute; left: 0; }
 .item__list .scroll-pane:before { top: 0; background: url('../img/icons-sacf4119e5b.png') 0 -3973px no-repeat; width: 203px; height: 17px; }
 .item__list .scroll-pane:after { bottom: 0; background: url('../img/icons-sacf4119e5b.png') 0 -3019px no-repeat; width: 203px; height: 17px; }
@@ -791,25 +794,35 @@ body.is-abs-sidebar .sidebar__in { position: absolute; top: auto; bottom: 28px; 
 .search-error__in strong { display: block; font-size: 23px; color: black; }
 
 .map { position: relative; margin-top: -90px; }
-.map .sidebar { position: absolute; left: 0; margin-left: 0; top: 72px; bottom: 0; z-index: 3; background: rgba(255, 255, 255, 0.93); }
+.map .sidebar { position: absolute; left: 0; margin-left: 0; top: 72px; bottom: 0; z-index: 3; background: rgba(247, 247, 247, 0.93); }
 .map .sidebar__in { position: absolute; top: 22px; left: 20px; bottom: 22px; right: 11px; padding: 0; background: none; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0; border-radius: 0; overflow-y: auto; }
-.map .sidebar__in::-webkit-scrollbar { width: 6px; }
-.map .sidebar__in::-webkit-scrollbar-thumb { border-radius: 3px; background: #535353; }
-.map .sidebar__in::-webkit-scrollbar-track-piece { width: 6px; border-radius: 3px; }
+.map .sidebar__in::-webkit-scrollbar { width: 4px; height: 4px; overflow: hidden; background: #e3e3e3; border-radius: 2px; }
+.map .sidebar__in::-webkit-scrollbar-thumb { border-radius: 2px; background: #818181; }
+.map .sidebar__in::-webkit-scrollbar-track-piece { width: 4px; border-radius: 2px; }
 .map .sidebar__item { border-top: 0; }
 
 .yandex-map { position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 1; }
 
-.map-info { height: 93px; }
-
-.map-info__inner { position: absolute; top: 0; left: 0; width: 100%; height: 114px; }
+.map-info { position: relative; top: 10px; height: 114px; background: white; -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.36); -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.36); box-shadow: 0 0 6px rgba(0, 0, 0, 0.36); }
+.map-info:after { content: ""; position: absolute; bottom: -9px; left: 50%; margin-left: -6px; width: 0px; height: 0px; border-style: solid; border-width: 9px 8px 0 8px; border-color: white transparent transparent transparent; }
 
 .map-info__img { position: relative; float: left; height: 114px; width: 114px; }
 .map-info__img:after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(75%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.9))); background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.9)); background-image: -moz-linear-gradient(rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.9)); background-image: -o-linear-gradient(rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.9)); background-image: linear-gradient(rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.9)); }
 .map-info__img img { display: block; max-width: 100%; height: auto; }
 
-.map-info__time { position: absolute; left: 0; bottom: 14px; color: white; font-size: 12px !important; text-shadow: 0 1px 1px black; padding-left: 27px; }
+.map-info__time { position: absolute; left: 0; bottom: 14px; z-index: 2; color: white; font-size: 12px !important; text-shadow: 0 1px 1px black; padding-left: 27px; }
 .map-info__time:before { content: ""; position: absolute; left: 8px; top: 3px; background: url('../img/icons-sacf4119e5b.png') 0 -5290px no-repeat; width: 14px; height: 14px; }
+
+.ymaps-b-balloon__content { border: 0 !important; background: none !important; }
+.ymaps-b-balloon__content ymaps { overflow: visible !important; }
+
+.ymaps-b-balloon__sprite { background: none !important; }
+
+.ymaps-b-balloon__tail { background: none !important; }
+
+.ymaps-b-balloon__close { top: 31px !important; right: -1px !important; background: url(../img/close.png) 0 0 no-repeat !important; }
+
+.ymaps-shadows-pane { display: none !important; }
 
 .map-info__badge { position: absolute; left: -5px; top: 5px; z-index: 3; padding: 0 7px 0 5px; height: 24px; line-height: 24px; background: #c82700; font-family: "GEInspiraBold", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; color: white; font-size: 14px; -webkit-box-shadow: 0 2px 1px #961c00; -moz-box-shadow: 0 2px 1px #961c00; box-shadow: 0 2px 1px #961c00; text-shadow: 0 1px 1px #601200; background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #c82700), color-stop(100%, #e72d00)); background-image: -webkit-linear-gradient(bottom, #c82700 0%, #e72d00 100%); background-image: -moz-linear-gradient(bottom, #c82700 0%, #e72d00 100%); background-image: -o-linear-gradient(bottom, #c82700 0%, #e72d00 100%); background-image: linear-gradient(bottom, #c82700 0%, #e72d00 100%); }
 .map-info__badge i { display: inline-block; margin-right: 3px; vertical-align: middle; }

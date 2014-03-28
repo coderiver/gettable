@@ -260,6 +260,17 @@
 	.scroll-pane
 		position: relative
 		height: 317px   
+		+scrollbar
+			width: 4px
+			overflow: hidden
+			background: #e3e3e3 
+			border-radius: 2px
+		+scrollbar-thumb
+			border-radius: 2px
+			background: #818181
+		+scrollbar-track-piece 
+			width: 4px 
+			border-radius: 2px
 		&:after,
 		&:before
 			content: "" 
@@ -381,7 +392,7 @@
 		top: 72px
 		bottom: 0
 		z-index: 3
-		background: rgba(255,255,255,.93) 
+		background: rgba(247,247,247,.93) 
 	.sidebar__in
 		position: absolute
 		top: 22px
@@ -394,13 +405,17 @@
 		+border-radius(0)
 		overflow-y: auto
 		+scrollbar
-			width: 6px
+			width: 4px
+			height: 4px
+			overflow: hidden
+			background: #e3e3e3 
+			border-radius: 2px
 		+scrollbar-thumb
-			border-radius: 3px
-			background: #535353
+			border-radius: 2px
+			background: #818181
 		+scrollbar-track-piece 
-			width: 6px 
-			border-radius: 3px
+			width: 4px 
+			border-radius: 2px
 	.sidebar__item
 		border-top: 0
 .yandex-map
@@ -412,13 +427,24 @@
 	z-index: 1
 	
 .map-info
-	height: 93px
-.map-info__inner
-	position: absolute
-	top: 0
-	left: 0
-	width: 100%
+	position: relative
+	top: 10px
 	height: 114px
+	background: #fff 
+	+box-shadow(0 0 6px rgba(0,0,0,.36))
+	&:after
+		content: "" 
+		position: absolute
+		bottom: -9px
+		left: 50%
+		margin-left: -6px
+		+arr(16,9,#fff,b)
+.map-info__inner  
+	//position: absolute
+	//top: 0
+	//left: 0
+	//width: 100%
+	//height: 114px
 .map-info__img
 	position: relative
 	float: left
@@ -440,6 +466,7 @@
 	position: absolute
 	left: 0
 	bottom: 14px
+	z-index: 2
 	color: #fff
 	font-size: 12px !important
 	text-shadow: 0 1px 1px #000
@@ -450,6 +477,24 @@
 		left: 8px
 		top: 3px
 		+s(time-s) 
+
+.ymaps-b-balloon__content
+	border: 0 !important
+	background: none !important
+	ymaps
+		overflow: visible !important
+.ymaps-b-balloon__sprite
+	background: none !important
+.ymaps-b-balloon__tail
+	background: none !important
+.ymaps-b-balloon__close
+	top: 31px  !important
+	right: -1px !important
+	background: url(../img/close.png) 0 0 no-repeat !important 
+.ymaps-shadows-pane
+	display: none !important
+	
+
 .map-info__badge
 	position: absolute
 	left: -5px

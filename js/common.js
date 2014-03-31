@@ -3,6 +3,7 @@ $(document).ready(function() {
     $(document).click(function(){
         window_el.fadeOut("fast");
         popup.fadeOut("fast");
+        overlay.fadeOut("fast");
     });
 
     var window_el = $(".js-window");
@@ -88,6 +89,7 @@ $(document).ready(function() {
 
     var sidebar = $(".js-sidebar");
     var sidebar_in = sidebar.find(".sidebar__in");
+
     function fixedSidebar() {
 
         var top = sidebar.offset().top-18;
@@ -97,7 +99,7 @@ $(document).ready(function() {
         if (scroll_top >= top) {
             $("body").addClass("is-fixed-sidebar");
 
-            // set max sidebar heibht
+            // set max sidebar height
             if (height >= $(window).height()) {
                 sidebar.find(".sidebar__wrap").css({
                     maxHeight: $(window).height()-80
@@ -140,9 +142,67 @@ $(document).ready(function() {
     if (sidebar.length) {
         fixedSidebar();
     }
+
+    var card = $(".js-card");
+    var card__in = $(".js-card__in");
+
+    function fixedCardInfo() {
+        
+        var top = card.offset().top;
+        var scroll_top = $("body").scrollTop();
+        var height = card__in.outerHeight();
+
+        if (scroll_top >= top) {
+            $("body").addClass("is-fixed-sidebar");
+
+            // set max sidebar height
+            if (height >= $(window).height()) {
+                card.find(".scroll-pane").css({
+                    maxHeight: $(window).height()-80
+                });
+                card__in.css({
+                    maxHeight: $(window).height()-36
+                });
+            }
+            if (height < $(window).height()) {
+                card.find(".scroll-pane").css({
+                    maxHeight: 'auto'
+                });
+                card__in.css({
+                    maxHeight: 'auto'
+                });
+            }
+
+            // remove fixing
+            var footer_bottom = $(".page-footer").offset().top; 
+            var sidebar_bottom = $(".sidebar-target").offset().top+height; 
+            console.log('target'+sidebar_bottom);
+            console.log('item'+footer_bottom);
+
+            if (sidebar_bottom >= footer_bottom) {
+                $("body").addClass("is-abs-sidebar");
+                $("body").removeClass("is-fixed-sidebar");
+            }
+            else if (sidebar_bottom < footer_bottom) {
+                $("body").removeClass("is-abs-sidebar");
+                $("body").addClass("is-fixed-sidebar");
+            }
+        }
+        else {
+            $("body").removeClass("is-fixed-sidebar");
+        }
+    }
+
+    if (card.length) {
+        fixedCardInfo();
+    }  
+
     $(window).scroll(function(){
         if (sidebar.length) {
             fixedSidebar();
+        }  
+        if (card.length) {
+            fixedCardInfo();
         }  
     }); 
     $(window).resize(function(){
@@ -150,12 +210,6 @@ $(document).ready(function() {
             fixedSidebar();
         }  
     }); 
-    //  $("html").scroll(function(){
-    //     // if (sidebar.length) {
-    //     //     fixedSidebar();
-    //     // }  
-    //     $('.window').fadeOut("fast");
-    // }); 
 
     $("body").prepend( '<div class="tip js-tip"><div class="tip__in"></div></div>' );
     var tooltip = $(".js-tip");
@@ -189,12 +243,14 @@ $(document).ready(function() {
 
     $(".js-close-window").on("click", function(){
         $(this).parents(".window").fadeOut("fast").removeAttr("data-id");
+        $(".js-window-key").removeClass("js-active");
     });
     window_el.on("click", function(event){
         event.stopPropagation()
     })
     $(".js-window-key").on("click", function(event){
         window_el.hide();
+        $(this).addClass("js-active");
         var el = $(this).attr("href");
         var height = $("."+el).outerHeight();
         var top = $(this).offset().top-(height/2)+($(this).outerHeight()/2);
@@ -224,9 +280,11 @@ $(document).ready(function() {
     });
 
     var popup = $(".popup");
+    var overlay = $(".js-overlay");
     $(".js-popup-link").on("click", function(event){
         var popup = $(this).attr("href");
         $("."+popup).fadeIn();
+        $(overlay).fadeIn();
         return false;
         event.stopPropagation()
     })
@@ -235,6 +293,7 @@ $(document).ready(function() {
     })
     $(".js-popup-close").on("click", function(){
        popup.fadeOut("fast");
+       overlay .fadeOut("fast");
     })
 
 
@@ -243,4 +302,4 @@ $(document).ready(function() {
         ($(this).scrollTop() + $(this).height()) >= this.scrollHeight) return false;
     });
 
-});  
+});      

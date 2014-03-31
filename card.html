@@ -260,52 +260,55 @@
 					<p>Wi-Fi, итальянская кухня, терраса, бизнес ланч, веранда, ланчи, завтраки, программы для детей</p>
 				</div>
 			</div>
-			<div class="l-col2">
-				<div class="l-col2__in">
-					<div class="card-info card-info_place">
-						<div class="card-info__icon">
-							<i class="icon icon-card-point"></i>
+			<div class="l-col2 js-card">
+				<div class="l-col2__in  js-card__in">
+					<div class="scroll-pane">
+						<div class="card-info card-info_place">
+							<div class="card-info__icon">
+								<i class="icon icon-card-point"></i>
+							</div>
+							<div class="card-info__main">
+								<p>Москва, Кутузовский пр-т, 48, ТЦ  «Времена года», 3 этаж</p>
+								<span>м. Тимирязевская</span>
+							</div>
 						</div>
-						<div class="card-info__main">
-							<p>Москва, Кутузовский пр-т, 48, ТЦ  «Времена года», 3 этаж</p>
-							<span>м. Тимирязевская</span>
+						<a class="map-card js-popup-link" href="js-popup-map">
+							<img src="http://static-maps.yandex.ru/1.x/?ll=37.57802,55.730765&size=280,94&z=16&l=map&pt=37.57802,55.730765,pm2rdm" />
+						</a>
+						<div class="card-info">
+							<div class="card-info__icon">
+								<i class="icon icon-card-clock"></i>
+							</div>
+							<div class="card-info__main">
+								<p>Пн. – Ср., Вс. 12:00 – 21:00,</p>
+								<p>Чт., Пт. 12:00 – 6:00,</p>
+								<p>Сб. 22:00 – 6:00</p>
+							</div>
 						</div>
-					</div>
-					<a class="map-card js-popup-link" href="js-popup-map">
-						<img src="http://static-maps.yandex.ru/1.x/?ll=37.57802,55.730765&size=280,94&z=16&l=map&pt=37.57802,55.730765,pm2rdm" />
-					</a>
-					<div class="card-info">
-						<div class="card-info__icon">
-							<i class="icon icon-card-clock"></i>
+						<div class="card-info card-info_bill">
+							<div class="card-info__icon">
+								<i class="icon icon-card-wallet"></i>
+							</div>
+							<div class="card-info__main">
+								<p>Средний чек: 3000 Р</p>
+							</div>
 						</div>
-						<div class="card-info__main">
-							<p>Пн. – Ср., Вс. 12:00 – 21:00,</p>
-							<p>Чт., Пт. 12:00 – 6:00,</p>
-							<p>Сб. 22:00 – 6:00</p>
+						<div class="card-info card-info_tel">
+							<div class="card-info__icon">
+								<i class="icon icon-card-phone"></i>
+							</div>
+							<div class="card-info__main">
+								<p>8 (495) 255-11-66</p>
+							</div>
 						</div>
-					</div>
-					<div class="card-info card-info_bill">
-						<div class="card-info__icon">
-							<i class="icon icon-card-wallet"></i>
+						<div class="order-item">
+							<div class="order-item__title">Лучший столик в 2 клика</div>
+							<span>это бесплатно</span>
+							<a class="btn btn_green" href="#">Заказать столик</a>
 						</div>
-						<div class="card-info__main">
-							<p>Средний чек: 3000 Р</p>
-						</div>
-					</div>
-					<div class="card-info card-info_tel">
-						<div class="card-info__icon">
-							<i class="icon icon-card-phone"></i>
-						</div>
-						<div class="card-info__main">
-							<p>8 (495) 255-11-66</p>
-						</div>
-					</div>
-					<div class="order-item">
-						<div class="order-item__title">Лучший столик в 2 клика</div>
-						<span>это бесплатно</span>
-						<a class="btn btn_green" href="#">Заказать столик</a>
 					</div>
 				</div>
+				<i class="sidebar-target"></i>
 			</div>
 		</div>
 	</div>
@@ -414,7 +417,7 @@
 		</div>
 		<button class="btn-close-big js-popup-close"></button>
 	</div>
-	
+	<div class="overlay js-overlay"></div>
 </body>
 
 </html>

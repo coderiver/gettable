@@ -1,4 +1,5 @@
 .l-cols
+	position: relative
 	margin: 0 auto 
 	width: 940px
 	background: #fff 
@@ -13,4 +14,18 @@
 		border-left: 1px solid #f2f2f2 
 		width: 340px
 	.l-col2__in
-		padding: 30px 28px 20px
+		padding: 30px 14px 20px 28px
+		.scroll-pane
+			overflow-x: hidden
+			padding-right: 14px
+			+scrollbar
+				width: 4px
+				overflow: hidden
+				background: #e3e3e3 
+				border-radius: 2px
+			+scrollbar-thumb
+				border-radius: 2px
+				background: #818181
+			+scrollbar-track-piece 
+				width: 4px 
+				border-radius: 2px

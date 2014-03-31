@@ -37,11 +37,13 @@ body.is-fixed-sidebar .sidebar__wrap { overflow-y: auto; height: 100%; overflow-
 body.is-fixed-sidebar .sidebar__wrap::-webkit-scrollbar { width: 4px; overflow: hidden; background: #e3e3e3; border-radius: 2px; }
 body.is-fixed-sidebar .sidebar__wrap::-webkit-scrollbar-thumb { border-radius: 2px; background: #818181; }
 body.is-fixed-sidebar .sidebar__wrap::-webkit-scrollbar-track-piece { width: 4px; border-radius: 2px; }
+body.is-fixed-sidebar .l-col2__in { position: fixed; top: 0; bottom: auto; left: 50%; z-index: 1000; margin-left: 131px; width: 339px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; background: white; }
 body.is-abs-sidebar .sidebar__in { position: absolute; top: auto; bottom: 28px; left: -7px; z-index: 1000; width: 276px; }
 body.is-abs-sidebar .sidebar__wrap { overflow-y: auto; height: 100%; overflow-x: hidden; }
 body.is-abs-sidebar .sidebar__wrap::-webkit-scrollbar { width: 4px; overflow: hidden; background: #e3e3e3; border-radius: 2px; }
 body.is-abs-sidebar .sidebar__wrap::-webkit-scrollbar-thumb { border-radius: 2px; background: #818181; }
 body.is-abs-sidebar .sidebar__wrap::-webkit-scrollbar-track-piece { width: 4px; border-radius: 2px; }
+body.is-abs-sidebar .l-col2__in { position: absolute; top: auto; bottom: 18px; left: 50%; z-index: 1000; margin-left: 131px; width: 339px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; background: white; }
 
 .main-section > .container { position: relative; }
 
@@ -414,11 +416,15 @@ body.is-abs-sidebar .sidebar__wrap::-webkit-scrollbar-track-piece { width: 4px; 
 .link-to-parent:hover { text-decoration: none; color: black; }
 .link-to-parent:before { content: ""; position: absolute; top: 5px; left: 0; background: url('../img/icons-sacf4119e5b.png') 0 -5569px no-repeat; width: 7px; height: 13px; }
 
-.l-cols { margin: 0 auto; width: 940px; background: white; *zoom: 1; }
+.l-cols { position: relative; margin: 0 auto; width: 940px; background: white; *zoom: 1; }
 .l-cols:after { content: " "; display: table; clear: both; }
 .l-cols .l-col1 { float: left; margin-right: -1px; border-right: 1px solid #f2f2f2; width: 601px; }
 .l-cols .l-col2 { float: right; border-left: 1px solid #f2f2f2; width: 340px; }
-.l-cols .l-col2__in { padding: 30px 28px 20px; }
+.l-cols .l-col2__in { padding: 30px 14px 20px 28px; }
+.l-cols .l-col2__in .scroll-pane { overflow-x: hidden; padding-right: 14px; }
+.l-cols .l-col2__in .scroll-pane::-webkit-scrollbar { width: 4px; overflow: hidden; background: #e3e3e3; border-radius: 2px; }
+.l-cols .l-col2__in .scroll-pane::-webkit-scrollbar-thumb { border-radius: 2px; background: #818181; }
+.l-cols .l-col2__in .scroll-pane::-webkit-scrollbar-track-piece { width: 4px; border-radius: 2px; }
 
 .sidebar { float: left; margin-left: -22px; width: 276px; }
 .sidebar .form-control { border-bottom: 1px solid #efefef; border-radius: 5px !important; }
@@ -951,7 +957,7 @@ body.is-abs-sidebar .sidebar__wrap::-webkit-scrollbar-track-piece { width: 4px; 
 
 .order-item__title { position: relative; display: inline-block; padding: 0 9px; top: -8px; background: white; font-family: "GEInspiraBold", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; color: #373737; }
 
-.popup { display: none; position: absolute; top: 122px; z-index: 10000; left: 50%; margin-left: -495px; width: 990px; background: white; *zoom: 1; -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.39); -moz-box-shadow: 0 0 35px rgba(0, 0, 0, 0.39); box-shadow: 0 0 35px rgba(0, 0, 0, 0.39); }
+.popup { display: none; position: fixed; top: 122px; z-index: 10000; left: 50%; margin-left: -495px; width: 990px; background: white; *zoom: 1; -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.39); -moz-box-shadow: 0 0 35px rgba(0, 0, 0, 0.39); box-shadow: 0 0 35px rgba(0, 0, 0, 0.39); }
 .popup:after { content: " "; display: table; clear: both; }
 .popup .btn-close-big { top: 15px; right: 15px; }
 
@@ -964,6 +970,10 @@ body.is-abs-sidebar .sidebar__wrap::-webkit-scrollbar-track-piece { width: 4px; 
 .popup__title { margin-bottom: 23px; color: #444444; font-size: 24px; font-family: "PFAgoraBold", Verdana, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
 
 .btn-close-big { position: absolute; background: url('../img/icons-sacf4119e5b.png') 0 -5343px no-repeat; width: 18px; height: 18px; border: 0; }
+
+.overlay { position: fixed; display: none; z-index: 9000; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0, 0.4); }
+
+.sidebar-target { width: 100%; height: 1px; display: block; }
 
 .icon { display: inline-block; vertical-align: middle; }
 

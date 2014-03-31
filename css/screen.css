@@ -33,8 +33,15 @@ body { min-width: 1024px; background: #fafafa url(../img/body-bg.png) 0 0 repeat
 body.index-page { background: #fafafa; }
 body.index-page .page-footer { border-top: 0; }
 body.is-fixed-sidebar .sidebar__in, body.is-fixed-sidebar .sidebar-target { position: fixed; top: 18px; bottom: auto; left: 50%; z-index: 1000; margin-left: -492px; width: 276px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-body.is-fixed-sidebar .sidebar__wrap { overflow-y: auto; height: 100%; }
+body.is-fixed-sidebar .sidebar__wrap { overflow-y: auto; height: 100%; overflow-x: hidden; }
+body.is-fixed-sidebar .sidebar__wrap::-webkit-scrollbar { width: 4px; overflow: hidden; background: #e3e3e3; border-radius: 2px; }
+body.is-fixed-sidebar .sidebar__wrap::-webkit-scrollbar-thumb { border-radius: 2px; background: #818181; }
+body.is-fixed-sidebar .sidebar__wrap::-webkit-scrollbar-track-piece { width: 4px; border-radius: 2px; }
 body.is-abs-sidebar .sidebar__in { position: absolute; top: auto; bottom: 28px; left: -7px; z-index: 1000; width: 276px; }
+body.is-abs-sidebar .sidebar__wrap { overflow-y: auto; height: 100%; overflow-x: hidden; }
+body.is-abs-sidebar .sidebar__wrap::-webkit-scrollbar { width: 4px; overflow: hidden; background: #e3e3e3; border-radius: 2px; }
+body.is-abs-sidebar .sidebar__wrap::-webkit-scrollbar-thumb { border-radius: 2px; background: #818181; }
+body.is-abs-sidebar .sidebar__wrap::-webkit-scrollbar-track-piece { width: 4px; border-radius: 2px; }
 
 .main-section > .container { position: relative; }
 

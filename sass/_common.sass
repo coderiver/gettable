@@ -92,6 +92,18 @@ body
 		.sidebar__wrap
 			overflow-y: auto
 			height: 100%
+			overflow-x: hidden
+			+scrollbar
+				width: 4px
+				overflow: hidden
+				background: #e3e3e3 
+				border-radius: 2px
+			+scrollbar-thumb
+				border-radius: 2px
+				background: #818181
+			+scrollbar-track-piece 
+				width: 4px 
+				border-radius: 2px
 	&.is-abs-sidebar
 		.sidebar__in
 			position: absolute
@@ -100,6 +112,21 @@ body
 			left: -7px
 			z-index: 1000
 			width: 276px
+		.sidebar__wrap
+			overflow-y: auto
+			height: 100%
+			overflow-x: hidden
+			+scrollbar
+				width: 4px
+				overflow: hidden
+				background: #e3e3e3 
+				border-radius: 2px
+			+scrollbar-thumb
+				border-radius: 2px
+				background: #818181
+			+scrollbar-track-piece 
+				width: 4px 
+				border-radius: 2px
 .main-section
 	> .container
 		position: relative

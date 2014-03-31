@@ -106,6 +106,14 @@ $(document).ready(function() {
                     maxHeight: $(window).height()-36
                 });
             }
+            if (height < $(window).height()) {
+                sidebar.find(".sidebar__wrap").css({
+                    maxHeight: 'auto'
+                });
+                sidebar_in.css({
+                    maxHeight: 'auto'
+                });
+            }
 
             // remove fixing
             if ($(".js-item").length) {
@@ -136,7 +144,11 @@ $(document).ready(function() {
         if (sidebar.length) {
             fixedSidebar();
         }  
-        //$('.window').fadeOut("fast");
+    }); 
+    $(window).resize(function(){
+        if (sidebar.length) {
+            fixedSidebar();
+        }  
     }); 
     //  $("html").scroll(function(){
     //     // if (sidebar.length) {
@@ -176,7 +188,7 @@ $(document).ready(function() {
     );
 
     $(".js-close-window").on("click", function(){
-        $(this).parents(".window").fadeOut("fast");
+        $(this).parents(".window").fadeOut("fast").removeAttr("data-id");
     });
     window_el.on("click", function(event){
         event.stopPropagation()
@@ -188,6 +200,7 @@ $(document).ready(function() {
         var top = $(this).offset().top-(height/2)+($(this).outerHeight()/2);
         var left = $(this).offset().left+$(this).outerWidth();
         $("."+el).fadeIn("fast");
+        $("."+el).attr("data-id",el);
         $("."+el).css({
             top: top,
             left: left
@@ -196,6 +209,8 @@ $(document).ready(function() {
         return false;
         
     });
+
+    
 
     function mapHeight() {
         var height = $(window).height()-$(".page-header").outerHeight();
@@ -221,5 +236,11 @@ $(document).ready(function() {
     $(".js-popup-close").on("click", function(){
        popup.fadeOut("fast");
     })
+
+
+    $('.scroll-pane').bind('mousewheel', function(e) {
+        if(e.originalEvent.wheelDelta < 0 && 
+        ($(this).scrollTop() + $(this).height()) >= this.scrollHeight) return false;
+    });
 
 });  

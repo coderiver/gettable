@@ -204,6 +204,7 @@ $(document).ready(function() {
         if (card.length) {
             fixedCardInfo();
         }  
+        windowPos();
     }); 
     $(window).resize(function(){
         if (sidebar.length) {
@@ -248,8 +249,21 @@ $(document).ready(function() {
     window_el.on("click", function(event){
         event.stopPropagation()
     })
+    function windowPos() {
+        if ($("body").find(".js-window-key.js-active").length) {
+            var key = $("body").find(".js-window-key.js-active");
+            var key_id = key.attr("href");
+            var height = $("body").find("."+key_id).outerHeight();
+            var top = key.offset().top - (height/2) +10;
+            $("body").find("."+key_id).css({
+                top: top
+            })
+        }
+    }
+
     $(".js-window-key").on("click", function(event){
         window_el.hide();
+        $(".js-window-key").removeClass("js-active");
         $(this).addClass("js-active");
         var el = $(this).attr("href");
         var height = $("."+el).outerHeight();
@@ -301,5 +315,7 @@ $(document).ready(function() {
         if(e.originalEvent.wheelDelta < 0 && 
         ($(this).scrollTop() + $(this).height()) >= this.scrollHeight) return false;
     });
+
+    
 
 });      

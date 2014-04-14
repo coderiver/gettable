@@ -64,16 +64,10 @@ body
 	+freg
 	line-height: 1.5  
 	font-size: 13px 
-	// +scrollbar
-	// 	width: 4px
-	// 	height: 4px
-	// 	background: #e3e3e3 
-	// +scrollbar-thumb
-	// 	border-radius: 2px
-	// 	background: #818181
-	// +scrollbar-track-piece 
-	// 	width: 4px 
-	// 	border-radius: 2px
+	&.inner-page
+		background: $light 
+		.page-footer
+			border-top: 0
 	&.index-page
 		background: $light 
 		.page-footer
@@ -208,7 +202,7 @@ body
 					
 .page-header__stat
 	float: left
-	margin: 10px 0 0 43px 
+	margin: 10px 0 0 32px 
 	font-size: 15px     
 	color: #8e8e8e
 	strong
@@ -382,6 +376,8 @@ body
 
 // ------------------ footer -------------------------- //
 .page-footer
+	position: relative
+	z-index: 2
 	border-top: 1px solid #ccc 
 	.container
 		+clr

@@ -30,6 +30,8 @@ html ::selection { background: rgba(19, 122, 233, 0.2); }
 html ::-moz-selection { background: rgba(19, 122, 233, 0.2); }
 
 body { min-width: 1024px; background: #fafafa url(../img/body-bg.png) 0 0 repeat; color: #858585; font-family: "GEInspiraReg", Arial, sans-serif; line-height: 1.5; font-size: 13px; }
+body.inner-page { background: #fafafa; }
+body.inner-page .page-footer { border-top: 0; }
 body.index-page { background: #fafafa; }
 body.index-page .page-footer { border-top: 0; }
 body.is-fixed-sidebar .sidebar__in, body.is-fixed-sidebar .sidebar-target { position: fixed; top: 18px; bottom: auto; left: 50%; z-index: 1000; margin-left: -492px; width: 276px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
@@ -70,7 +72,7 @@ body.is-abs-sidebar .l-col2__in { position: absolute; top: auto; bottom: 18px; l
 .page-header .filter-view a:hover span { color: #dc2b00; border-bottom-color: #dc2b00; }
 .page-header .filter-view a:active span { color: red; border-bottom-color: red; }
 
-.page-header__stat { float: left; margin: 10px 0 0 43px; font-size: 15px; color: #8e8e8e; }
+.page-header__stat { float: left; margin: 10px 0 0 32px; font-size: 15px; color: #8e8e8e; }
 .page-header__stat strong { font-family: "GEInspiraBold", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; color: #373737; font-weight: bold; }
 .page-header__stat .icon { margin: -8px 6px 0 0; }
 
@@ -118,7 +120,7 @@ body.is-abs-sidebar .l-col2__in { position: absolute; top: auto; bottom: 18px; l
 .drop-list_search strong { font-family: "GEInspiraBold", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
 .drop-list_search span { display: block; font-size: 14px; color: #a2a2a2; }
 
-.page-footer { border-top: 1px solid #cccccc; }
+.page-footer { position: relative; z-index: 2; border-top: 1px solid #cccccc; }
 .page-footer .container { *zoom: 1; }
 .page-footer .container:after { content: " "; display: table; clear: both; }
 
@@ -798,18 +800,18 @@ body.is-abs-sidebar .l-col2__in { position: absolute; top: auto; bottom: 18px; l
 
 .search-result__text { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 
-.holder { position: relative; margin: 0 0 15px; z-index: 2; text-shadow: 0 2px 1px rgba(0, 0, 0, 0.64); }
-.holder:after { content: ""; position: absolute; left: 0; right: 0; height: 5px; bottom: 0; background: url(../img/shadow.png) 50% 0 no-repeat; }
-.holder .icon { margin-bottom: 8px; }
+.holder { position: relative; z-index: 2; text-shadow: 0 2px 1px rgba(0, 0, 0, 0.64); }
+.holder:after { content: ""; position: absolute; left: 0; right: 0; height: 5px; bottom: -5px; background: url(../img/shadow.png) 50% 0 no-repeat; }
+.holder .icon { margin-bottom: 11px; }
 
-.holder_contacts { height: 303px; }
+.holder_contacts { margin-bottom: 23px; height: 303px; }
 
-.holder__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 5px; min-width: 1600px; overflow: hidden; background-position: 0 17%; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.holder__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; min-width: 1600px; overflow: hidden; background-position: 0 17%; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
-.holder__main { position: absolute; left: 50%; top: 58px; margin-left: -435px; z-index: 2; width: 870px; text-align: center; font-size: 30px; color: white; line-height: 1.2; }
+.holder__main { position: absolute; left: 50%; top: 55px; margin-left: -435px; z-index: 2; width: 870px; text-align: center; font-size: 30px; color: white; line-height: 1.2; }
 .holder__main strong { font-weight: normal; font-family: "GEInspiraBold", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
 
-.holder__title { margin-bottom: 12px; color: white; font-size: 36px; font-family: "PFAgoraMedium", Verdana, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
+.holder__title { margin-bottom: 15px; color: white; font-size: 36px; font-family: "PFAgoraMedium", Verdana, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
 
 .search-error { position: relative; margin: 0 0 48px; padding: 28px 0 37px; text-align: center; font-size: 16px; color: #666666; line-height: 1.2; }
 .search-error:after { content: ""; position: absolute; bottom: -17px; left: 50%; margin-left: -238px; background: url('../img/icons-s3183ef88cf.png') 0 -3466px no-repeat; width: 476px; height: 17px; }
@@ -991,7 +993,25 @@ body.is-abs-sidebar .l-col2__in { position: absolute; top: auto; bottom: 18px; l
 
 .main { background: #fafafa; }
 
-.title { font-size: 30px; font-weight: normal; text-align: center; color: #373737; }
+.title-h2 { margin-bottom: 15px; font-size: 30px; font-weight: normal; text-align: center; color: #373737; }
+
+.contact-wrap { padding: 14px 0; margin-right: -100px; font-size: 0; }
+
+.contact { display: inline-block; vertical-align: top; margin: 0 86px 20px 0; width: 170px; color: #3b3b3b; text-align: center; }
+.contact a { color: #dc2b00; font-size: 20px; border-bottom: 1px solid; }
+.contact a:hover { text-decoration: none; border-bottom-color: transparent; }
+.contact span { display: block; margin-top: 5px; font-size: 20px; }
+
+.contact__img { position: relative; display: inline-block; margin-bottom: 18px; height: 160px; width: 160px; overflow: hidden; background: #3b5997; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
+.contact__img:after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 2; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; -webkit-box-shadow: inset 2px 3px 3px rgba(0, 0, 0, 0.26); -moz-box-shadow: inset 2px 3px 3px rgba(0, 0, 0, 0.26); box-shadow: inset 2px 3px 3px rgba(0, 0, 0, 0.26); }
+
+.contact__title { margin-bottom: 5px; font-size: 18px; font-family: "GEInspiraBold", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
+
+.contacts { text-align: center; font-size: 24px; color: #3b3b3b; }
+.contacts strong { font-weight: normal; font-family: "GEInspiraBold", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }
+
+.map-contacts { position: relative; margin: 45px 0 -11px; height: 510px; overflow: hidden; }
+.map-contacts:before { content: ""; position: absolute; top: -3px; left: 0; right: 0; z-index: 1000; bottom: 0; height: 2px; -webkit-box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.7); -moz-box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.7); box-shadow: 0 10px 20px 1px rgba(0, 0, 0, 0.7); }
 
 .icon { display: inline-block; vertical-align: middle; }
 

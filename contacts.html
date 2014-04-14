@@ -14,9 +14,37 @@
 	<script src="js/jquery.cycle2.carousel.js"></script>
 	<script src="js/jquery.maskedinput.js"></script>
 	<script src="js/jquery.mousewheel.js"></script>
+	<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"> </script>
 	<script src="js/common.js"></script>
+	<script type="text/javascript">
+        ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+
+        function init(){ 
+            myMap = new ymaps.Map ("map-contacts", {
+                center: [55.698886,37.624603],
+                zoom: 16,
+            }); 
+            myMap.controls
+	        .add('zoomControl', { right: 15, top: 15 });
+            myPlacemark1 = new ymaps.Placemark([55.698886,37.624603], 
+	            {
+	                hintContent: '',
+	                balloonContent: '<div class="map-info" style="width:322px;"><div class="map-info__inner"><a class="map-info__img" href="#"><img src="img/map-img.jpg"><div class="map-info__time">Круглосуточно</div><div class="map-info__badge"><i  class="icon icon-user-small"></i>6 +</div></a><div class="map-info__main"><a class="map-info__title" href="#">George</a><p>Первый премиальный грузинский ресторан в Москве</p><div class="map-info__meta"><span><i class="icon icon-point"></i>м. Братиславская</span><span><i class="icon icon-like-s"></i> 854</span></div></div></div>',
+	            },
+	            {	
+	                iconImageHref: 'img/marker.png',
+	        		iconImageSize: [45, 49],
+	        		iconImageOffset: [-15, -35]
+	            }
+            );
+            
+            myMap.geoObjects.add(myPlacemark1);
+        }
+    </script>
 </head>
-<body>
+<body class="inner-page">
 	<!-- BEGIN header -->
 	<div class="page-header clearfix">
 		<div class="container">
@@ -83,53 +111,51 @@
 	<!-- BEGIN main -->
 	<div class="main">
 		<div class="container">
-			<h2 class="title">Наши контакты</h2>
+			<h2 class="title-h2">Наши контакты</h2>
+			<div class="wrapper">
+				<div class="contact-wrap">
+					<div class="contact">
+						<div class="contact__img">
+							<img src="img/contact1.png" alt="">
+						</div>
+						<div class="contact__title">Общие вопросы</div>
+						<a href="#">support@gettable</a>
+					</div>
+					<div class="contact">
+						<div class="contact__img">
+							<img src="img/contact1.png" alt="">
+						</div>
+						<div class="contact__title">Отдел сверок гостей</div>
+						<a href="#">fin@gettable.ru</a>
+						<span>+8 (495) 966-38-48</span>
+					</div>
+					<div class="contact">
+						<div class="contact__img">
+							<img src="img/contact1.png" alt="">
+						</div>
+						<div class="contact__title">Отдел подключения</div>
+						<a href="#">sales@gettable.ru</a>
+						<span>+8 (495) 955-33-44</span>
+					</div>
+					<div class="contact">
+						<div class="contact__img">
+							<img src="img/contact1.png" alt="">
+						</div>
+						<div class="contact__title">Технический отдел</div>
+						<a href="#">tech@gettable.ru</a>
+					</div>
+				</div>
+			</div>
+			<h2 class="title-h2">Наш адрес</h2>
 		</div>
-		
+		<div class="contacts">
+			г. Москва, <strong>Варшавское шоссе, д. 9, стр. 1</strong>
+			<div id="map-contacts" class="map-contacts"></div>
+		</div>
 	</div>
 	<!-- END main -->
 	<!-- BEGIN footer -->
 	<div class="page-footer clearfix">
-		<div class="container page-footer__top">
-			<div class="footer__seo">
-				<span class="logo"></span>
-				<p>© 2012 - 2013 GETTABLE</p>
-				<p>GetTable - быстрейшая служба бронирования столиков в рестораны Москвы. Мы поможем вам выбрать куда сходить сегодня вечером. 500 лучших ресторанов в одном месте! </p>
-				<p>Закажите столик онлайн и за 2 минуты для вас будет забронирован лучший столик, абсолютно бесплатно.</p>
-			</div>
-			<div>
-				<div class="footer__nav">
-					<div class="page-footer__title">КАТЕГОРИИ</div>
-					<ul>
-						<li><a href="#">Новый год</a></li>
-						<li><a href="#">Популярные</a></li>
-						<li><a href="#">Бары и клубы</a></li>
-						<li><a href="#">С видом</a></li>
-						<li><a href="#">Пивные</a></li>
-					</ul>
-				</div>
-				<div class="footer__nav">
-					<ul>
-						<li><a href="#">Итальянская кухня</a></li>
-						<li><a href="#">Русская кухня</a></li>
-						<li><a href="#">Японская кухня</a></li>
-						<li><a href="#">Грузинская кухня</a></li>
-						<li><a href="#">Китайская кухня</a></li>
-					</ul>
-				</div>
-				<div class="footer__nav">
-					<div class="page-footer__title">Полезные ссылки</div>
-					<ul>
-						<li><a href="#">Блог</a></li>
-						<li><a href="#">Наши партнеры</a></li>
-						<li><a href="#">Для ресторанов</a></li>
-						<li><a href="#">Оферта</a></li>
-						<li><a href="#">Пользовательское соглашение</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
 		<div class="page-footer__bottom">
 			<div class="container">
 				<div class="page-footer__soc">

@@ -359,6 +359,55 @@
 .search-result__text
 	+opacity(.8)
 
+.holder
+	position: relative
+	margin: 0 0 15px
+	z-index: 2
+	text-shadow: 0 2px 1px rgba(0,0,0,.64)
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		height: 5px
+		bottom: 0
+		background: url(../img/shadow.png) 50% 0 no-repeat
+	.icon
+		margin-bottom: 8px
+.holder_contacts
+	height: 303px
+	
+.holder__bg
+	position: absolute
+	top: 0
+	left: 0
+	right: 0 
+	bottom: 5px
+	min-width: 1600px
+	overflow: hidden
+	background-position: 0 17%
+	background-repeat: no-repeat  
+	+background-size(cover)
+.holder__main
+	position: absolute
+	left: 50%
+	top: 58px
+	margin-left: -435px
+	z-index: 2
+	width: 870px
+	text-align: center
+	font-size: 30px
+	color: #fff 
+	line-height: 1.2
+	strong
+		font-weight: normal
+		+fbold
+.holder__title
+	margin-bottom: 12px
+	color: #fff
+	font-size: 36px
+	+fmed2
+
 .search-error
 	position: relative 
 	margin: 0 0 48px
@@ -885,3 +934,11 @@
 	width: 100%
 	height: 1px
 	display: block
+	
+.main
+	background: #fafafa 
+.title
+	font-size: 30px
+	font-weight: normal
+	text-align: center
+	color: $dark_gray   

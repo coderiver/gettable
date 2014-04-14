@@ -1057,8 +1057,10 @@ body.is-abs-sidebar .l-col2__in { position: absolute; top: auto; bottom: 18px; l
 
 .send-message__info { margin-bottom: 41px; font-size: 26px; }
 
-.offer { font-size: 16px; color: #373737; }
+.offer { font-size: 16px; color: #373737; line-height: 1.6; }
+.offer p { margin-bottom: 9px; }
 .offer .main-title { margin: 55px 0 15px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+.offer .main-title .icon { margin-bottom: 17px; }
 .offer a { color: #dc2b00; text-decoration: underline; }
 .offer a:hover { text-decoration: none; }
 .offer strong { font-weight: normal; font-family: "GEInspiraBold", Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; }

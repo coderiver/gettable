@@ -1084,3 +1084,78 @@
 .send-message__info
 	margin-bottom: 41px
 	font-size: 26px  
+	
+.offer
+	font-size: 16px 
+	color: #373737 
+	.main-title
+		margin: 55px 0 15px
+		text-shadow: 0 1px 1px rgba(0,0,0,.2)
+	a
+		color: $red
+		text-decoration: underline 
+		&:hover
+			text-decoration: none  
+	strong
+		font-weight: normal
+		+fbold
+.offer__main	
+	position: relative
+	padding-bottom: 74px
+	overflow: hidden
+	background: $light url(../img/body-bg.png) 0 0 repeat
+	&:before
+		content: ""
+		position: absolute
+		top: -60px
+		left: 0
+		right: 0
+		height: 50px
+		+border-radius(50%)
+		background: #000
+		+box-shadow(0 0 30px #000) 
+		
+.subtitle
+	margin-bottom: 32px
+	color: #373737
+	font-size: 30px 
+	text-align: center
+	line-height: 1.3
+	text-shadow: 0 1px 1px rgba(0,0,0,.2)
+.offer__term	
+	position: relative
+	z-index: 3
+	padding: 3px 0 43px 
+	background: #fff
+	+box-shadow(0 0 25px rgba(#000, .4)) 
+	p
+		margin-bottom: 25px
+.offer__body
+	position: relative
+	z-index: 2
+	padding: 7px 0 0 
+	+box-shadow(0 0 25px rgba(#000, .4)) 
+	ol
+		padding: 0 
+		list-style-type: none
+	li
+		margin-bottom: 25px
+	.main-title
+		margin: 50px 0 35px 
+		text-align: left
+.offer__meta
+	margin: 73px 0 66px
+	text-align: center
+.offer__details
+	position: relative
+	margin-bottom: -11px
+	overflow: hidden
+	text-align: center
+	background: $light url(../img/body-bg.png) 0 0 repeat
+	
+	ul
+		margin: 35px 0 72px
+		padding: 0
+		list-style-type: none 
+	li
+		margin-bottom: 25px

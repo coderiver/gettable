@@ -4,6 +4,11 @@
 	margin-bottom: 10px
 .item-wrap
 	+clr
+.item-wrap-small
+	+clr
+	padding-left: 15px
+	+ .to-center
+		margin: 9px 0 34px
 .item
 	position: relative
 	float: left
@@ -34,6 +39,30 @@
 			height: 365px
 			&:after
 				bottom: 24px
+.item_small
+	margin: 0 0 25px 25px
+	width: 270px
+	height: 430px  
+	.item__wrap,
+	.item__in,
+	.item__card 
+		width: 270px
+	.item__title-link
+		max-width: 160px
+		line-height: 1
+		height: 50px 
+	.item__text
+		margin-bottom: 22px
+		height: 81px
+		line-height: 1.4
+	.item__main
+		height: 227px
+	.item__info
+		width: 220px
+	.item__title
+		margin-top: 6px
+	.item__like
+		margin-top: 3px
 .item__wrap
 	position: absolute
 	top: 0
@@ -370,7 +399,8 @@
 		left: 0
 		right: 0
 		height: 5px
-		bottom: -5px
+		top: 0
+		+opacity(.5)
 		background: url(../img/shadow.png) 50% 0 no-repeat
 	.icon
 		margin-bottom: 11px
@@ -379,6 +409,9 @@
 	height: 303px
 .holder_dont-like
 	height: 375px
+.holder_places
+	height: 330px
+	margin-bottom: 55px
 .holder__bg
 	position: absolute
 	top: 0
@@ -404,6 +437,12 @@
 	strong
 		font-weight: normal
 		+fbold
+	a
+		color: #fff  
+		+fbold
+		text-decoration: underline
+		// &:hover
+		// 	text-decoration: none
 .holder__title
 	margin-bottom: 15px
 	color: #fff
@@ -947,7 +986,19 @@
 	font-weight: normal
 	text-align: center
 	color: $dark_gray   
-	
+.title-h3
+	margin-bottom: 41px
+	font-size: 26px
+	font-weight: normal
+	text-align: center
+	color: $dark_gray 
+	.icon
+		display: block
+		margin: 0 auto 25px
+	strong
+		font-weight: normal
+		+fbold
+		
 .contact-wrap
 	padding: 14px 0
 	margin-right: -100px

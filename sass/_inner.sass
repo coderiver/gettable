@@ -1166,13 +1166,147 @@
 		list-style-type: none 
 	li
 		margin-bottom: 25px
-		
+
+.promo-rest
+	background: $light url(../img/body-bg.png) 0 0 repeat	
 .info-section
-	padding: 55px 0   
+	padding: 55px 0 0   
 	color: #373737
 	font-size: 16px
 	line-height: 1.6 
-	background: $light url(../img/body-bg.png) 0 0 repeat
+	p
+		margin-bottom: 26px
 	.main-title
 		margin-bottom: 35px
 		+fmed2
+
+.connect
+	margin-bottom: -11px
+	padding: 63px 0 90px
+	background: #fff
+	+box-shadow(0 0 25px rgba(#000, .4))    
+	.main-title
+		margin: 0 0 36px
+		letter-spacing: -.8 
+	.container
+		text-align: center
+		font-size: 24px
+		color: #373737
+		strong
+			font-weight: normal
+			+fbold 
+
+.benefit-wrap
+	position: relative
+	margin: 35px auto 34px
+	padding-bottom: 58px   
+	width: 850px
+	text-align: justify  
+	background: url(../img/shadow2.png) 50% 100% no-repeat    
+	&:after
+		content: "" 
+		display: inline-block
+		width: 100%
+		height: 0     
+		visibility: visible
+.benefit-wrap_width
+	width: 100%
+.benefit
+	display: inline-block
+	//width: 190px
+	text-align: center
+	vertical-align: top  
+	color: #858585
+	font-size: 16px 
+	
+.benefit__img
+	margin-bottom: 21px  
+.benefit__info
+	line-height: 1.3
+.step
+	font-size: 16px
+	color: #858585 
+	.main-title
+		margin-bottom: 23px
+		+fmed2
+	.btn_white
+		padding: 10px 40px
+		width: auto 
+	.btn_green
+		font-size: 18px
+.step__form
+	margin: 0 auto
+	width: 624px 
+	+clr
+	.input-group
+		width: 282px
+		margin: 0 auto 41px	
+	.radio-item
+		margin-bottom: 36px
+		input
+			&:checked
+				+ span
+					color: #000 
+					&:after
+						top: 9px
+		span
+			font-size: 20px
+			padding-left: 33px
+			color: #666 
+			&:before
+				top: 3px
+	.checkbox
+		text-align: left
+		margin-bottom: 20px
+		a
+			display: inline-block
+			margin-left: 34px
+			font-size: 14px
+			font-style: italic
+			color: $red
+			+opacity(.6)
+			border-bottom: 1px dotted
+			&:hover
+				text-decoration: none 
+		span
+			font-size: 20px
+			padding-left: 34px
+			&:before
+				top: 4px
+		input
+			&:checked
+				+ span
+					color: #000 
+					&:after
+						top: 8px
+	.checkbox__in
+		display: block
+		margin: 0
+.step__title
+	margin: 0 auto 37px
+	width: 780px
+	line-height: 1.3
+	font-size: 24px
+	color: #373737 
+	text-shadow: 0 1px 1px rgba(0,0,0,.2) 
+.step__subtitle
+	margin-bottom: 27px
+	font-size: 24px
+	+fbold
+	color: #373737 
+	text-align: center  
+.step__next-info
+	display: block
+	padding-top: 25px
+	text-align: center
+	font-size: 14px
+	color: #b3b3b3 
+	+fmed2  
+.step__text
+	margin-bottom: 37px
+.step__left
+	float: left
+	width: 312px
+.step__right
+	float: right
+	width: 312px

@@ -29,8 +29,9 @@ $(document).ready(function() {
         	var tab_link = $(this).find("a");
         	var tab_cont = $(this).parents(".js-tab-group").find(".js-tab-cont");
         	tab_cont.hide();
-        	tab_link.first().addClass("is-active");
-        	$(this).parents(".js-tab-group").find(".js-tab1").show();
+            var id_active = $(this).find(".is-active").attr("href");
+        	$("."+id_active).show();
+        	//$(this).parents(".js-tab-group").find(".js-tab1").show();
         	tab_link.on("click", function() {
             	var index = $(this).attr("href");
             	tab_link.removeClass("is-active");

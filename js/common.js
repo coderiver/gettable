@@ -4,6 +4,7 @@ $(document).ready(function() {
         window_el.fadeOut("fast");
         popup.fadeOut("fast");
         overlay.fadeOut("fast");
+        $(".js-popup-link").removeClass("is-active");
     });
 
     var window_el = $(".js-window");
@@ -297,7 +298,10 @@ $(document).ready(function() {
     var popup = $(".popup");
     var overlay = $(".js-overlay");
     $(".js-popup-link").on("click", function(event){
+        $(".window_bottom").fadeOut();
         var popup = $(this).attr("href");
+        $(".js-popup-link").removeClass("is-active");
+        $(this).addClass("is-active");
         $("."+popup).fadeIn();
         $(overlay).fadeIn();
         return false;
@@ -309,6 +313,8 @@ $(document).ready(function() {
     $(".js-popup-close").on("click", function(){
        popup.fadeOut("fast");
        overlay .fadeOut("fast");
+       $(".window_bottom").fadeOut();
+       $(".js-popup-link").removeClass("is-active");
     })
 
 

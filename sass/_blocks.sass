@@ -795,6 +795,48 @@
 		+scrollbar-track-piece 
 			width: 4px 
 			border-radius: 2px
+			
+.window_bottom
+	padding: 11px 5px 11px 11px
+	font-size: 16px
+	max-height: 500px
+	color: #000 
+	line-height: 1.6
+	.window__in
+		padding: 11px 17px 11px 11px
+		padding-right: 11px
+		overflow-y: auto
+		max-height: 500px
+		overflow-x: hidden
+		+scrollbar
+			width: 4px
+			background: #e3e3e3 
+		+scrollbar-thumb
+			border-radius: 2px
+			background: #818181
+		+scrollbar-track-piece 
+			width: 4px 
+			border-radius: 2px
+	img
+		display: block
+		max-width: 100%
+		margin: 19px auto 0
+	&:before
+		bottom: -9px
+		top: auto
+		left: 50% 
+		margin: 0 0 0 -13px
+		+s(arr-tip-b)
+	&:after
+		bottom: -17px  
+		top: auto  
+		left: 50% 
+		margin: 0 0 0 -9px
+		+s(arr-tip-shadow-b)
+	a
+		color: $red 
+	.button-close
+		top: 24px   
 .window__col
 	width: 173px
 	float: left

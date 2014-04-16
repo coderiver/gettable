@@ -1234,6 +1234,7 @@
 		width: auto 
 	.btn_green
 		font-size: 18px
+	
 .step__form
 	margin: 0 auto
 	width: 624px 
@@ -1256,18 +1257,10 @@
 			&:before
 				top: 3px
 	.checkbox
+		position: relative
 		text-align: left
+		line-height: 1.2
 		margin-bottom: 20px
-		a
-			display: inline-block
-			margin-left: 34px
-			font-size: 14px
-			font-style: italic
-			color: $red
-			+opacity(.6)
-			border-bottom: 1px dotted
-			&:hover
-				text-decoration: none 
 		span
 			font-size: 20px
 			padding-left: 34px
@@ -1279,15 +1272,34 @@
 					color: #000 
 					&:after
 						top: 8px
+		.checkbox__more
+			display: inline-block
+			margin-left: 34px
+			font-size: 14px
+			font-style: italic
+			color: $red
+			line-height: 1.3
+			+opacity(.6)
+			+tr(opacity .2s linear)
+			border-bottom: 1px dotted
+			&.is-active
+				+opacity(1)
+			&:hover
+				text-decoration: none 
 	.checkbox__in
 		display: block
 		margin: 0
+	.window
+		top: auto
+		bottom: 28px
+		width: 394px
+		left: -160px
 .step__title
 	margin: 0 auto 37px
 	width: 780px
 	line-height: 1.3
 	font-size: 24px
-	color: #373737 
+	color: #373737   
 	text-shadow: 0 1px 1px rgba(0,0,0,.2) 
 .step__subtitle
 	margin-bottom: 27px

@@ -772,6 +772,8 @@ body.is-abs-sidebar .l-col2__in { position: absolute; top: auto; bottom: 18px; l
 
 .btn-clear { position: absolute; top: 18px; left: 214px; padding: 0; border: 0; background-color: none; background: url('../img/icons-s1e7b096d3e.png') 0 -6621px no-repeat; width: 13px; height: 12px; }
 
+.wrapper { overflow: hidden; }
+
 .main-col { float: right; width: 668px; margin-bottom: 10px; }
 
 .item-wrap { *zoom: 1; }
@@ -878,7 +880,7 @@ body.is-abs-sidebar .l-col2__in { position: absolute; top: auto; bottom: 18px; l
 
 .sort-section__in { position: relative; z-index: 2; padding: 19px 0; background: rgba(247, 247, 247, 0.6); }
 
-.search-result { position: relative; margin: -90px 0 15px; height: 338px; z-index: 2; }
+.search-result { position: relative; margin: -90px 0 15px; height: 338px; z-index: 2; overflow: hidden; }
 .search-result:after { content: ""; position: absolute; left: 0; right: 0; height: 5px; bottom: 0; background: url(../img/shadow.png) 50% 0 no-repeat; }
 
 .search-result__bg { position: absolute; top: 0; left: 0; right: 0; bottom: 5px; min-width: 1600px; overflow: hidden; background: url(../img/search-bg.jpg) 0 50% no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
@@ -889,7 +891,7 @@ body.is-abs-sidebar .l-col2__in { position: absolute; top: auto; bottom: 18px; l
 
 .search-result__text { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
 
-.holder { position: relative; z-index: 2; text-shadow: 0 2px 1px rgba(0, 0, 0, 0.64); }
+.holder { position: relative; z-index: 2; overflow: hidden; text-shadow: 0 2px 1px rgba(0, 0, 0, 0.64); }
 .holder:after { content: ""; position: absolute; left: 0; right: 0; height: 5px; top: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); opacity: 0.5; background: url(../img/shadow.png) 50% 0 no-repeat; }
 .holder .icon { margin-bottom: 11px; }
 

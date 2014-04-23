@@ -1,0 +1,57 @@
++font(GEInspiraLight, GEInspiraLT)  
++font(GEInspiraReg, GEInspira)  
++font(GEInspiraMed, GEInspira-Medium)  
++font(GEInspiraBold, GEInspira-Bold)  
++font(PFAgoraRegular, PFAgoraSlabPro-Regular)
++font(PFAgoraBold, PFAgoraSlabPro-Bold)
++font(pfagorasanspro-reg, pfagorasanspro-reg)
++font(pfagorasanspro-medium, pfagorasanspro-medium)
+=reg
+	font-family: "pfagorasanspro-reg", Arial, sans-serif 
+=med
+	font-family: "pfagorasanspro-medium", Arial, sans-serif 
+$gray: #838383
+$dark: #373737    
+$light: #b3b3b3
+$black: #22282e
+$border: #ccc                   
+body
+	font-size: 14px 
+	+reg  
+	color: $dark 
+	line-height: 1.14
+	background: #fff 
+.l-container
+	padding: 0 15px 
+.header
+	padding: 19px 0 
+	text-align: center
+.header__logo
+	display: inline-block	 
+	text-decoration: none
+	i
+		display: block
+		margin: 0 auto 
+		+sr(logo)
+	strong
+		color: $dark 
+		font: normal 15px "Myriad Pro",Arial,sans-serif 
+		
+.search
+	padding-top: 4px
+	border-bottom: 1px solid #e8e8e8 
+	background: #f6f6f6 
+	box-shadow: inset 0 1px 3px rgba(0,0,0,.2)
+.search__form  
+	position: relative
+	padding: 7px 
+	background: rgba(#c9c9cd, .2)
+	.input
+		padding-left: 27px
+	.btn-search
+		position: absolute
+		left: 16px
+		top: 50%
+		margin-top: -6px
+		
+		

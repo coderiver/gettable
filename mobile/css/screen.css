@@ -1,0 +1,66 @@
+/*done by Coderiver.com.ua */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
+
+body, html { height: 100%; }
+
+img, fieldset, a img { border: none; }
+
+input[type="submit"], button { cursor: pointer; }
+input[type="submit"]::-moz-focus-inner, button::-moz-focus-inner { padding: 0; border: 0; }
+
+textarea { overflow: auto; }
+
+input, button { margin: 0; padding: 0; border: 0; }
+
+input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus { outline: none; }
+
+ul, ol { list-style-type: none; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
+table { border-spacing: 0; border-collapse: collapse; width: 100%; }
+
+@font-face { font-family: GEInspiraLight; src: url("fonts/GEInspiraLT.eot"); src: url("fonts/GEInspiraLT.eot?#iefix") format("embedded-opentype"), url("fonts/GEInspiraLT.woff") format("woff"), url("fonts/GEInspiraLT.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: GEInspiraReg; src: url("fonts/GEInspira.eot"); src: url("fonts/GEInspira.eot?#iefix") format("embedded-opentype"), url("fonts/GEInspira.woff") format("woff"), url("fonts/GEInspira.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: GEInspiraMed; src: url("fonts/GEInspira-Medium.eot"); src: url("fonts/GEInspira-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/GEInspira-Medium.woff") format("woff"), url("fonts/GEInspira-Medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: GEInspiraBold; src: url("fonts/GEInspira-Bold.eot"); src: url("fonts/GEInspira-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/GEInspira-Bold.woff") format("woff"), url("fonts/GEInspira-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: PFAgoraRegular; src: url("fonts/PFAgoraSlabPro-Regular.eot"); src: url("fonts/PFAgoraSlabPro-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/PFAgoraSlabPro-Regular.woff") format("woff"), url("fonts/PFAgoraSlabPro-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: PFAgoraBold; src: url("fonts/PFAgoraSlabPro-Bold.eot"); src: url("fonts/PFAgoraSlabPro-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/PFAgoraSlabPro-Bold.woff") format("woff"), url("fonts/PFAgoraSlabPro-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: pfagorasanspro-reg; src: url("fonts/pfagorasanspro-reg.eot"); src: url("fonts/pfagorasanspro-reg.eot?#iefix") format("embedded-opentype"), url("fonts/pfagorasanspro-reg.woff") format("woff"), url("fonts/pfagorasanspro-reg.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: pfagorasanspro-medium; src: url("fonts/pfagorasanspro-medium.eot"); src: url("fonts/pfagorasanspro-medium.eot?#iefix") format("embedded-opentype"), url("fonts/pfagorasanspro-medium.woff") format("woff"), url("fonts/pfagorasanspro-medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+body { font-size: 14px; font-family: "pfagorasanspro-reg", Arial, sans-serif; color: #373737; line-height: 1.14; background: white; }
+
+.l-container { padding: 0 15px; }
+
+.header { padding: 19px 0; text-align: center; }
+
+.header__logo { display: inline-block; text-decoration: none; }
+.header__logo i { display: block; margin: 0 auto; background: url('../img/icons-see2f2a8c34.png') 0 -89px no-repeat; background-position: 0 -45px; width: 124.5px; height: 30.5px; -moz-background-size: 125px 294px; -webkit-background-size: 125px 294px; background-size: 125px 294px; }
+.header__logo strong { color: #373737; font: normal 15px "Myriad Pro", Arial, sans-serif; }
+
+.search { padding-top: 4px; border-bottom: 1px solid #e8e8e8; background: #f6f6f6; box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); }
+
+.search__form { position: relative; padding: 7px; background: rgba(201, 201, 205, 0.2); }
+.search__form .input { padding-left: 27px; }
+.search__form .btn-search { position: absolute; left: 16px; top: 50%; margin-top: -6px; }
+
+.input { display: block; width: 100%; padding: 0 8px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: 29px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; background: white; font-family: "pfagorasanspro-reg", Arial, sans-serif; font-size: 15px; }
+.input:-ms-input-placeholder { color: #b3b3b3; font-size: 15px; }
+.input:-moz-placeholder { color: #b3b3b3; font-size: 15px; }
+.input::-moz-placeholder { color: #b3b3b3; font-size: 15px; }
+.input::-webkit-input-placeholder { color: #b3b3b3; font-size: 15px; }
+.input::placeholder { color: #b3b3b3; font-size: 15px; }
+
+.btn-search { background: url('../img/icons-see2f2a8c34.png') 0 -346px no-repeat; background-position: 0 -173px; width: 12.5px; height: 12.5px; -moz-background-size: 125px 294px; -webkit-background-size: 125px 294px; background-size: 125px 294px; font: 0/0 a; text-shadow: none; color: transparent; }
+
+.l { *zoom: 1; }
+.l:after { content: " "; display: table; clear: both; }
+.l .l-col1 { float: left; width: 20%; }
+.l .l-col2 { float: right; width: 70%; }

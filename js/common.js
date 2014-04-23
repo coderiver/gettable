@@ -323,6 +323,10 @@ $(document).ready(function() {
         ($(this).scrollTop() + $(this).height()) >= this.scrollHeight) return false;
     });
 
+    $(".js-load-more").on("click", function(){
+       $(this).addClass("is-active");
+       return false;
+    })
     
 
 });      

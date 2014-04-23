@@ -987,10 +987,62 @@
 	+ .dropdown-menu
 		background: #f9f9f9
 		width: 100%
-
+		text-align: left
 	.caret
 		position: absolute
 		top: 50%
 		margin-top: -4px
 		right: 18px
 		+arr(8,8,#878787,b)
+
+.load-more
+	display: block  
+	clear: both
+	margin-left: 20px   
+	width: 646px
+	line-height: 44px
+	text-align: center
+	height: 44px
+	+fbold
+	color: #6d6d6d
+	text-decoration: none
+	font-size: 16px 
+	+border-radius(4px)
+	+box-shadow(0 1px 2px rgba(151,151,151,.77), inset 0 1px 1px #f5f5f5)
+	+background-image(linear-gradient(bottom, #f6f6f6 0%, #fff 100%), linear-gradient(top, #e03200 -48.23%, #c12c00 -47.23%))
+	i
+		display: inline-block
+		margin-left: 9px
+		vertical-align: middle
+		+s(arr7)    
+	&:hover
+		text-decoration: none
+		color: #000
+		+box-shadow(0 1px 1px rgba(0,0,0,.2))
+		+background-image(linear-gradient(bottom, #f6f6f6 0%, #fff 26.25%, #fff 100%), linear-gradient(top, #e03200 -48.23%, #c12c00 -47.23%))
+		i
+			+sp(arr7-h) 
+	&:active,
+		color: #fff
+		+box-shadow(inset 0 2px 2px rgba(0,0,0,.4))
+		+background-image(linear-gradient(top, #4b4b4b -48.23%, #4b4b4b -47.23%))
+		i
+			+sp(arr7-act) 
+	&.is-active
+		+box-shadow(inset 0 2px 2px rgba(0,0,0,.4))
+		+background-image(linear-gradient(top, #4b4b4b -48.23%, #4b4b4b -47.23%))
+		span
+			display: none
+		
+		i
+			width: 34px
+			height: 32px
+			background: url(../img/gif-preloader.gif) 
+
+.loading
+	display: none
+	clear: both
+	height: 159px
+	background: url(../img/loader.gif) 50% 0 no-repeat    
+	&.is-active
+		display: block

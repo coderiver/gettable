@@ -659,35 +659,33 @@
 .slideshow__prev,
 .slideshow__next
 	position: absolute
-	top: 50%
+	top: 0
+	bottom: 0
 	z-index: 200
-	margin-top: -21px
-	width: 42px
-	height: 42px
-	+border-radius(50%)
+	width: 50%
 	border: 0
-	background: rgba(0,0,0,.4)
-	+tr(all .2s linear) 
+	background: none
 	visibility: visible
-	&:hover
-		background: rgba(0,0,0,.6)
-	&:after
+	&:before
 		content: ""
 		position: absolute
 		top: 50%
-		left: 50%
-		margin-top: -7px
-		visibility: visible
+		+opacity(.5)
+		margin-top: -16px
+		+tr(all .2s linear)
+	&:hover
+		&:before
+			+opacity(.7)
 .slideshow__prev
-	left: 21px
-	&:after
-		+s(arr4)
-		margin-left: -6px
+	left: 0
+	&:before
+		left: 21px
+		+s(slide-prev)
 .slideshow__next
-	right: 21px
-	&:after
-		margin-left: -4px
-		+s(arr5)
+	right: 0
+	&:before
+		right: 21px  
+		+s(slide-next)  
 
 .card-content
 	margin-bottom: 19px
@@ -723,8 +721,6 @@
 		+s(like-b)
 .card-content__text
 	margin-bottom: 28px
-.card-content__more
-	color: #8d8d8d 
 .text-item
 	padding: 15px 20px 
 	border-bottom: 1px solid #f2f2f2 
@@ -1085,6 +1081,9 @@
 	.btn
 		padding: 10px 31px 
 		width: auto
+	strong
+		font-weight: normal
+		+fbold
 .send-message__info
 	margin-bottom: 41px
 	font-size: 26px  

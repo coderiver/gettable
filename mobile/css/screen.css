@@ -41,9 +41,10 @@ a { text-decoration: none; }
 .search__form .input { padding-left: 27px; }
 .search__form .btn-search { position: absolute; left: 16px; top: 50%; margin-top: -6px; }
 
-.item { border-bottom: 1px solid #cccccc; padding: 20px 0 23px; }
+.item { border-top: 1px solid #cccccc; padding: 20px 0 23px; }
+.item:first-child { border-top: 0; }
 
-.item__title { position: relative; padding-right: 40px; font-size: 21px; }
+.item__title { position: relative; margin-bottom: 3px; padding-right: 40px; font-size: 21px; }
 .item__title a { color: #373737; }
 .item__title .like { position: absolute; right: 0; top: 0; }
 

@@ -19,25 +19,15 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-@font-face { font-family: GEInspiraLight; src: url("fonts/GEInspiraLT.eot"); src: url("fonts/GEInspiraLT.eot?#iefix") format("embedded-opentype"), url("fonts/GEInspiraLT.woff") format("woff"), url("fonts/GEInspiraLT.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-
-@font-face { font-family: GEInspiraReg; src: url("fonts/GEInspira.eot"); src: url("fonts/GEInspira.eot?#iefix") format("embedded-opentype"), url("fonts/GEInspira.woff") format("woff"), url("fonts/GEInspira.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-
-@font-face { font-family: GEInspiraMed; src: url("fonts/GEInspira-Medium.eot"); src: url("fonts/GEInspira-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/GEInspira-Medium.woff") format("woff"), url("fonts/GEInspira-Medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-
-@font-face { font-family: GEInspiraBold; src: url("fonts/GEInspira-Bold.eot"); src: url("fonts/GEInspira-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/GEInspira-Bold.woff") format("woff"), url("fonts/GEInspira-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-
-@font-face { font-family: PFAgoraRegular; src: url("fonts/PFAgoraSlabPro-Regular.eot"); src: url("fonts/PFAgoraSlabPro-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/PFAgoraSlabPro-Regular.woff") format("woff"), url("fonts/PFAgoraSlabPro-Regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-
-@font-face { font-family: PFAgoraBold; src: url("fonts/PFAgoraSlabPro-Bold.eot"); src: url("fonts/PFAgoraSlabPro-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/PFAgoraSlabPro-Bold.woff") format("woff"), url("fonts/PFAgoraSlabPro-Bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-
 @font-face { font-family: pfagorasanspro-reg; src: url("fonts/pfagorasanspro-reg.eot"); src: url("fonts/pfagorasanspro-reg.eot?#iefix") format("embedded-opentype"), url("fonts/pfagorasanspro-reg.woff") format("woff"), url("fonts/pfagorasanspro-reg.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
 @font-face { font-family: pfagorasanspro-medium; src: url("fonts/pfagorasanspro-medium.eot"); src: url("fonts/pfagorasanspro-medium.eot?#iefix") format("embedded-opentype"), url("fonts/pfagorasanspro-medium.woff") format("woff"), url("fonts/pfagorasanspro-medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
 body { font-size: 14px; font-family: "pfagorasanspro-reg", Arial, sans-serif; color: #373737; line-height: 1.14; background: white; }
 
-.l-container { padding: 0 15px; }
+a { text-decoration: none; }
+
+.l-container { padding: 0 16px; }
 
 .header { padding: 19px 0; text-align: center; }
 
@@ -51,6 +41,16 @@ body { font-size: 14px; font-family: "pfagorasanspro-reg", Arial, sans-serif; co
 .search__form .input { padding-left: 27px; }
 .search__form .btn-search { position: absolute; left: 16px; top: 50%; margin-top: -6px; }
 
+.item { border-bottom: 1px solid #cccccc; padding: 20px 0 23px; }
+
+.item__title { position: relative; padding-right: 40px; font-size: 21px; }
+.item__title a { color: #373737; }
+.item__title .like { position: absolute; right: 0; top: 0; }
+
+.item__meta { display: block; margin: 9px 0 21px; position: relative; color: #838383; }
+.item__meta .distance { margin-right: 23px; }
+.item__meta:after { content: ""; position: absolute; right: 0; top: 2px; background: url('../img/icons-see2f2a8c34.png') 0 -563px no-repeat; background-position: 0 -282px; width: 8px; height: 12.5px; -moz-background-size: 125px 294px; -webkit-background-size: 125px 294px; background-size: 125px 294px; }
+
 .input { display: block; width: 100%; padding: 0 8px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: 29px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; background: white; font-family: "pfagorasanspro-reg", Arial, sans-serif; font-size: 15px; }
 .input:-ms-input-placeholder { color: #b3b3b3; font-size: 15px; }
 .input:-moz-placeholder { color: #b3b3b3; font-size: 15px; }
@@ -59,6 +59,21 @@ body { font-size: 14px; font-family: "pfagorasanspro-reg", Arial, sans-serif; co
 .input::placeholder { color: #b3b3b3; font-size: 15px; }
 
 .btn-search { background: url('../img/icons-see2f2a8c34.png') 0 -346px no-repeat; background-position: 0 -173px; width: 12.5px; height: 12.5px; -moz-background-size: 125px 294px; -webkit-background-size: 125px 294px; background-size: 125px 294px; font: 0/0 a; text-shadow: none; color: transparent; }
+
+.like { display: inline-block; position: relative; padding-left: 21px; font-size: 18px; color: #373737; font-family: "pfagorasanspro-medium", Arial, sans-serif; }
+.like:before { content: ""; position: absolute; left: 0; top: 0; background: url('../img/icons-see2f2a8c34.png') 0 -222px no-repeat; background-position: 0 -111px; width: 17px; height: 19px; -moz-background-size: 125px 294px; -webkit-background-size: 125px 294px; background-size: 125px 294px; }
+
+.distance { position: relative; display: inline-block; padding-left: 17px; font-size: 14px; color: #838383; font-family: "pfagorasanspro-medium", Arial, sans-serif; }
+.distance:before { content: ""; position: absolute; top: 1px; left: 0; background: url('../img/icons-see2f2a8c34.png') 0 -381px no-repeat; background-position: 0 -191px; width: 12.5px; height: 13px; -moz-background-size: 125px 294px; -webkit-background-size: 125px 294px; background-size: 125px 294px; }
+
+.info { padding: 11px; border: 1px solid #cccccc; -webkit-border-radius: 4px; border-radius: 4px; color: #838383; }
+.info li { position: relative; margin-top: 10px; padding-left: 25px; }
+.info li:before { content: ""; position: absolute; left: 0; top: 1px; }
+.info li:first-child { margin-top: 0; }
+
+.info__time:before { background: url('../img/icons-see2f2a8c34.png') 0 -443px no-repeat; background-position: 0 -222px; width: 16px; height: 15px; -moz-background-size: 125px 294px; -webkit-background-size: 125px 294px; background-size: 125px 294px; }
+
+.info__text:before { background: url('../img/icons-see2f2a8c34.png') 0 -523px no-repeat; background-position: 0 -262px; width: 16px; height: 15px; -moz-background-size: 125px 294px; -webkit-background-size: 125px 294px; background-size: 125px 294px; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }

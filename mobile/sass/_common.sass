@@ -8,7 +8,8 @@ $gray: #838383
 $dark: #373737    
 $light: #b3b3b3
 $black: #22282e
-$border: #ccc                   
+$border: #ccc          
+$red: #dd2b00         
 body
 	font-size: 14px 
 	+reg  
@@ -122,3 +123,28 @@ a
 	img
 		width: 100%
 		height: auto
+		
+.card
+	position: relative
+.card__header
+	position: absolute
+	left: 0
+	right: 0
+	top: 0  
+	height: 45px
+	line-height: 45px
+	z-index: 1000
+	text-align: center
+	font-size: 19px
+	color: #21272d
+	text-shadow: 0 2px 0 rgba(255,255,255,.6)
+	+box-shadow(inset 0 -1px 0 rgba(255,255,255,.6))
+	+background-image(linear-gradient(bottom, rgba(255,255,255,.7) 0%, rgba(255,255,255,.95) 100%), linear-gradient(right, rgba(248,248,248,.5) 0%, rgba(249,249,249,.5) 50.76%, rgba(248,248,248,.5) 100%)) 
+.slider  
+	border-bottom: 2px solid $red     
+	text-align: center
+.fotorama__nav-wrap
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0

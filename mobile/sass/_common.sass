@@ -8,7 +8,7 @@ $gray: #838383
 $dark: #373737    
 $light: #b3b3b3
 $black: #22282e
-$border: #ccc          
+$border: rgba(#000,.2)         
 $red: #dd2b00         
 body
 	font-size: 14px 
@@ -53,7 +53,7 @@ a
 
 .item
 	display: block
-	border-top: 1px solid $border 
+	border-top: 1px solid $border
 	padding: 20px 0 23px 
 	color: $dark
 	&:first-child
@@ -67,6 +67,8 @@ a
 		position: absolute
 		right: 0
 		top: 0
+.item__sub-title
+	font-size: 16px
 .item__meta
 	margin: 9px 0 21px
 	position: relative
@@ -79,6 +81,16 @@ a
 		right: 0
 		top: 2px
 		+sr(arr2)
+.item_card
+	border: none
+	border-bottom: 1px solid $border
+	padding: 16px 0 19px 
+	.item__meta
+		margin-bottom: 0
+		&:after
+			top: auto
+			bottom: 5px
+			+sr(arr1)
 .comment
 	margin-bottom: 21px
 	padding-bottom: 14px
@@ -118,14 +130,60 @@ a
 	+sr(dont-like)
 
 .map
-	margin: 0 auto 
-	max-width: 640px
+	position: relative
+	margin: 0 0 20px 
+	text-align: center
+	border-bottom: 1px solid $border 
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 30px
+		+g(rgba(#000, .2),rgba(#000, 0)) 
 	img
+		display: block
 		width: 100%
 		height: auto
+.map__info
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	padding: 16px 
+	line-height: 1.62
+	text-align: left
+	+box-shadow(inset 0 1px 0 rgba(255,255,255,.6))
+	+background-image(linear-gradient(bottom, #fff 0%, rgba(255,255,255,.95) 100%))
+	font-size: 16px
+	div
+		position: relative
+		z-index: 2
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 20px
+		+g(rgba(#fff, .95),rgba(#f6f6f6, 1)) 
+	.icon-metro
+		margin-right: 12px
+.icon-metro
+	display: inline-block
+	+sr(metro)
 		
 .card
 	position: relative
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 1px
+		background: rgba(#fff,.5)  
 .card__header
 	position: absolute
 	left: 0
@@ -140,6 +198,9 @@ a
 	text-shadow: 0 2px 0 rgba(255,255,255,.6)
 	+box-shadow(inset 0 -1px 0 rgba(255,255,255,.6))
 	+background-image(linear-gradient(bottom, rgba(255,255,255,.7) 0%, rgba(255,255,255,.95) 100%), linear-gradient(right, rgba(248,248,248,.5) 0%, rgba(249,249,249,.5) 50.76%, rgba(248,248,248,.5) 100%)) 
+.card__main
+	background: #e5e5e5 url(../img/card-bg.png) 0 0 repeat
+	padding: 0 0 23px 
 .slider  
 	border-bottom: 2px solid $red     
 	text-align: center
@@ -148,3 +209,29 @@ a
 	left: 0
 	right: 0
 	bottom: 0
+.fotorama__dot
+	width: 8px
+	height: 8px
+	-webkit-border-radius: 50%
+	border-radius: 50%
+	border: 0
+	background: rgba(255,255,255,.2)
+.fotorama__active
+	.fotorama__dot
+		width: 8px !important
+		height: 8px !important
+		-webkit-border-radius: 50%
+		border-radius: 50%
+		border: 0
+		background: #fff 
+		
+.promo-info
+	position: relative
+	margin: 18px 0 
+	padding-left: 28px
+	&:before
+		content: ""
+		position: absolute
+		top: 2px
+		left: 0
+		+sr(message-act) 

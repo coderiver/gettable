@@ -204,6 +204,10 @@ a
 .slider  
 	border-bottom: 2px solid $red     
 	text-align: center
+.fotorama
+	visibility: hidden
+	&.is-visible
+		visibility: visible
 .fotorama__nav-wrap
 	position: absolute
 	left: 0
@@ -223,8 +227,7 @@ a
 		-webkit-border-radius: 50%
 		border-radius: 50%
 		border: 0
-		background: #fff 
-		
+		background: #fff 	
 .promo-info
 	position: relative
 	margin: 18px 0 
@@ -235,3 +238,5 @@ a
 		top: 2px
 		left: 0
 		+sr(message-act) 
+.fotorama__arr
+	display: none !important

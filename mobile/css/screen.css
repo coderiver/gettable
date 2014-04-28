@@ -92,6 +92,9 @@ a { text-decoration: none; }
 
 .slider { border-bottom: 2px solid #dd2b00; text-align: center; }
 
+.fotorama { visibility: hidden; }
+.fotorama.is-visible { visibility: visible; }
+
 .fotorama__nav-wrap { position: absolute; left: 0; right: 0; bottom: 0; }
 
 .fotorama__dot { width: 8px; height: 8px; -webkit-border-radius: 50%; border-radius: 50%; border: 0; background: rgba(255, 255, 255, 0.2); }
@@ -100,6 +103,8 @@ a { text-decoration: none; }
 
 .promo-info { position: relative; margin: 18px 0; padding-left: 28px; }
 .promo-info:before { content: ""; position: absolute; top: 2px; left: 0; background: url('../img/icons-see2f2a8c34.png') 0 -483px no-repeat; background-position: 0 -242px; width: 16px; height: 15px; -moz-background-size: 125px 294px; -webkit-background-size: 125px 294px; background-size: 125px 294px; }
+
+.fotorama__arr { display: none !important; }
 
 .input { display: block; width: 100%; padding: 0 8px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: 29px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; background: white; font-family: "pfagorasanspro-reg", Arial, sans-serif; font-size: 15px; }
 .input:-ms-input-placeholder { color: #b3b3b3; font-size: 15px; }

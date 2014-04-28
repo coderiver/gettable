@@ -26,11 +26,11 @@ a
 .header__logo
 	display: inline-block	 
 	text-decoration: none
-	i
+	text-align: center
+	i  
+		+svg(125,31,logo) 
+	strong    
 		display: block
-		margin: 0 auto 
-		+sr(logo)
-	strong
 		color: $dark 
 		font: normal 15px "Myriad Pro",Arial,sans-serif 
 		
@@ -80,7 +80,8 @@ a
 		position: absolute 
 		right: 0
 		top: 2px
-		+sr(arr2)
+		//+sr(arr2)
+		+svg(8,13,arr2)
 .item_card
 	border: none
 	border-bottom: 1px solid $border
@@ -90,7 +91,8 @@ a
 		&:after
 			top: auto
 			bottom: 5px
-			+sr(arr1)
+			//+sr(arr1)
+			+svg(13,8,arr2)
 .comment
 	margin-bottom: 21px
 	padding-bottom: 14px
@@ -122,12 +124,14 @@ a
 	display: inline-block
 	margin-right: 6px
 	vertical-align: top
-	+sr(like)
+	//+sr(like)
+	+svg(13,14,like)
 .icon-not-like
 	display: inline-block
 	margin-right: 6px
 	vertical-align: top
-	+sr(dont-like)
+	//+sr(dont-like)
+	+svg(13,14,dont-like)
 
 .map
 	position: relative
@@ -172,8 +176,8 @@ a
 		margin-right: 12px
 .icon-metro
 	display: inline-block
-	+sr(metro)
-		
+	//+sr(metro)
+	+svg(16,11,metro)
 .card
 	position: relative
 	&:after
@@ -237,6 +241,7 @@ a
 		position: absolute
 		top: 2px
 		left: 0
-		+sr(message-act) 
+		//+sr(message-act) 
+		+svg(16,15,chat-red)
 .fotorama__arr
 	display: none !important

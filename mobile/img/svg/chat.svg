@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="chat_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="32px" height="30px" viewBox="0 0 32 30" enable-background="new 0 0 32 30" xml:space="preserve">
-<g id="chat">
-	<g>
-		<path fill="#DD2B00" d="M25,8H7C6.448,8,6,8.448,6,9c0,0.553,0.448,1,1,1h18c0.553,0,1-0.447,1-1C26,8.448,25.553,8,25,8z M21,14
-			H11c-0.552,0-1,0.448-1,1c0,0.553,0.448,1,1,1h10c0.553,0,1-0.447,1-1C22,14.448,21.553,14,21,14z M29,0H3C1.343,0,0,1.344,0,3v20
-			c0,1.657,1.343,3,3,3h8.987L16,30.013L20.012,26H29c1.656,0,3-1.343,3-3V3C32,1.344,30.656,0,29,0z M30,22c0,1.104-0.896,2-2,2
-			h-8.988L16,27.013L12.988,24H4c-1.104,0-2-0.896-2-2V4c0-1.104,0.896-2,2-2h24c1.104,0,2,0.896,2,2V22z"/>
-	</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="30" viewBox="0 0 32 30"><path fill-rule="evenodd" clip-rule="evenodd" fill="#999" d="M25 8h-18c-.552 0-1 .448-1 1 0 .553.448 1 1 1h18c.553 0 1-.447 1-1 0-.552-.447-1-1-1zm-4 6h-10c-.552 0-1 .448-1 1 0 .553.448 1 1 1h10c.553 0 1-.447 1-1 0-.552-.447-1-1-1zm8-14h-26c-1.657 0-3 1.344-3 3v20c0 1.657 1.343 3 3 3h8.987l4.013 4.013 4.012-4.013h8.988c1.656 0 3-1.343 3-3v-20c0-1.656-1.344-3-3-3zm1 22c0 1.104-.896 2-2 2h-8.988l-3.012 3.013-3.012-3.013h-8.988c-1.104 0-2-.896-2-2v-18c0-1.104.896-2 2-2h24c1.104 0 2 .896 2 2v18z"/></svg>

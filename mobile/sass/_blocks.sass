@@ -12,7 +12,8 @@
 		color: $light
 		font-size: 15px 
 .btn-search
-	+sr(glass)
+	//+sr(glass)
+	+svg(12,12,glass)
 	+hide-text
 
 .like
@@ -27,7 +28,8 @@
 		position: absolute
 		left: 0
 		top: 0
-		+sr(like-act)
+		//+sr(like-act)
+		+svg(17,19,like-act)
 
 .distance
 	position: relative
@@ -41,7 +43,8 @@
 		position: absolute
 		top: 1px
 		left: 0
-		+sr(distance) 
+		//+sr(distance) 
+		+svg(12,13,distance)
 
 .info
 	padding: 11px
@@ -63,10 +66,12 @@
 		
 .info__time
 	&:before
-		+sr(info)
+		//+sr(info)
+		+svg(16,15,info)
 .info__text
 	&:before
-		+sr(message)
+		//+sr(message)
+		+svg(16,15,chat)
 
 .btn
 	display: block

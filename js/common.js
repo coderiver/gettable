@@ -46,7 +46,7 @@ $(document).ready(function() {
   	tab();
 
     if ($(".js-input-tel").length) {
-        $(".js-input-tel").mask("(999) 999-99-99");
+        $(".js-input-tel").mask("+9(999) 999-99-99");
     }
     
     //$(".js-input-pass").mask("");
@@ -95,7 +95,7 @@ $(document).ready(function() {
     function fixedSidebar() {
 
         var top = sidebar.offset().top-18;
-        var scroll_top = $("body").scrollTop();
+        var scroll_top = $(document).scrollTop();
         var height = sidebar_in.outerHeight();
 
         if (scroll_top >= top) {
@@ -151,7 +151,7 @@ $(document).ready(function() {
     function fixedCardInfo() {
         
         var top = card.offset().top;
-        var scroll_top = $("body").scrollTop();
+        var scroll_top = $(document).scrollTop();
         var height = card__in.outerHeight();
 
         if (scroll_top >= top) {

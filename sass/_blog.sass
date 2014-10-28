@@ -1,0 +1,322 @@
+.onleft
+	float: left
+.onright
+	float: right
+
+.page-header
+	&.blog
+		background: #fff
+		box-shadow: none
+		.btn-group
+			display: block
+			margin: 2px 0 0 20px
+			.btn
+				padding: 10px 12px
+				border-color: #dddddd
+			.caret
+				margin-left: 35px
+			.dropdown-menu_city
+				padding: 0
+				&:before
+					display: none
+				a
+					padding: 6px 20px
+		.page-header__stat
+			margin: 10px 0 0 38px
+			+fs(16)
+		.page-blog
+			margin-top: 2px
+			padding: 7px 20px
+			border: 1px solid #e5e5e5
+			background-color: #f1f1f1
+			+border-radius(4px)
+			strong
+				color: #e72d00
+			&:hover
+				text-decoration: none
+	.logged
+		margin-right: 35px
+		+clr
+		.logged__in
+			position: relative
+			margin-right: 10px
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				right: -4px
+				+s(online)
+		span
+			display: inline-block
+			padding-top: 7px
+			color: #242424
+			+fs(16)
+			+fbold
+
+.l-cols
+	&.shadow
+		position: relative
+		width: 960px
+		&:before
+			content: ""
+			top: 0
+			position: absolute
+			width: 960px
+			height: 16px
+			background: url(../img/shadow3.png) no-repeat
+
+.text-item
+	&.blog
+		margin-bottom: 0
+		padding: 23px 35px
+		line-height: 1
+		+clr
+		.text-item__in
+			width: 33%
+			color: #656565
+			+fs(16)
+			+freg
+			p
+				text-align: center
+				color: #242424
+				+fs(24)
+				+fbold
+			&.onright
+				text-align: right
+		.star
+			display: inline-block
+			margin-right: 5px
+			vertical-align: bottom
+			+s(star2)
+		.zoom
+			display: inline-block
+			margin-top: 5px
+			vertical-align: bottom
+			+s(search)
+	&.with-pad
+		padding: 0 50px
+		border-bottom-width: 0
+		h1
+			margin-bottom: 38px
+			color: #333333
+			+fs(48)
+			+fbold2
+			span
+				position: relative
+				display: inline-block
+				width: 1px
+				height: 13px
+				margin-left: -1px
+				vertical-align: 20px
+				&:before
+					content: " "
+					position: absolute
+					top: 0
+					left: 15px
+					+s(star3)
+		h3
+			margin-bottom: 30px
+			+fbold
+		p
+			color: #656565
+			line-height: 30px
+			+fs(18)
+			&.is-first
+				+fs(22)
+		.publish
+			padding: 15px 0
+			color: #666666
+			p, span
+				+fs(14)
+			span
+				margin-right: 25px
+				&.is-last
+					margin-right: 0
+			i
+				display: inline-block
+				margin-right: 5px
+				vertical-align: middle
+			.bubble
+				+s(bubble)
+			.eye
+				+s(eye)
+
+.share
+	margin: 35px 50px
+	+clr
+	p
+		margin-bottom: 20px
+		color: #333
+		line-height: 24px
+		+fs(18)
+		+fbold
+	.curv
+		display: inline-block
+		margin-right: 10px
+		vertical-align: -10px
+		+s(curved)
+	.soc__fb
+		+s(soc-fb-small)
+	.soc__od
+		+s(soc-od-small)
+	.soc__vk
+		+s(soc-vk-small)
+	.soc__tw
+		+s(soc-tw-small)
+	.share__num
+		span
+			display: inline-block
+			color: #cacaca
+			+fs(18)
+		.num
+			width: 48px
+			height: 48px
+			margin: 2px 10px 0 0
+			color: #333
+			background-color: #eee
+			line-height: 48px
+			padding-left: 13px
+			+border-radius(17px)
+			+fs(21)
+			+fbold
+
+.tags
+	margin: 0 50px 22px
+	a
+		margin-right: 20px
+		color: #656565
+		text-decoration: underline
+		+fs(16)
+
+.illustrate
+	margin: 40px 0 45px
+	img
+		width: 100%
+	p
+		padding-top: 20px
+		color: #666666
+		line-height: 20px
+		+fs(14)
+
+.quote
+	margin: 50px 0 45px
+	text-align: center
+	p
+		margin: 20px 0
+		color: #333333
+		+fs(24)
+		+fbold
+	i
+		color: #cbcbcb
+		+fs(24)
+
+.comments
+	background: #F7F7F7
+	.comments__in
+		padding: 32px 0 50px 50px
+	h3
+		margin-bottom: 30px
+		color: #333
+		+fbold
+	p
+		line-height: 24px
+		+fs(16)
+		&.is-bold
+			+fbold
+	.comment__row
+		margin-bottom: 60px
+	.comment__name
+		width: 115px
+		line-height: 20px
+		+box
+	.desc
+		width: 503px
+		margin-left: 25px
+	.trash
+		display: block
+		position: relative
+		width: 50px
+		height: 50px
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			left: 50%
+			margin: -12px 0 0 -10px
+			+s(trash)
+		&:hover
+			background: #FFF
+			+border-radius(50%)
+			&:before
+				+s(trash-h)
+
+.add-comment
+	width: 645px
+	span
+		padding-left: 10px
+		color: #999
+		+fs(16)
+		+fbold
+	.input__row
+		margin-bottom: 18px
+		+clr
+		input
+			height: 40px
+			padding: 0 15px
+			color: #333333
+			background-color: #fff
+			border: 1px solid #dbdbdb
+			+placeholder-color(#333333)
+			+border-radius(5px)
+			+fs(16)
+			+box
+			+fbold
+			&.half
+				width: 48.5%
+	.textarea
+		margin-bottom: 20px
+		border: 1px solid #dbdbdb
+		background: #fff
+		color: #333333
+		box-shadow: none
+		+fs(16)
+		+border-radius(5px)
+		+placeholder-color(#333333)
+		+fbold
+	.send
+		width: 122px
+		height: 40px
+		border: 0
+		background-color: #e2e2e2
+		color: #999999
+		+box
+		+border-radius(4px)
+		+fs(16)
+		+fbold
+		&:active
+			background: darken(#e2e2e2, 15%)
+			color: #fff
+
+.popular
+	padding: 10px 50px 50px
+	h3
+		margin-bottom: 40px
+		text-align: center
+		color: #333333
+		line-height: 24px
+		+fbold
+	.popular__item
+		display: block
+		width: 250px
+		margin-right: 54px
+		&.is-last
+			margin-right: 0
+		p
+			padding-top: 20px
+			color: #333
+			+fs(16)
+
+.page-footer
+	&.blog
+		background: #FFF
+		border-top: 0

@@ -1,7 +1,7 @@
 // ------------------ main settings -------------------------- //
 input[type="submit"],
 button
-	cursor: pointer  
+	cursor: pointer
 	&::-moz-focus-inner
 		padding: 0
 		border: 0
@@ -13,39 +13,41 @@ button
 	&:focus
 		outline: none !important
 input, textarea, select,button,
-h1,h2,h3,h4,h5,h6,a,span,a:focus 
+h1,h2,h3,h4,h5,h6,a,span,a:focus
 	outline: none
-+font(GEInspiraLight, GEInspiraLT)  
-+font(GEInspiraReg, GEInspira)  
-+font(GEInspiraMed, GEInspira-Medium)  
-+font(GEInspiraBold, GEInspira-Bold)  
++font(GEInspiraLight, GEInspiraLT)
++font(GEInspiraReg, GEInspira)
++font(GEInspiraMed, GEInspira-Medium)
++font(GEInspiraBold, GEInspira-Bold)
 +font(PFAgoraRegular, PFAgoraSlabPro-Regular)
 +font(PFAgoraBold, PFAgoraSlabPro-Bold)
 +font(PFAgoraMedium, pf_agora_slab_pro_medium)
 +font(rub, alsrubl-tahoma-regular)
 +font(rub-b, alsrubl-tahoma-bold)
++font(fontawesome-webfont, fontawesome-webfont)
+
 =rub
-	font-family: "rub", Verdana, Arial, sans-serif 
+	font-family: "rub", Verdana, Arial, sans-serif
 =rub-b
-	font-family: "rub-b", Verdana, Arial, sans-serif 
+	font-family: "rub-b", Verdana, Arial, sans-serif
 =flight
-	font-family: "GEInspiraLight", Arial, sans-serif 
+	font-family: "GEInspiraLight", Arial, sans-serif
 =freg
-	font-family: "GEInspiraReg", Arial, sans-serif 
+	font-family: "GEInspiraReg", Arial, sans-serif
 =fmed
-	font-family: "GEInspiraMed", Arial, sans-serif 
+	font-family: "GEInspiraMed", Arial, sans-serif
 	+font-smoothing
 =fbold
-	font-family: "GEInspiraBold", Arial, sans-serif 
+	font-family: "GEInspiraBold", Arial, sans-serif
 	+font-smoothing
 =freg2
-	font-family: "PFAgoraRegular", Verdana, Arial, sans-serif 
+	font-family: "PFAgoraRegular", Verdana, Arial, sans-serif
 =fbold2
-	font-family: "PFAgoraBold", Verdana, Arial, sans-serif 
+	font-family: "PFAgoraBold", Verdana, Arial, sans-serif
 	+font-smoothing
 =fmed2
 	font-family: "PFAgoraMedium", Verdana, Arial, sans-serif
-	+font-smoothing 
+	+font-smoothing
 $light: #fafafa
 $light2: #f7f7f7
 $text: #858585
@@ -62,14 +64,14 @@ body
 	background: $light url(../img/body-bg.png) 0 0 repeat
 	color: $text
 	+freg
-	line-height: 1.5  
-	font-size: 13px 
+	line-height: 1.5
+	font-size: 13px
 	&.inner-page
-		background: $light 
+		background: $light
 		.page-footer
 			border-top: 0
 	&.index-page
-		background: $light 
+		background: $light
 		.page-footer
 			border-top: 0
 	&.is-fixed-sidebar
@@ -90,13 +92,13 @@ body
 			+scrollbar
 				width: 4px
 				overflow: hidden
-				background: #e3e3e3 
+				background: #e3e3e3
 				border-radius: 2px
 			+scrollbar-thumb
 				border-radius: 2px
 				background: #818181
-			+scrollbar-track-piece 
-				width: 4px 
+			+scrollbar-track-piece
+				width: 4px
 				border-radius: 2px
 		.l-col2__in
 			position: fixed
@@ -107,7 +109,7 @@ body
 			margin-left: 131px
 			width: 339px
 			+box
-			background: #fff 
+			background: #fff
 	&.is-abs-sidebar
 		.sidebar__in
 			position: absolute
@@ -123,13 +125,13 @@ body
 			+scrollbar
 				width: 4px
 				overflow: hidden
-				background: #e3e3e3 
+				background: #e3e3e3
 				border-radius: 2px
 			+scrollbar-thumb
 				border-radius: 2px
 				background: #818181
-			+scrollbar-track-piece 
-				width: 4px 
+			+scrollbar-track-piece
+				width: 4px
 				border-radius: 2px
 		.l-col2__in
 			position: absolute
@@ -140,12 +142,12 @@ body
 			margin-left: 131px
 			width: 339px
 			+box
-			background: #fff 
+			background: #fff
 .main-section
 	> .container
 		position: relative
 .container
-	margin: 0 auto 
+	margin: 0 auto
 	width: 970px
 .row
 	margin: 0
@@ -163,18 +165,18 @@ body
 	position: relative
 	z-index: 2000
 	margin: 0
-	padding: 22px 0 
-	background: $light 
+	padding: 22px 0
+	background: $light
 	+box-shadow(0 0 3px rgba(0,0,0,.5))
 	.btn_red,
-	.btn_white  
+	.btn_white
 		float: right
 	.btn-group_simple
 		float: left
-		margin: 12px 0 0 32px 
-		&:hover	
+		margin: 12px 0 0 32px
+		&:hover
 			strong
-				border-color: $red 
+				border-color: $red
 			.caret
 				border-color: $red transparent transparent transparent
 		&.open
@@ -189,36 +191,36 @@ body
 		margin: 9px 0 0 26px
 		span
 			line-height: 1.5
-			border-bottom: 1px solid #c3c3c3 
+			border-bottom: 1px solid #c3c3c3
 		a
 			&:hover
 				span
 					color: $red
-					border-bottom-color: $red 
+					border-bottom-color: $red
 			&:active
 				span
-					color: #f00 
-					border-bottom-color: #f00 
-					
+					color: #f00
+					border-bottom-color: #f00
+
 .page-header__stat
 	float: left
-	margin: 10px 0 0 32px 
-	font-size: 15px     
+	margin: 10px 0 0 32px
+	font-size: 15px
 	color: #8e8e8e
 	strong
 		+fbold
-		color: #373737 
+		color: #373737
 		font-weight: bold
 	.icon
 		margin: -8px 6px 0 0
 .logo
 	float: left
-	+s(logo)     
+	+s(logo)
 .btn-group_lang
 	float: right
 	margin: 8px 22px 0 0
 	font-size: 14px
-	color: $dark_gray 
+	color: $dark_gray
 	&:hover
 		.caret
 			border-color: #f00 transparent transparent transparent
@@ -226,12 +228,12 @@ body
 		background: $dark
 		border-radius: 5px
 		.btn
-			background: $dark 
+			background: $dark
 			.caret
 				+arr(10,6,#fff,t)
 	.btn
 		position: relative
-		padding: 3px 7px 3px 9px 
+		padding: 3px 7px 3px 9px
 		z-index: 1001
 		border-radius: 5px
 		background: #fff
@@ -242,9 +244,9 @@ body
 			top: -3px
 			margin-right: 8px
 
-	.dropdown-menu 
+	.dropdown-menu
 		margin-top: -1px
-		padding: 0 
+		padding: 0
 		width: 100%
 		overflow: hidden
 		width: 110px
@@ -255,10 +257,10 @@ body
 		li
 			border-top 1px solid #dfdfdf
 			a
-				padding: 8px 9px      
+				padding: 8px 9px
 				&:hover
-					color: #fff 
-					+g(#ea5f3d, #d42b02)      
+					color: #fff
+					+g(#ea5f3d, #d42b02)
 			.icon
 				position: static
 				margin-right: 5px
@@ -271,19 +273,19 @@ body
 			// strong
 			// 	color: #f00
 		.caret
-			border-color: #000 transparent transparent transparent 
+			border-color: #000 transparent transparent transparent
 		.icon-metro
 			+sp(metro-h)
 	&.open
 		.caret
-			border-color: #fff transparent transparent transparent 
+			border-color: #fff transparent transparent transparent
 		.icon-metro
 			+s(metro-act)
 		.btn
 			background: #4b4b4b
 			+box-shadow(inset 0 2px 2px rgba(0,0,0,.4))
 			strong
-				color: #fff 
+				color: #fff
 
 	.btn
 		position: relative
@@ -304,7 +306,7 @@ body
 			font-weight: normal
 			color: #000
 			font-size: 16px
-			+fbold 
+			+fbold
 	.caret
 		position: absolute
 		top: 50%
@@ -315,9 +317,9 @@ body
 		position: relative
 		margin-right: 8px
 		top: -3px
-.drop-list   
-	margin: -41px 0 0  
-	padding-top: 48px 
+.drop-list
+	margin: -41px 0 0
+	padding-top: 48px
 	width: 100%
 	border-radius: 3px
 	background: #fff
@@ -326,45 +328,45 @@ body
 	+box
 	&:hover,
 	&:active
-		z-index: 1000 !important  
+		z-index: 1000 !important
 	ul
-		list-style-type: none 
+		list-style-type: none
 		padding: 0
-		margin: 0 6px 0 0  
+		margin: 0 6px 0 0
 		height: 337px
 		overflow-y: auto
 	li
-		padding: 0 9px 0 18px 
+		padding: 0 9px 0 18px
 		background: #fff
 		&:first-child
 			a
 				border-top: 0
 		&:hover
 			position: relative
-			z-index: 2  
+			z-index: 2
 			+box-shadow(0 1px 0 #d32900)
-			+g(#e95b37, #d32900)  
+			+g(#e95b37, #d32900)
 			a
 				border-top-color: #e95b37
-				color: #fff   
+				color: #fff
 	a
 		display: block
-		padding: 7px 0 
+		padding: 7px 0
 		font-size: 16px
-		border-top: 1px solid #b2b2b2 
-		color: $dark 
+		border-top: 1px solid #b2b2b2
+		color: $dark
 		&:hover
 			text-decoration: none
-.drop-list_search	
+.drop-list_search
 	font-size: 16px
-	color: #000 
+	color: #000
 	line-height: 1.3
 	+freg
 	li
 		&:hover
 			color: #fff
 			span
-				color: #fff 
+				color: #fff
 	a
 		border-color: #e0e0e0
 	strong
@@ -372,20 +374,20 @@ body
 	span
 		display: block
 		font-size: 14px
-		color: #a2a2a2 
+		color: #a2a2a2
 
 // ------------------ footer -------------------------- //
 .page-footer
 	position: relative
 	z-index: 2
-	border-top: 1px solid #ccc 
+	border-top: 1px solid #ccc
 	.container
 		+clr
 .page-footer__top
 	padding: 40px 15px 30px
 .footer__seo
 	float: left
-	margin: 0 30px 0 0  
+	margin: 0 30px 0 0
 	width: 322px
 	.logo
 		float: none
@@ -399,29 +401,29 @@ body
 	width: 145px
 	float: left
 	&:nth-child(2)
-		width: 205px  
+		width: 205px
 	&:nth-child(3)
-		width: 220px 
+		width: 220px
 	.page-footer__title
 		position: absolute
 		top: 0
 		left: 0
-		color: #000 
+		color: #000
 	ul
 		margin: 0
 		padding: 0
-		list-style-type: none 
+		list-style-type: none
 	li
 		margin-bottom: 11px
 	a
 		color: #858585
-		font-size: 15px 
+		font-size: 15px
 		line-height: 1.3
 		text-decoration: none
 		border-bottom: 1px solid #d5d5d5
 		&:hover
-			color: $red  
-			border-bottom-color: #f4ab99 
+			color: $red
+			border-bottom-color: #f4ab99
 .page-footer__bottom
 	padding-top: 41px
 	height: 203px
@@ -435,14 +437,14 @@ body
 .page-footer__created
 	float: right
 	margin-top: 54px
-	color: #807d78 
+	color: #807d78
 .page-footer__title
 	margin-bottom: 15px
 	font-size: 16px
 	letter-spacing: 2px
 	color: #fff
 	text-transform: uppercase
-	+fbold 
+	+fbold
 .counter
 	display: inline-block
 	vertical-align: middle
@@ -461,7 +463,7 @@ body
 				margin-top: -3px
 				width: 3px
 				height: 6px
-				background: #666  
+				background: #666
 				border-radius: 5px
 		&:after
 			content: ""
@@ -471,7 +473,7 @@ body
 			margin-top: -3px
 			width: 3px
 			height: 6px
-			background: #666  
+			background: #666
 			border-radius: 5px
 	span
 		display: block
@@ -482,15 +484,15 @@ body
 		height: 52px
 		line-height: 52px
 		color: #fff
-		+fbold 
+		+fbold
 		&:before,
 		&:after
 			content: ""
 			position: absolute
 			left: 0
 			right: 0
-			height: 25px 
-			background: #000 
+			height: 25px
+			background: #000
 		&:before
 			top: 0
 		&:after
@@ -500,20 +502,20 @@ body
 		z-index: 2
 		font-style: normal
 		font-size: 50px
-			
+
 .counter-text
 	display: inline-block
 	margin-left: 8px
 	vertical-align: middle
-	+fbold  
+	+fbold
 	font-size: 16px
 	color: #a8a8a8
-	line-height: 1 
+	line-height: 1
 .logo-created
 	display: inline-block
 	margin-left: 10px
 	vertical-align: middle
-	+s(logo-created)   
+	+s(logo-created)
 	+opacity(.5)
 	+tr(opacity .2s linear)
 	&:hover

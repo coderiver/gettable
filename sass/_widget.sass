@@ -1,0 +1,269 @@
+//re-use
+=vertical
+	text-align: center
+	font-size: 0
+	&:before
+		content: ""
+		display: inline-block
+		vertical-align: middle
+		width: 0
+
+.onleft
+	float: left
+.onright
+	float: right
+
+.widgets
+	.overlay
+		display: block
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#66000000,endColorstr=#66000000)
+
+.present
+	height: 40px
+	padding: 0 14px
+	font-size: 17px
+	color: #fff
+	background-color: #50b748
+	border: 1px solid #50b748
+	text-shadow: -1px -1px 1px rgba(0,0,0,.27)
+	+border-radius(6px)
+	+box-shadow(inset 0 1px 0 rgba(255,255,255,.47))
+	+g(#92d98a, #2d9027)
+	+hr
+	&:hover
+		+g(#84e381, #25aa23)
+
+//main
+.widget
+	position: relative
+	width: 800px
+	margin: 80px auto
+	font-family: Helvetica, Arial, sans-serif
+	z-index: 10000
+	h3
+		margin: 0
+		font-size: 24px
+		color: #333
+		+hbc
+	p
+		margin: 0
+	.correct
+		display: inline-block
+		vertical-align: middle
+		+s(correct)
+	.overlay
+		position: absolute
+		background: rgba(0, 0, 0, 0.5)
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000)
+		z-index: 10001
+	&__header
+		height: 52px
+		background: #404040
+		+clr
+		&-left
+			position: relative
+			width: 248px
+			+box
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				right: 0
+				+s(widget-shadow)
+		&-right
+			width: 552px
+			padding: 14px 20px 0 0
+			text-align: right
+			+box
+			a
+				color: #D6D6D6
+				text-shadow: 0 -2px 1px #000
+				border-bottom: 1px dotted #D6D6D6
+				text-decoration: none
+				font-size: 11px
+			.close
+				display: inline-block
+				margin-left: 17px
+				border-bottom: 0
+				vertical-align: middle
+				+s(close-bold)
+	&__logo
+		display: block
+		margin: 14px auto 0
+		+s(logo-small)
+	&__body
+		min-height: 285px
+		border-bottom: 1px solid #F5F3F0
+		&-left
+			width: 248px
+			min-height: 285px
+			padding-top: 25px
+			text-align: center
+			text-shadow: 0 1px 1px #fff
+			color: #333
+			background: #eee
+			border-right: #e3e3e3
+			box-shadow: inset -5px 0 5px -4px rgba(0, 0, 0, 0.1)
+			+clr
+			+box
+			.dotted
+				display: inline-block
+				margin-bottom: 15px
+				padding: 0 20px 18px
+				border-bottom: 1px dotted #a6a6a6
+		&-right
+			width: 552px
+			min-height: 285px
+			padding: 25px 0 0 35px
+			background: #f7f7f7
+			border-left: 1px solid #ffffff
+			+box
+			h3
+				font-size: 18px
+				&.is-last
+					margin-bottom: 25px
+			p
+				font-size: 18px
+				&.is-small
+					margin-top: 10px
+					font-size: 13px
+					color: #333
+			.correct
+				margin-left: 2px
+		&-center
+			padding: 16px 30px 16px 29px
+			background: #F7F7F7
+			+box
+			+clr
+			p
+				font-size: 15px
+				color: #333
+				+hr
+			.correct
+				margin-right: 5px
+			.onright
+				padding-top: 7px
+	&__footer
+		min-height: 210px
+		padding: 30px 0 30px 25px
+		background: #fdf9f2
+		border-top: 1px solid #dbd9d6
+		+clr
+		+box
+		&-in
+			width: 580px
+			padding-left: 20px
+			color: #333
+			font-size: 24px
+			+hl
+			+box
+			a
+				color: #878787
+				&:hover
+					color: #333
+		&-title
+			text-align: center
+			font-size: 26px
+			color: #333
+			line-height: 1.2
+			+hl
+		.is-bold
+			font-size: 16px
+			+hb
+		.is-small
+			font-size: 13px
+		.present
+			margin: 15px 5px 0 0
+		&.another-pad
+			padding: 30px 54px 50px
+			.widget__footer-title
+				margin-bottom: 45px
+
+.win
+	+clr
+	&__item
+		width: 33%
+		text-align: center
+		border-right: 1px solid #E6E5E3
+		&.is-last
+			border-right: 0
+		.is-bold
+			padding: 0 25px 12px
+			text-transform: uppercase
+			color: #333
+			font-size: 14px
+		.present
+			margin-right: 0
+	&__img
+		height: 170px
+
+.confirm
+	min-width: 495px
+	min-height: 313px
+	position: absolute
+	top: 50%
+	left: 50%
+	margin: -156.5px 0 0 -247.5px
+	padding: 60px 36px 55px 42px
+	background: rgba(0, 0, 0, 0.6)
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000)
+	z-index: 10002
+	+box
+	p
+		font-size: 16px
+		color: #FFF
+		+hl
+		&.incorrect
+			margin-top: 12px
+			font-size: 14px
+			color: #ff632d
+	.is-centered
+		text-align: center
+	&.thanks
+		padding-top: 85px
+		text-align: center
+		p
+			width: 200px
+			margin: 0 auto 33px
+			font-size: 22px
+			line-height: 1.3
+	&__title
+		padding-bottom: 40px
+		margin-bottom: 35px
+		border-bottom: 1px solid #626155
+		+clr
+		p
+			width: 370px
+			font-size: 22px
+			line-height: 1.2
+		i
+			margin: 5px 15px 0 0
+		.tickets
+			+s(tickets)
+		.bottle
+			+s(bottle)
+		.baloon
+			+s(baloon)
+	.closing
+		position: absolute
+		display: block
+		top: 25px
+		right: 25px
+		+s(close-another)
+	.input__row
+		margin-top: 27px
+		font-size: 0
+		input
+			height: 40px
+			padding: 0 12px
+			color: #878787
+			background-color: #fff
+			font-size: 14px
+			+placeholder-color(#878787)
+			+box
+			+hli
+			&.half
+				width: 49%
+				margin-right: 10px
+			&.incorrect
+				border: 2px solid #ff632d

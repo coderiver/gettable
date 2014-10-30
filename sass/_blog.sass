@@ -65,6 +65,83 @@
 			height: 16px
 			background: url(../img/shadow3.png) no-repeat
 
+.bcategory
+	margin: 25px 0 15px
+	text-align: center
+	.bcategory__item
+		display: inline-block
+		margin: 0 0 10px 10px
+		padding: 5px 18px
+		text-decoration: none
+		font-size: 16px
+		color: #333
+		background-color: #fff
+		border: 1px solid #e5e5e5
+		+border-radius(15px)
+		+box
+		&.is-active
+			background-color: #f2f2f2
+
+.article
+	padding: 0 50px 45px
+	+clr
+	+box
+	.article__item
+		width: 250px
+		margin-right: 50px
+		text-decoration: none
+		a
+			color: #333
+		&.is-last
+			margin-right: 0
+		&:hover
+			.read-more
+				opacity: 1
+	.article__img
+		position: relative
+		img
+			width: 100%
+	.article__view
+		position: absolute
+		left: 13px
+		bottom: 10px
+		font-size: 14px
+		color: #FFF
+		span
+			margin-right: 20px
+		i
+			display: inline-block
+			margin-right: 5px
+			vertical-align: middle
+		.bubble
+			+s(bubble-white)
+		.eye
+			+s(eye-white)
+	.article__txt
+		padding: 16px 0 20px 0
+		color: #333
+		font-size: 16px
+		line-height: 24px
+		+box
+	.article__title
+		font-size: 22px
+		+fbold
+	.read-more
+		padding: 2px 15px
+		font-size: 14px
+		color: #e12b00
+		background-color: #fff
+		border: 2px solid #e12b00
+		opacity: 0
+		+border-radius(17px)
+		+box
+		+fbold
+	.btn-default
+		display: block
+		margin: 0 auto
+		padding: 6px 50px
+		font-size: 16px
+
 .text-item
 	&.blog
 		margin-bottom: 0
@@ -212,6 +289,28 @@
 
 .comments
 	background: #F7F7F7
+	&.to-send
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			bottom: 0
+			width: 100%
+			height: 11px
+			background: url(../img/send-bg.png) repeat-x
+		.comments__in
+			padding: 40px 0
+			text-align: center
+			h3
+				margin: 0 0 20px 0
+			.add-comment
+				width: auto
+				margin-top: 35px
+				input
+					width: 313px
+					margin-right: 17px
+				.send
+					width: 140px
 	.comments__in
 		padding: 32px 0 50px 50px
 	h3

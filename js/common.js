@@ -48,17 +48,17 @@ $(document).ready(function() {
     if ($(".js-input-tel").length) {
         $(".js-input-tel").mask("+9(999) 999-99-99");
     }
-    
+
     //$(".js-input-pass").mask("");
 
     $(".js-login-link").on("click", function(){
         $(".js-login-box").slideToggle("fast");
-        $(this).toggleClass("is-active");  
+        $(this).toggleClass("is-active");
     });
 
     $(".js-close-login").on("click", function(){
         $(".js-login-box").slideUp("fast");
-        $(".js-login-link").removeClass("is-active"); 
+        $(".js-login-link").removeClass("is-active");
     });
     $(".js-clear-input").on("click", function(){
         $(this).fadeOut("fast");
@@ -78,12 +78,12 @@ $(document).ready(function() {
     //         autoReinitialise: true
     //     });
     // }
-      
+
 
     $(".js-item-key").on("click",function(){
         $(this).parents(".item").addClass("is-active");
         return false;
-    }); 
+    });
     $(".js-hide-info").on("click",function(){
         $(this).parents(".item").removeClass("is-active");
         return false;
@@ -121,10 +121,10 @@ $(document).ready(function() {
 
             // remove fixing
             if ($(".js-item").length) {
-                var item_bottom = $(".js-item").offset().top + $(".js-item").outerHeight(); 
+                var item_bottom = $(".js-item").offset().top + $(".js-item").outerHeight();
             }
-            
-            var sidebar_bottom = $(".sidebar-target").offset().top+height; 
+
+            var sidebar_bottom = $(".sidebar-target").offset().top+height;
 
             if (sidebar_bottom >= item_bottom) {
                 $("body").addClass("is-abs-sidebar");
@@ -149,7 +149,7 @@ $(document).ready(function() {
     var card__in = $(".js-card__in");
 
     function fixedCardInfo() {
-        
+
         var top = card.offset().top;
         var scroll_top = $(document).scrollTop();
         var height = card__in.outerHeight();
@@ -176,8 +176,8 @@ $(document).ready(function() {
             }
 
             // remove fixing
-            var footer_bottom = $(".page-footer").offset().top; 
-            var sidebar_bottom = $(".sidebar-target").offset().top+height; 
+            var footer_bottom = $(".page-footer").offset().top;
+            var sidebar_bottom = $(".sidebar-target").offset().top+height;
             console.log('target'+sidebar_bottom);
             console.log('item'+footer_bottom);
 
@@ -197,27 +197,27 @@ $(document).ready(function() {
 
     if (card.length) {
         fixedCardInfo();
-    }  
+    }
 
     $(window).scroll(function(){
         if (sidebar.length) {
             fixedSidebar();
-        }  
+        }
         if (card.length) {
             fixedCardInfo();
-        }  
+        }
         windowPos();
-    }); 
+    });
     $(window).resize(function(){
         if (sidebar.length) {
             fixedSidebar();
-        }  
-    }); 
+        }
+    });
 
     $("body").prepend( '<div class="tip js-tip"><div class="tip__in"></div></div>' );
     var tooltip = $(".js-tip");
     $(".js-tip-key").hover(
-        
+
         function(){
             var left = $(this).offset().left;
             var top = $(this).offset().top;
@@ -229,7 +229,7 @@ $(document).ready(function() {
                 left: left+60,
                 top: top-(tooltip_height/2)+10,
             });
-            
+
         },
         function() {
             tooltip.hide();
@@ -240,7 +240,7 @@ $(document).ready(function() {
             tooltip.show();
         },
         function() {
-            tooltip.hide(); 
+            tooltip.hide();
         }
     );
 
@@ -279,10 +279,10 @@ $(document).ready(function() {
         });
         event.stopPropagation();
         return false;
-        
+
     });
 
-    
+
 
     function mapHeight() {
         var height = $(window).height()-$(".page-header").outerHeight();
@@ -319,7 +319,7 @@ $(document).ready(function() {
 
 
     $('.scroll-pane').bind('mousewheel', function(e) {
-        if(e.originalEvent.wheelDelta < 0 && 
+        if(e.originalEvent.wheelDelta < 0 &&
         ($(this).scrollTop() + $(this).height()) >= this.scrollHeight) return false;
     });
 
@@ -327,6 +327,21 @@ $(document).ready(function() {
        $(this).addClass("is-active");
        return false;
     })
-    
 
-});      
+
+    $(window).load(function() {
+       //isotope
+         var $container = $('.article__in');
+         // init
+         $container.isotope({
+           // options
+           itemSelector: '.article__item',
+            masonry: {
+              columnWidth: 250,
+              gutter: 50
+            },
+         });
+    });
+
+
+});

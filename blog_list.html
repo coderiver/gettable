@@ -14,6 +14,21 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.jscrollpane.js"></script>
 	<script src="js/common.js"></script>
+	<script>
+		$(window).load(function() {
+			//isotope
+			var $container = $('.article__in');
+			// init
+			$container.isotope({
+			// options
+			itemSelector: '.article__item',
+				masonry: {
+					columnWidth: 250,
+					gutter: 50
+				},
+			});
+		});
+	</script>
 </head>
 <body>
 	<!-- BEGIN header -->

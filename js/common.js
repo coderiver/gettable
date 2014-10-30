@@ -329,19 +329,19 @@ $(document).ready(function() {
     })
 
 
-    $(window).load(function() {
-       //isotope
-         var $container = $('.article__in');
-         // init
-         $container.isotope({
-           // options
-           itemSelector: '.article__item',
-            masonry: {
-              columnWidth: 250,
-              gutter: 50
-            },
-         });
-    });
+    // $(window).load(function() {
+    //    //isotope
+    //      var $container = $('.article__in');
+    //      // init
+    //      $container.isotope({
+    //        // options
+    //        itemSelector: '.article__item',
+    //         masonry: {
+    //           columnWidth: 250,
+    //           gutter: 50
+    //         },
+    //      });
+    // });
 
 
 });
